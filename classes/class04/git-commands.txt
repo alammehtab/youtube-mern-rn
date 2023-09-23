@@ -1,3 +1,5 @@
+install git software
+
 go to github and create your account.
 
 create repository by clicking + icon and selecting new repository.
