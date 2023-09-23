@@ -1,0 +1,7 @@
+class02 recap and practice
+
+favicon https://www.w3schools.com/html/html_favicon.asp
+
+tables https://www.w3schools.com/html/html_tables.asp
+
+practice

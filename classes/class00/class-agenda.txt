@@ -1,0 +1,16 @@
+Students Introduction
+
+Course Introduction, scope, and jobs
+
+what is web development?
+
+Components of a website
+    HTML
+    CSS
+    JavaScript
+
+download VS Code
+
+Install VS Code
+
+Hello world in HTML

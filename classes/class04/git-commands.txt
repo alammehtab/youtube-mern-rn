@@ -1,0 +1,28 @@
+go to github and create your account.
+
+create repository by clicking + icon and selecting new repository.
+
+copy repositoryURL
+
+go to folder/directory where you want to save your repository/folder.
+
+go to addressbar, type cmd and hit enter.
+
+git clone repositoryURL
+
+git status
+
+git add .
+
+git commit -m"message"
+
+git push origin main
+
+
+
+
+
+
+
+
+

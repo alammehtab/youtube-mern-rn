@@ -1,0 +1,15 @@
+class00 recap and practice
+
+html links, a tag
+
+html images, img tag
+
+elements https://www.w3schools.com/html/html_elements.asp
+
+attributes https://www.w3schools.com/html/html_attributes.asp
+
+headings https://www.w3schools.com/html/html_headings.asp
+
+paragraphs https://www.w3schools.com/html/html_paragraphs.asp
+
+practice
