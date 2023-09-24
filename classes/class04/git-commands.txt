@@ -20,6 +20,10 @@ git commit -m"message"
 
 git push origin main
 
+if you're getting authorization error then run the following commands
+git config --global user.name "apka apna username"
+git config --global user.email "apka apna email"
+
 
 
 
