@@ -1,0 +1,57 @@
+/* UNIVERSAL SELECTOR */
+
+/* *{
+    color: blue;
+} */
+
+
+/* TYPE SELECTOR */
+/* h1{
+    color: red;
+} */
+
+/* h1,p {
+    color: red;
+} */
+
+
+/* CLASS SELECTOR */
+/* .interest{
+    color: tomato;
+} */
+
+/* ID SELECTOR */
+/* #p3{
+    color: red;
+} */
+
+
+/* #target{
+    color: yellow;
+} */
+
+/* child selector */
+/* only one */
+/* ul > span {
+    color: tomato;
+} */
+
+/* multiple children */
+/* ul>span,li {
+    color: tomato;
+} */
+
+/* descendant selector */
+/* ul p{
+    color: red;
+} */
+
+/* adjacent sibling selector */
+/* h1+p{
+    color: aqua;
+} */
+
+/* general sibling selector */
+/* h1~p{
+    color: green;
+} */

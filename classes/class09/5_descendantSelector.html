@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Descendant Selector</h1>
+
+    <!-- example -->
+
+    <!-- ul is acting like a dada -->
+    <ul>
+        <!-- li is acting like a father (child of ul) -->
+        <li>
+            <!-- p is a child -->
+            <p>first item</p>
+            <!-- a is also a child -->
+            <a href="">link to something</a>
+
+            <!-- ol is also a child -->
+            <ol>
+                <!-- li is a grand-child -->
+                <li>this is pota of </li>
+                <!-- div is a grand-child -->
+                <div>
+                    <!-- p is great-grand-child -->
+                    <p>this is inside div which is a grand-child</p>
+                </div>
+            </ol>
+        </li>
+
+        <!-- div is acting like a father (child of ul) -->
+        <div>
+            <h1>this is a div</h1>
+            <p>inside div child of ul THIS SHOULD BE CHANGED</p>
+            <P>ANOTHER P FOR TESTING</P>
+        </div>
+
+        <!-- span is acting like a father (child of ul) -->
+        <span>
+            <h1>this is a span</h1>
+            <p>inside span child of ul</p>
+        </span>
+    </ul>
+</body>
+
+</html>
