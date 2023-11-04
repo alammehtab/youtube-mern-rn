@@ -48,10 +48,10 @@
 
 /* adjacent sibling selector */
 /* h1+p{
-    color: aqua;
+    color: red;
 } */
 
 /* general sibling selector */
 /* h1~p{
-    color: green;
+    color: red;
 } */
