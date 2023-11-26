@@ -1,0 +1,154 @@
+/* UNORDERED LIST */
+/* ul{
+    list-style-type: square;
+} */
+
+/* ORDERED LIST */
+/* ol{
+    list-style-type: upper-roman;
+} */
+
+/* IMAGES FOR BULLETS */
+/* ul{
+    list-style-image: url('./images/arrow-icon.png');
+}
+
+li {
+    margin: 10px 0px 0px 0px;
+} */
+
+/* LIST STYLE POSITION */
+/* .illuminations{
+    list-style-position: outside;
+}
+
+.season{
+    list-style-position: inside;
+} */
+
+/* LIST SHORTHAND */
+/* ul{
+    list-style: inside square;
+} */
+
+/* TABLE PROPERTIES */
+/* table{
+    width: 600px;
+    padding: 20px;
+    text-transform: capitalize;
+    border-top: 1px solid red;
+    border-bottom: 1px solid green;
+} */
+
+/* table, td, th{
+    border: 1px solid red;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table{
+    background-color: aqua;
+}
+
+tr:hover{
+    background-color: wheat;
+    cursor: pointer;
+}
+
+td{
+    padding: 10px;
+}
+
+th{
+    background-color: black;
+    color: white;
+}
+
+.even{
+    background-color: black;
+    color: white;
+} */
+
+/* EMPTY CELLS */
+/* td {
+    border: 1px solid #0088dd;
+    padding: 15px;
+}
+
+table {
+    empty-cells: show;
+} */
+
+/* GAPS BETWEEN CELLS */
+/* td {
+    background-color: #0088dd;
+    padding: 15px;
+    border: 2px solid #000000;
+}
+
+table {
+    border-collapse: separate;
+} */
+
+/* STYLING FORMS */
+#github{
+    margin-top: 5px;
+}
+
+/* input{
+    font-size: xx-large;
+    color: red;
+    background-color: black;
+    color: white;
+} */
+
+/* input{
+    border: 5px solid red;
+    border-radius: 10px;
+} */
+
+/* input:hover{
+    background-color: lightblue;
+}
+
+input:focus{
+    border: 5px solid red;
+    outline: none;
+} */
+
+/* #email{
+    background-image: url('./images/email-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+#github{
+    background-image: url('./images/github-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+} */
+
+/* STYLING FIELDSET AND LEGEND */
+/* fieldset {
+    width: 350px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right;
+}
+
+legend {
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase;
+} */
+
+/* CURSOR STYLES */
+#submit-btn:hover{
+    cursor: help;
+}
