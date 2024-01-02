@@ -1,0 +1,7 @@
+To install, choose "Load Actions..." from the menu in the Actions pallette.
+
+You will now be able to create templates on the fly, by using the Actions panel.
+
+For more info, see this GitHub thread:
+
+https://github.com/nathansmith/960-Grid-System/issues/26

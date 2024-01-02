@@ -1,0 +1,124 @@
+/* SIMPLE EXAMPLE */
+
+/* body {
+    background-color: pink;
+}
+
+agr width 480px ho ya is se zyada ho
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: lightgreen;
+    }
+} */
+
+/* FLOATING MENU */
+/* .wrapper {
+    overflow: auto;
+}
+
+#main {
+    margin-left: 4px;
+}
+
+#leftsidebar {
+    float: none;
+    width: auto;
+}
+
+#menulist {
+    margin: 0;
+    padding: 0;
+}
+
+.menuitem {
+    background: #CDF0F6;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    list-style-type: none;
+    margin: 4px;
+    padding: 2px;
+}
+
+@media (min-width: 1000px) {
+    #leftsidebar {
+        width: 200px;
+        float: left;
+    }
+
+    #main {
+        margin-left: 216px;
+    }
+} */
+
+/* RESPONSIVE NAVIGATION MENU */
+/*  *{
+    box-sizing: border-box;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+} */
+
+/* RESPONSIVE 4 COLUMN LAYOUT */
+/* * {
+    box-sizing: border-box;
+}
+
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+} */
+
+/* ORIENTATION */
+/* body{
+    background-color: lightgreen;
+}
+
+@media(orientation: landscape){
+    body{
+        background-color: lightblue;
+    }
+} */

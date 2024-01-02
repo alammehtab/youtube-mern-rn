@@ -1,3 +1,0 @@
-portfolio website deployment assignment
-
-a brief recap of css intro and selectors

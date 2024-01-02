@@ -1,8 +1,0 @@
-lists and its types
-    ordered
-    unordered
-    definition
-
-linkedIn SignUp
-
-gitHub SignUp, create repo, push local code.

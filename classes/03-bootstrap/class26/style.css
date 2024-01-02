@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;
+}
+
+.col{
+    background-color: blueviolet;
+    margin: 2px;
+}

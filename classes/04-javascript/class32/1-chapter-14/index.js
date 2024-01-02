@@ -1,0 +1,30 @@
+// CHAPTER-14: IF STATEMENTS NESTED
+
+// User Authentication
+// const username = prompt("Please enter your username");
+// let password = "";
+
+// if (username === "admin") {
+//   password = prompt("Please enter your password");
+//   if (password === "secret") {
+//     document.write("Login successful. Welcome, Admin!");
+//   } else {
+//     document.write("Incorrect password. Please try again.");
+//   }
+// } else {
+//   document.write("User not found. Please check your username.");
+// }
+
+// Ticket Pricing
+const age = +prompt("Please enter your age");
+const isStudent = +prompt(`Are you a student\n0.No\n1.Yes`);
+
+if (age < 12) {
+  document.write("Child Ticket: $5");
+} else {
+  if (age >= 12 && age < 18 && isStudent) {
+    document.write("Student Ticket: $10");
+  } else {
+    document.write("Adult Ticket: $15");
+  }
+}

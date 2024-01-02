@@ -1,0 +1,3 @@
+built discussed and practiced portfolio website
+introduction to css
+css selectors
