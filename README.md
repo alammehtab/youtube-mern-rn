@@ -6,4 +6,4 @@ In this course, we are covering MERN Stack for full-stack web development and Re
 
 We've started with an introduction to HTML, CSS, and JavaScript and are moving down the path.
 
-##Make sure you leave a star on this repository so that you can easily find it later.
+Make sure you leave a star on this repository so that you can easily find it later.
