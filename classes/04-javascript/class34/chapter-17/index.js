@@ -25,7 +25,7 @@
 // console.log({ animals, shiftedAnimal });
 
 // splice, add-replace-remove
-const animals = ["🐶", "😸", "🐘", "🐄"];
+// const animals = ["🐶", "😸", "🐘", "🐄"];
 
 // add 2 animals at index 2 without removing any animal (apni example)
 // animals.splice(2, 0, "🐴", "🐪");
@@ -53,6 +53,10 @@ const animals = ["🐶", "😸", "🐘", "🐄"];
 // or phr kon konse elements add karne hn
 // pets.splice(2, 2, "pig", "duck", "emu");
 // console.log({ pets });
+
+// negative indexing in splice and slice
+// const fruits = ["mango", "banana", "orange"];
+// console.log(fruits.slice(-3, -1));
 
 // pop vs splice, return type
 // const pets = ["dog", "cat", "fly", "bug", "ox"];
@@ -83,6 +87,15 @@ const animals = ["🐶", "😸", "🐘", "🐄"];
 
 // console.log({ pets, slicedArray });
 // console.log({ pets, splicedArray });
+
+// splice: changing the original
+// slice: not changing the original
+// const animals = ["🐶", "😸", "🐘", "🐄"];
+// const spliced = animals.splice(2);
+// const sliced = animals.slice(2);
+
+// console.log({ animals, spliced });
+// console.log({ animals, sliced });
 
 // pass by value and pass by ref
 // const fruits = ["mango", "banana", "orange"];
