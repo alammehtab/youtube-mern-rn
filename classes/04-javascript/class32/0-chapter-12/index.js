@@ -45,13 +45,13 @@
 // console.log(badal)
 
 // PROGRAM: EVEN/ODD
-const userName = prompt("Please apna name to bataiyega");
-const userInput = +prompt("Please 1 number dijyega: ");
+// const userName = prompt("Please apna name to bataiyega");
+// const userInput = +prompt("Please 1 number dijyega: ");
 
-const remainder = userInput % 2;
+// const remainder = userInput % 2;
 
-if (remainder === 0) {
-  alert(userName + " Bhai ap ne EVEN number enter kia.");
-} else {
-  alert(userName + " Bhai ap ne ODD number enter kia.");
-}
+// if (remainder === 0) {
+//   alert(userName + " Bhai ap ne EVEN number enter kia.");
+// } else {
+//   alert(userName + " Bhai ap ne ODD number enter kia.");
+// }

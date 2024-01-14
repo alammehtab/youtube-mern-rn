@@ -1,5 +1,12 @@
 // CHAPTER-14: IF STATEMENTS NESTED
 
+// what is a nested if
+// if (10 > 8) {
+//   if (8 > 5) {
+//     console.log("yes 8 > 5");
+//   }
+// }
+
 // User Authentication
 // const username = prompt("Please enter your username");
 // let password = "";
