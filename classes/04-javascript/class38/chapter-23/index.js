@@ -25,6 +25,10 @@
 // apko -1 deta ha agr string mojud na ho
 // console.log(email.indexOf("r"));
 
+// we can use simple arrays as well
+// const mohalla = ["ali", "ahmad", "akram", "aslam", "ajmal"];
+// console.log(mohalla.indexOf("aslam"));
+
 // lastIndexOf
 
 // const email = "qazisahb@gmail.com";
