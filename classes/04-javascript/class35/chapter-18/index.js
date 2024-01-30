@@ -23,21 +23,35 @@
 //  code block to be executed
 // }
 
-// Expression 1 is executed (one time) before the execution of the code block.
-// Expression 2 defines the condition for executing the code block.
-// Expression 3 is executed (every time) after the code block has been executed.
+// Expression 1,
+// 1. declare and variable and assign it a value
+// 2. it is executed (one time) before the execution of the code block.
+
+// Expression 2
+// 1. we check the condition
+// 2. defines the condition for executing the code block.
+
+// Expression 3
+// 1. increment/ decrement
+// 2. it is executed (every time) after the code block has been executed except the first time.
+
+// understanding for loop with a very simple example
+// print numbers 1 to 10
+// for (let number = 1; number <= 10; number++) {
+//   console.log(number);
+// }
 
 // verification of cleanest city using loops
-const cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
-const cityToCheck = prompt("Please enter your city name: ");
+// const cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
+// const cityToCheck = prompt("Please enter your city name: ");
 
-for (let cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
-  if (cityToCheck === cleanestCities[cityIndex]) {
-    alert("It's one of the cleanest cities");
-  }
-}
+// for (let cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
+//   if (cityToCheck === cleanestCities[cityIndex]) {
+//     alert("It's one of the cleanest cities");
+//   }
+// }
 
-// totalIterations: 5 (0,1,2,3,4)
+// totalIterations: 6 (0,1,2,3,4,5)
 // cityToCheck  = "Karachi"
 
 // iteration0:
@@ -64,3 +78,8 @@ for (let cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
 // cityIndex: 4
 // cityIndex < cleanestCities.length -> 4 < 5 (true)
 // cityToCheck === cleanestCities[cityIndex]-> "Karachi" === cleanestCities[4] -> "Karachi" === "Multan" -> FALSE
+
+// iteration5:
+// cityIndex: 5
+// cityIndex < cleanestCities.length -> 5 < 5 (false)
+// loop will be terminated because the condition is false
