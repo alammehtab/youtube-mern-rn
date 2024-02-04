@@ -1,41 +1,14 @@
-// flag and loopus intr recap
-// let isFound = false;
-// let desiredNumber = 9;
-
-// for (let count = 1; count <= 12; count++) {
-//   console.log({ count });
-//   if (count === desiredNumber) {
-//     isFound = true;
-//     break;
-//   }
-// }
-
-// if (isFound) {
-//   console.log("we found the number");
-// } else {
-//   console.log("number not found");
-// }
-
-// Lecture Notes: Nested For Loops
+// CHAPTER-20: FOR LOOPS NESTED
 
 // ============================
-// Lecture Overview
-// ============================
-/*
-In this lecture, we'll dive into the concept of nested for loops in JavaScript. 
-Nested loops are loops within loops, providing a powerful tool for iterating through multi-dimensional 
-arrays and solving complex problems.
-
-We'll explore practical examples to understand how to structure and use nested for loops effectively.
-*/
-
-// ============================
-// Exercise 1: Simple Nested Loop
+// Exercise 0: Simple Nested Loop
 // ============================
 // kitni dfa loop chal rha
 // let count = 0;
 
+// // outer loop
 // for (let i = 1; i <= 3; i++) {
+//   // inner loop
 //   for (let j = 1; j <= 3; j++) {
 //     console.log(`i: ${i}, j: ${j}`);
 //     count++;
@@ -43,15 +16,17 @@ We'll explore practical examples to understand how to structure and use nested f
 // }
 // console.log({ count });
 
+// ===========================
 // formatted strings
+// ===========================
 // const firstNumber = 5;
 // const secondNumber = 10;
 // const sum = firstNumber + secondNumber;
 
-// console.log(`the sum of ${firstNumber} and ${secondNumber} is: ${sum}`);
+// console.log(`The sum of ${firstNumber} and ${secondNumber} is: ${sum}`);
 
 // ============================
-// Exercise 1.1: Multiplication Table (5x5)
+// Exercise 1: Multiplication Table (5x5)
 // ============================
 // for (let i = 1; i <= 5; i++) {
 //   for (let j = 1; j <= 5; j++) {
@@ -60,52 +35,37 @@ We'll explore practical examples to understand how to structure and use nested f
 // }
 
 // ============================
-// Exercise 1.1.1: Multiplication Table (Single number)
+// Exercise 2: Multiplication Table (Single number) will cover formatted strings
 // ============================
+// const userInput = +prompt("Please enter a number");
 
-// student's task
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`${userInput} * ${i} = ${userInput * i}`);
+// }
 
 // ============================
-// Exercise 1.2: Repeating Characters
+// Exercise 3: Repeating Characters
 // ============================
 
 // let characters = "ABC";
 
 // for (let i = 0; i < 3; i++) {
 //   for (let j = 0; j < characters.length; j++) {
-//     console.log(characters[i]);
+//     console.log(characters[j]);
 //   }
 // }
 
 // ============================
-// Exercise 2.1: Pyramid Pattern
-// ============================
-// let pyramidSize = 3;
-
-// for (let i = 1; i <= pyramidSize; i++) {
-//   let row = "";
-//   for (let j = 1; j <= pyramidSize - i; j++) {
-//     row += " ";
-//   }
-//   for (let k = 1; k <= 2 * i - 1; k++) {
-//     row += "*";
-//   }
-//   console.log(row);
-// }
-
-// ============================
-// Exercise 2.2: Reverse Pyramid Pattern
+// Exercise 4: Triangle Pattern with *s
 // ============================
 
-// let reversedPyramidSize = 5;
+const rows = 5;
 
-// for (let i = reversedPyramidSize; i >= 1; i--) {
-//   let row = "";
-//   for (let j = 1; j <= reversedPyramidSize - i; j++) {
-//     row += " ";
-//   }
-//   for (let k = 1; k <= 2 * i - 1; k++) {
-//     row += "*";
-//   }
-//   console.log(row);
-// }
+for (let i = 1; i <= rows; i++) {
+  // for lines/rows
+  let stars = "";
+  for (let j = 1; j <= i; j++) {
+    stars += "*";
+  }
+  console.log(stars);
+}
