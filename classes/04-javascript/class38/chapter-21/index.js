@@ -5,14 +5,43 @@
 // uppercase:
 // HELLO WORLD
 
+// toLowerCase()
 // const city = "peshawar";
+// console.log(city);
+
+// using second variable
+// let city = "PESHAWAR";
+// const smallCity = city.toLowerCase();
+// console.log(city);
+// console.log(smallCity);
+
+// without using second variable
+// console.log(city.toLowerCase());
+// city = city.toLowerCase();
+// console.log(city);
+
+// zaroori nhi ha k all uppercase ho, mix b hosakte hn
+// const city = "KaRachi";
+// console.log(city.toLowerCase());
+
+// toUpperCase()
+// let city = "karachi";
+
+// using second variable
+// const capitalizedCity = city.toUpperCase();
+// console.log(city);
+// console.log(capitalizedCity);
+
+// without using second variable
+// console.log(city.toUpperCase());
+// city = city.toUpperCase();
+// console.log(city);
+
+// zaroori nhi ha k all lowercase ho, mix b hosakte hn
 // const city = "peShaWar";
 // console.log(city.toUpperCase());
 
-// const city = "PESHAWAR";
-// const city = "PeshaWar";
-// console.log(city.toLowerCase());
-
+// REAL WORLD EXAMPLE
 // latptop scheme
 const eligibleUniversities = [
   "sarhad",
