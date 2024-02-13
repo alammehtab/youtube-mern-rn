@@ -1,4 +1,39 @@
-// email validation (without using)
+// Chapter-23: Strings:Finding segments
+
+// methods we're gonna discuss
+// indexOf
+// const book = "Think and Grow Rich";
+// const indexOfK = book.indexOf("k");
+// console.log(indexOfK);
+
+// ALWAYS RETURNS THE INDEX OF VERY FIRST MATCH
+// const greetings = "hello";
+// console.log(greetings.indexOf("l"));
+
+// CAN PASS STRING AS WELL
+// const book = "Think and Grow Rich";
+// console.log(book.indexOf("and Grow"));
+
+// APKO WO INDEX DETA HA JISPE MATCH MILE
+// const email = "test@test.com";
+// console.log(email.indexOf("r"));
+// console.log(email.indexOf("@gmail.com"));
+
+// APKO -1 DETA HA AGAR MATCH NA MILE
+// console.log(email.indexOf("r"));
+
+// WE CAN USE SIMPLE ARRAYS AS WELL
+// const mohalla = ["ali", "ahmad", "akram", "aslam", "ajmal", "aslam"];
+// console.log(mohalla.indexOf("aslam"));
+// console.log(mohalla.lastIndexOf("aslam"));
+
+// lastIndexOf
+
+// as the name suggests, it always returns the index of last match
+// const greetings = "hello";
+// console.log(greetings.lastIndexOf("l"));
+
+// EMAIL VALIDATION WITHOUT USING INDEXOF
 // const userEmail = prompt("Please enter your email address");
 // let isValid = false;
 
@@ -15,30 +50,12 @@
 //   console.log("Invalid email address");
 // }
 
-// indexOf
-// const email = "qazisahb@gmail.com";
+// EMAIL VALIDATION USING INDEXOF
+// const email = prompt("Please enter your email");
+// const isValid = email.indexOf("@");
 
-// apko index deta ha jispe string mojood ha
-// console.log(email.indexOf("@"));
-// console.log(email.indexOf("@gmail.com"));
-
-// apko -1 deta ha agr string mojud na ho
-// console.log(email.indexOf("r"));
-
-// we can use simple arrays as well
-// const mohalla = ["ali", "ahmad", "akram", "aslam", "ajmal"];
-// console.log(mohalla.indexOf("aslam"));
-
-// lastIndexOf
-
-// const email = "qazisahb@gmail.com";
-// console.log(email.lastIndexOf("a"));
-
-// email validation using indexOf
-// const email = prompt("Please enter your email address");
-
-// if (email.indexOf("@") !== -1) {
-//   console.log("Valid email address");
+// if (isValid === -1) {
+//   console.log("Invalid email");
 // } else {
-//   console.log("Invalid email address");
+//   console.log("Valid email");
 // }
