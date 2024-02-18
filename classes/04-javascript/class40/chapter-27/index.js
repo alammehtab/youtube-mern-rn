@@ -1,11 +1,14 @@
 // CHAPTER-27: Generating random numbers
+
+// Math module
+
 // const randomNumber = Math.random();
 // console.log(randomNumber);
 
 // converting random number to integer
-// let randomNumber = Math.random();
-// randomNumber = randomNumber * 100000000000000000;
-// console.log(randomNumber);
+let randomNumber = Math.random();
+const intergerNumber = randomNumber * 100000000000000000;
+console.log(intergerNumber);
 
 // generating random number from 0 to 6
 // let randomNumber = Math.random();
@@ -25,12 +28,12 @@
 // console.log({ bigDecimal, improvedNum, numberOnDice });
 
 // guessing number game
-const randomNumber = Math.ceil(Math.random() * 3);
-const userGuess = +prompt("Guess the number between 1 and 3");
-console.log(randomNumber);
+// const randomNumber = Math.ceil(Math.random() * 3);
+// const userGuess = +prompt("Guess the number between 1 and 3");
+// console.log(randomNumber);
 
-if (randomNumber === userGuess) {
-  alert("you got it right");
-} else {
-  alert("Try again");
-}
+// if (randomNumber === userGuess) {
+//   alert("you got it right");
+// } else {
+//   alert("Try again");
+// }
