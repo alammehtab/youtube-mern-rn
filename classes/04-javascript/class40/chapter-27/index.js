@@ -6,9 +6,9 @@
 // console.log(randomNumber);
 
 // converting random number to integer
-let randomNumber = Math.random();
-const intergerNumber = randomNumber * 100000000000000000;
-console.log(intergerNumber);
+// let randomNumber = Math.random();
+// const intergerNumber = randomNumber * 100000000000000000;
+// console.log(intergerNumber);
 
 // generating random number from 0 to 6
 // let randomNumber = Math.random();
@@ -21,11 +21,11 @@ console.log(intergerNumber);
 // console.log(Math.floor(randomNumber));
 
 // ludo dice example
-// let bigDecimal = Math.random();
-// let improvedNum = bigDecimal * 6 + 1;
-// let numberOnDice = Math.floor(improvedNum);
+let bigDecimal = Math.random();
+let improvedNum = bigDecimal * 6 + 1;
+let numberOnDice = Math.floor(improvedNum);
 
-// console.log({ bigDecimal, improvedNum, numberOnDice });
+console.log({ bigDecimal, improvedNum, numberOnDice });
 
 // guessing number game
 // const randomNumber = Math.ceil(Math.random() * 3);
