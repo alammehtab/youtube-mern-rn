@@ -12,6 +12,8 @@ go to addressbar, type cmd and hit enter.
 
 git clone repositoryURL
 
+go to cloned repository
+
 git status
 
 git add .
