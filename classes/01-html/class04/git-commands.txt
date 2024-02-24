@@ -14,6 +14,8 @@ git clone repositoryURL
 
 go to cloned repository
 
+add something to it
+
 git status
 
 git add .
