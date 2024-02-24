@@ -14,7 +14,7 @@ git clone repositoryURL
 
 go to cloned repository
 
-add something to it
+add something to it (naya ya purana kaam)
 
 git status
 
