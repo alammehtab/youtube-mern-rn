@@ -10,7 +10,7 @@
 //   console.log("Grade-B+");
 // }
 
-// const percentage = 800;
+// const percentage = 80;
 
 // switch (true) {
 //   case percentage >= 95 && percentage <= 100:

@@ -1,10 +1,14 @@
-let count = 1;
+// let count = 1;
 
-while (count <= 5) {
-  if (count == 2) {
-    continue;
-  }
-  console.log(count);
+// while (count <= 10) {
+//   console.log(count);
+//   count++;
+// }
 
-  count++;
-}
+// reverse
+// let count = 10;
+
+// while (count >= 1) {
+//   count--;
+//   console.log(count);
+// }
