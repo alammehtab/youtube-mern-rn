@@ -1,3 +1,7 @@
+what is web browser?
+
+what is IDE?
+
 install vs code
 
 hello world in html

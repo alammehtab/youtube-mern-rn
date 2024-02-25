@@ -1,13 +1,3 @@
 class01 recap
 
-styles https://www.w3schools.com/html/html_styles.asp
-
-formatting https://www.w3schools.com/html/html_formatting.asp
-
-quotations https://www.w3schools.com/html/html_quotation_elements.asp
-
-comments https://www.w3schools.com/html/html_comments.asp
-
-colors https://www.w3schools.com/html/html_colors.asp
-
-css https://www.w3schools.com/html/html_css.asp
+chapter1 structure
