@@ -1,7 +1,15 @@
-what is web browser?
+TUTORIAL:
+https://www.youtube.com/watch?v=gu66WlyH7wQ&list=PLg9mj9NR7Z6a6py4Cps_odGcrwhP3O7D7&index=2
 
-what is IDE?
 
-install vs code
+website vs webpage
 
-hello world in html
+what is html and its role in web dev?
+
+what is css and its role in web dev?
+
+what is javascript and its role in web dev?
+
+real world examples:
+car
+human body

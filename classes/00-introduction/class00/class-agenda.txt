@@ -1,12 +1,5 @@
-Students Introduction
+MY INTRODUCTION
 
-Course Introduction, scope, and jobs
+STUDENTS INTRODUCTION
 
-what is web development?
-
-website vs webpage
-
-Components of a webpage
-    HTML
-    CSS
-    JavaScript
+COURSE INTRODUCTION, SCOPE, AND JOBS

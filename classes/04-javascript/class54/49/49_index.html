@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49-READING FIELD VALUES</title>
+</head>
+<body>
+    <h1>LOGIN FORM</h1>
+    <!-- <form onSubmit="validateEmail()">
+        Email: <input type="email" id="email">
+        Password: <input type="password" id="pass">
+        <input type="submit">
+    </form> -->
+
+    <!-- using dynamic id -->
+    <form onSubmit="validateEmail('email')">
+        Email: <input type="email" id="email">
+        <input type="submit">
+    </form>
+
+    <script>
+        const userEmail = 'test@test.com'
+        const userPassword = 'raaz'
+        // function validateEmail(){
+        //     const email = document.getElementById('email').value
+        //     const password = document.getElementById('pass').value
+
+        //     if(email === userEmail && password === userPassword){
+        //         alert('home screen')
+        //     }else{
+        //         alert("Invalid credentials")
+        //     }
+        // }
+
+        // using dynamic id
+        function validateEmail(id){
+            const email = document.getElementById(id).value
+            alert(email)
+        }
+    </script>
+</body>
+</html>

@@ -1,40 +1,55 @@
 // CHAPTER-30: Controlling the length of decimals
 
-// sales tax example
+// METHOD WE'RE LOOKING AT
+// toFixed(lengthOfDecimals)
+
+// GENERAL EXAMPLES
+// const testNumber = 45.1284;
+// console.log(testNumber.toFixed());
+
+// SALES TAX EXAMPLE
 // const itemPrice = 1750.765;
-// const salesTaxPercent = 0.02; //2%
-// const salesTaxAmount = itemPrice * salesTaxPercent;
+// const salesTax = 0.02;
+// const salesTaxAmount = itemPrice * salesTax;
 // console.log({ salesTaxAmount });
 
 // let totalPrice = itemPrice + salesTaxAmount;
-// totalPrice = totalPrice.toFixed(0);
+// console.log(totalPrice);
+
+// limiting the length of decimals
+// console.log(totalPrice);
+// totalPrice = totalPrice.toFixed(2);
+// console.log(totalPrice);
 // console.log({ itemPrice, salesTaxAmount, totalPrice });
 
-// inter marks percentage
+// SCHOOL MARKS PERCENTAGE EXAMPLE
 // const totalMarks = 1100;
-// const obtainedMarks = 653;
+// const obtainedMarks = 953;
 
-// const percentage = ((obtainedMarks / totalMarks) * 100).toFixed();
+// before limiting the length
+// const percentage = (obtainedMarks / totalMarks) * 100;
 // console.log(percentage);
 
-// problem
-// console.log(1.555.toFixed(2))
+// after limiting the length
+// const percentage = ((obtainedMarks / totalMarks) * 100).toFixed(2);
+// console.log(percentage);
+
+// PROBLEM
+// console.log((1.555).toFixed(2));
 
 // fixing the above problem (jugaar)
-// let num = 1.555;
+let num = 1.555;
 
-// let str = num.toString();
+let str = num.toString();
+// console.log(str);
 
-// if (str.charAt(str.length - 1) === "5") {
-//   str = str.slice(0, str.length - 1) + "6";
-// }
+// console.log(str.charAt(str.length - 1));
 
-// console.log({ str });
-// num = Number(str);
-// num = num.toFixed(2);
-// console.log({ num });
+if (str.charAt(str.length - 1) === "5") {
+  str = str.slice(0, str.length - 1) + "6";
+}
 
-// mini imtihan
-// console.log("################", str.length - 1);
-// console.log(">>>>>>>", str.charAt(str.length - 1));
-// console.log(">>>>>>>>", str.slice(0, str.length - 1));
+// console.log(str);
+num = Number(str);
+num = num.toFixed(2);
+console.log(num);

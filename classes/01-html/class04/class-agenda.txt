@@ -1,8 +1,18 @@
-lists and its types
-    ordered
-    unordered
-    definition
+TUTORIALS:
 
-linkedIn SignUp
 
-gitHub SignUp, create repo, push local code.
+CLASS-03 RECAP
+
+CHAPTER02: TEXT (REMAINING TOPICS)
+
+line breaks and horizontal rules
+visual editors and their code views
+semantic markup
+strong and emphasis
+quotations
+abbreviations and acronyms
+citations and definitions
+author details
+changes to content
+chapter summary
+ 

@@ -1,24 +1,40 @@
-// Chapter-32: Extracting parts of the date and time
+// Chapter-32: EXTRACTING PARTS OF THE DATE AND TIME
 
-// last class
-// const now = new Date();
+// LAST CLASS
+const now = new Date();
 // console.log(now);
 
-// GETDAY
-// day
+// get day
 // console.log(now.getDay());
 
 // day name
-// const daysNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+// const daysNames = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ];
 // console.log(daysNames[now.getDay()]);
 
-// GETMONTH
-// const now = new Date();
-// const month = now.getMonth();
-// console.log({ month });
+// getFullYear
+// console.log(now.getFullYear());
 
-// month name
-// const now = new Date();
+// getHour
+// console.log(now.getHours());
+
+// getMinutes
+// console.log(now.getMinutes());
+
+// getDate
+// const aajKiTareekh = now.getDate();
+// console.log({ aajKiTareekh });
+
+// NEW STUFF
+
+// GETTING MONTH NAME
 // const monthsNames = [
 //   "January",
 //   "February",
@@ -33,37 +49,30 @@
 //   "November",
 //   "December",
 // ];
-// const month = now.getMonth();
-// console.log(monthsNames[month]);
 
-// getDate
-// const now = new Date();
-// const aajKiTareekh = now.getDate();
-// console.log({ aajKiTareekh });
+// getting current month number
+// const currentMonthNumber = now.getMonth();
+// console.log(currentMonthNumber);
 
-// getFullYear
-// console.log(new Date().getFullYear());
+// printing month name
+// console.log(monthsNames[currentMonthNumber]);
 
-// getHour
-// console.log(new Date().getHours());
+// PRINTING HOURS AND MINUTES IN FORMATTED STRING
 
-// getMinutes
-// console.log(new Date().getMinutes());
+// using variables
+// const hours = now.getHours();
+// const minutes = now.getMinutes();
+// console.log({ hours, minutes });
+// console.log(`${hours}:${minutes}`);
 
-// printing hours and minutes
-// console.log(
-//   `${new Date().getHours()}:${new Date().getMinutes()}: ${new Date().getSeconds()}`
-// );
+// without using variables
+// console.log(`${now.getHours()}: ${now.getMinutes()}: ${now.getSeconds()}`);
 
-// am pm
-// const hours = new Date().getHours();
-// if (hours > 11) {
-//   console.log("pm");
-// } else {
-//   console.log("am");
-// }
-// console.log(hours);
+// DECIDING AM AND PM, HOURS > 11 PM ELSE AM
+const hours = now.getHours();
 
-// getMilliseconds
-
-// getTime
+if (hours > 11) {
+  console.log(`${hours} PM`);
+} else {
+  console.log(`${hours} AM`);
+}

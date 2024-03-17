@@ -1,24 +1,27 @@
 // Chapter-29: Converting strings to numbers, numbers to strings
 
-// string
-// number -> float, int
-// boolean
-// notDefined
-// undefined
-// null
-// symbol
+// CONVERTING STRING TO NUMBER
+// number with string type
+// let numString = "25";
 
-// string to number using Number()
-// const integerString = "24";
-// const num = Number(integerString);
-// console.log(typeof integerString);
+// checking type using typeof operator
+// console.log(typeof numString);
 
-// example
-// const n = "2";
-// console.log(typeof Number(n));
+// converting string to number
+// let convertedNumber = Number(numString);
 
-// number to string
-const number = 34;
-// console.log(typeof number);
-const convertedNumber = number.toString();
-console.log(typeof convertedNumber);
+// checking type using typeof operator
+// console.log(typeof convertedNumber);
+
+// CONVERTING NUMBER TO STRING
+
+let hamaraNumber = 35;
+
+// checking type using typeof opertor
+// console.log(typeof hamaraNumber);
+
+// converting number to string
+let convertedString = hamaraNumber.toString();
+
+// cheking type using typeof operator
+console.log(typeof convertedString);

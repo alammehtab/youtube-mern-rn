@@ -1,3 +1,13 @@
-class01 recap
+TUTORIALS:
+https://www.youtube.com/watch?v=s6AW0pPsC2c&list=PLg9mj9NR7Z6a6py4Cps_odGcrwhP3O7D7&index=3
 
-chapter1 structure
+https://www.youtube.com/watch?v=ZI9Kxbvof14&list=PLg9mj9NR7Z6a6py4Cps_odGcrwhP3O7D7&index=4
+
+what is web browser?
+what is an IDE?
+environment setup
+vs code tour
+hello world in html
+
+CHAPTER-1: STRUCTURE (complete)
+

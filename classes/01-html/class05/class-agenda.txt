@@ -1,1 +1,10 @@
-git and github complete flow
+TUTORIALS:
+
+CLASS-04 RECAP
+
+CHAPTER-03: LISTS
+ordered lists
+unordered lists
+definition lists
+nested lists
+chapter summary

@@ -1,7 +1,25 @@
-// Chapter-34: Changing elements of a date and time
+// Chapter-34: CHANGING ELEMENTS OF A DATE AND TIME
 
-// apni marzi ki date set kare
+// OLD STUFF
 // const now = new Date();
-// console.log(now.getFullYear());
-// now.setFullYear("2025");
-// console.log(now.getFullYear());
+// console.log(now.getDay());
+
+// SET FULL YEAR
+const now = new Date();
+// console.log({ now });
+// console.log("before setting: ", now.getFullYear());
+
+// now.setFullYear("2035");
+// console.log({ now });
+// console.log("after setting: ", now.getFullYear());
+
+// SET HOURS
+
+// before setting
+console.log("before setting hours: ", now.getHours());
+
+// setting
+now.setHours(22);
+
+// after setting
+console.log("after setting hours: ", now.getHours());

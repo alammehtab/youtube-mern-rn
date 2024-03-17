@@ -1,3 +1,11 @@
-class02 recap and practice
+CLASS02 RECAP AND PRACTICE
 
-chapter2: text
+CHPATER-2: TEXT
+
+headings
+paragraphs
+bold
+italic
+superscript
+subscript
+whitespace

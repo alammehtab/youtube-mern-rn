@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fields</title>
+    <script>
+        function turnToRed(){
+            alert('turned to red')
+        }
+
+        function revertToWhite(){
+            this.style.backgroundColor = 'white'
+        }
+    </script>
+</head>
+<body>
+    <!-- doing manually -->
+    <!-- Email: <input type="email" onFocus="this.style.backgroundColor='red'" onBlur="this.style.backgroundColor='white'">
+    Password: <input type="password" onFocus="this.style.backgroundColor='red'"> -->
+
+    <input type="text" onFocus="turnToRed()">
+</body>
+</html>
