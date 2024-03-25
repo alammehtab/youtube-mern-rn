@@ -2,7 +2,7 @@
 
 // WHAT IS A FUNCTION?
 // A function is a block of JavaScript that robotically does the same thing again and again,
-// whenever you invoke its name.
+// whenever you invoke/call its name.
 
 // WHY FUNCTIONS?
 // It saves you repetitive coding and makes your code easier to understand.
@@ -30,3 +30,18 @@
 // tellTime();
 
 // CREATE OUR OWN FUNCTION
+
+// function declaration
+// function sayHello() {
+//   alert("Hello");
+// }
+
+// function call
+// sayHello();
+
+// function with requirements
+function greetUser(userName) {
+  alert("Hello " + userName);
+}
+
+greetUser("Bilal");
