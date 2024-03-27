@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-48</title>
+</head>
+<body>
+    <p>Chapter-48: Events: fields</p>
+    <!-- doing manually -->
+    <!-- Email: <input type="email" onFocus="this.style.backgroundColor='red'" onBlur="this.style.backgroundColor='white'">
+        Password: <input type="password" onFocus="this.style.backgroundColor='red'"> -->
+
+    <input type="text" onFocus="turnToRed()">
+
+    <!-- javascript -->
+    <script>
+        function turnToRed(){
+            alert('turned to red')
+        }
+
+        function revertToWhite(){
+            this.style.backgroundColor = 'white'
+        }
+    </script>
+</body>
+</html>
