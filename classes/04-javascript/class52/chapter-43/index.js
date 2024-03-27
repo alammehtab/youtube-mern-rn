@@ -1,3 +1,5 @@
+// Chapter-43: Placing Scripts
+
 function sayHi() {
   console.log("Hi from sayHi");
 }
