@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-84</title>
+</head>
+<body>
+    <p>Chapter-84: Form validation: radio-buttons</p>
+
+    <form onSubmit="return validateRadios();">
+        <input type="radio" name="r1" value="cat"> Cat<br>
+        <input type="radio" name="r1" value="bat"> Bat<br>
+        <input type="radio" name="r1" value="hat"> Hat<br>
+        <input type="submit" value="Submit Form">
+    </form>
+
+    <script>
+       function validateRadios() {
+            let radios = document.getElementsByName("r1");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    return true;
+                }
+            }
+            alert("Please check one.");
+            return false;
+        }
+    </script>
+</body>
+</html>

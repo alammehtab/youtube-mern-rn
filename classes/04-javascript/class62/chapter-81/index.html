@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-81</title>
+</head>
+<body>
+    <p>Chapter-81: Browser control:
+    Testing for popup blockers</p>
+
+    <script>
+        function checkForPopBlocker() {
+            var testPop = window.open("", "", "width=100,height=100");
+                if (testPop === null) {
+                    alert("Please disable your popup blocker.");
+                }
+                testPop.close();
+            }
+            checkForPopBlocker()
+    </script>
+</body>
+</html>

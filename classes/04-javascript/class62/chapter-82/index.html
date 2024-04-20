@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-82</title>
+</head>
+<body>
+    <p>Chapter-82: Form validation: text fields</p>
+    <form onSubmit="return checkForLastName();">
+        Please enter your last name.<br>
+        <input type="text" id="lastNameField">
+        <input type="submit" value="Submit Form">
+    </form>
+
+    <script>
+        function checkForLastName() {
+                if (document.getElementById("lastNameField").value.length === 0) {
+                alert("Please enter your last name");
+                    return false;
+                }
+                
+            }
+    </script>
+</body>
+</html>
