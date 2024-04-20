@@ -9,7 +9,7 @@ function checkPassword() {
     }
     let numberSomewhere = false;
     for (let i = 0; i < pass.length; i++) {
-      if (isNaN(pass(i, i + 1)) === false) {
+      if (isNaN(pass[(i, i + 1)]) === false) {
         numberSomewhere = true;
         break;
       }

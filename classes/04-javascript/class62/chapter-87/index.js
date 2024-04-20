@@ -10,8 +10,7 @@ function greetTheWorld() {
     let greeting = "Hello world!";
     aler(greeting);
   } catch (error) {
-    // alert(error);
-    alert("Sorry! It's not you.It's us!");
+    alert(error);
   }
 }
 greetTheWorld();

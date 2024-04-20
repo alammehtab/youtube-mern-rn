@@ -8,14 +8,14 @@
 <body>
     <p>Chapter-85: Form validation: ZIP codes</p>
 
-    <form onsubmit="validateZIP()">
+    <form onsubmit="return validateZIP()">
         <input type="text" placeholder="ZIP goes here..." id="zip"><br>
         <input type="submit" value="Submit Form">
     </form>
 
     <script>
        function validateZIP() {
-            var numChars = document.getElementById("zip").value.length;
+            let numChars = document.getElementById("zip").value.length;
             if (numChars < 5) {
                 alert("Please enter at least a 5-digit code.");
                 return false;

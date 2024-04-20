@@ -8,38 +8,38 @@
 <body>
     <p>Chapter-86: Form validation: email</p>
 
-    <form onsubmit="validateEmail()">
+    <form onsubmit="return validateEmail()">
         <input type="text" placeholder="Your email..." id="email"><br>
         <input type="submit" value="Validate Email">
     </form>
 
     <script>
-    //    function validateEmail() {
-    //         let eEntered = document.getElementById("email").value;
-    //         if (eEntered.indexOf(" ") !== -1) {
-    //             alert("No spaces allowed in email address");
-    //             return false
-    //         }
-    //     }
-
-    function validateEmail() {
-            let addressIsLegal = true;
+       function validateEmail() {
             let eEntered = document.getElementById("email").value;
             if (eEntered.indexOf(" ") !== -1) {
-                addressIsLegal = false;
-            }
-            if (eEntered.indexOf("@") < 1 || eEntered.indexOf("@") > eEntered.length - 5) {
-                addressIsLegal = false;
-            }
-            if (eEntered.indexOf(".") - eEntered.indexOf("@") < 2 ||
-                eEntered.indexOf(".") > eEntered.length - 3) {
-                addressIsLegal = false;
-            }
-            if (addressIsLegal === false) {
-                alert("Please correct email address");
-                return false;
+                alert("No spaces allowed in email address");
+                return false
             }
         }
+
+    // function validateEmail() {
+    //         let addressIsLegal = true;
+    //         let eEntered = document.getElementById("email").value;
+    //         if (eEntered.indexOf(" ") !== -1) {
+    //             addressIsLegal = false;
+    //         }
+    //         if (eEntered.indexOf("@") < 1 || eEntered.indexOf("@") > eEntered.length - 5) {
+    //             addressIsLegal = false;
+    //         }
+    //         if (eEntered.indexOf(".") - eEntered.indexOf("@") < 2 ||
+    //             eEntered.indexOf(".") > eEntered.length - 3) {
+    //             addressIsLegal = false;
+    //         }
+    //         if (addressIsLegal === false) {
+    //             alert("Please correct email address");
+    //             return false;
+    //         }
+    //     }
     </script>
 </body>
 </html>
