@@ -1,21 +1,35 @@
 // Chapter-41: while loops
 
-// EXAMPLE PROGRAM USING FOR LOOP
-for (let i = 0; i <= 3; i++) {
-  alert(i);
-}
+// DIFFERENCE BETWEEN A FOR LOOP AND WHILE LOOP
 
-// FOR LOOP EXPLAINATION
-// All the how-to-loop directions are packed into the space between the parentheses: where
-// to start the counter, how long to keep the loop going, and how to update the counter each time through.
+// For Loop: A for loop is an iteration method that is best used when you know the number of iterations ahead of time.It’s always followed by the initialization, expression and increment statements.
 
-// SAME PROGRAM USING WHILE LOOP
-let i = 0;
-while (i <= 3) {
-  alert(i);
-  i++;
-}
+// While Loop: A while loop is an iteration method that is best used when you don't know the number of iterations ahead of time. The contents of the loop are executed as long as the expression evaluates to true.
 
-// WHILE LOOP EXPLAINATION
-// A while loop does the same thing, but it's organized differently. Only the middle term,
-// how long to keep the loop going, is inside the parentheses. The counter is defined before the first line of the while block. The counter is updated within the code that executes when the loop runs.
+// EXAMPLE FOR LOOP
+
+// for (count = 1; count < 10; count++) {
+//     console.log(count);
+// }
+
+// NOTE: The increment does not have to be ++, but you’ll see that the most often.
+
+// SAME EXAMPLE WITH WHILE LOOP
+
+// let count = 1;
+// while (count < 10) {
+//     console.log(count);
+//     count++;
+// }
+
+// FOR VS WHILE SYNTAX
+
+// So, in summary, the while loop has a looser syntax, and the for loop has a more rigid syntax.A while loop expects some sort of modification to the variable in the body, whereas everything is in the for loop’s definition.
+
+// A FEW USE CASES
+
+// Use a for loop to iterate over an array.
+// Use a for loop when you know the loop should execute n times.
+// Use a while loop for reading a file into a variable.
+// Use a while loop when asking for user input.
+// Use a while loop when the increment value is nonstandard.
