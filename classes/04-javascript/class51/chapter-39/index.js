@@ -28,6 +28,15 @@
 // }
 
 
+// SAME PROGRAM WITH IF-ELSE
+// if (day === "Monday") {
+//     console.log("Today is Monday")
+// } else if (day === "Tuesday") {
+//     console.log("Today is Tuesday")
+// } else {
+//     console.log("Today is neither Monday nor Tuesday")
+// }
+
 // ADVANTAGES OF SWITCH
 // 1. One advantage of using a switch statement is that it can be more efficient than multiple if/else statements when testing a single expression against multiple possible values.
 // 2. Additionally, a switch statement can make the code more readable and easier to follow, especially when there are many possible conditions to check.
@@ -37,10 +46,21 @@
 // WHEN TO USE WHICH
 // Overall, the choice between using an if/else statement and a switch statement depends on the specific needs of the program and the complexity of the conditions being evaluated.
 
+// let day = "Monday";
+// switch (day) {
+//     case "Monday":
+//         console.log("Today is Monday");
+//         break;
+//     case "Tuesday":
+//         console.log("Today is Tuesday");
+//         break;
+//     default:
+//         console.log("Today is neither Monday nor Tuesday");
+// }
+
 // JUST FOCUS ON FIRST 3 LINES
-// 1. Begins with the keyword switch. Bumping up against it is the variable that's being tested,
-// inside parentheses. Then there's an opening curly bracket.
-// 2. The first possibility, that the variable dayOfWeek has the value "Sat". Begins with the
-// keyword case. Then the value that is being tried, "Sat". Then a space and a colon.
-// 3. The statement that executes if the test passes—if dayOfWeek does, in fact, have the value
-// "Sat". This statement is indented. Any number of statements can execute if the test passes.
+// 1. Begins with the keyword switch. Bumping up against it is the variable that's being tested, inside parentheses. Then there's an opening curly bracket.
+// 2. The first possibility, that the variable day has the value "Monday". Begins with the
+// keyword case. Then the value that is being tried, "Monday". Then a space and a colon.
+// 3. The statement that executes if the test passes—if day does, in fact, have the value
+// "Monday". This statement is indented. Any number of statements can execute if the test passes.
