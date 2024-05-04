@@ -1,9 +1,41 @@
 // Chapter-39: switch statements: How to start them
 
-// BEFORE SWITCH STATEMENTS
-// program: which day of the week
+// USE OF SWITCH STATEMENT
+// In JavaScript, if/else statements and switch statements are used to control the flow of a program based on a specific condition.
 
-// NOW USING SWITCH STATEMENT
+// IF/ELSE VS SWITCH
+// The main difference between the two is that an if/else statement evaluates a CONDITION and executes a block of code if the condition is true, while a switch statement evaluates an EXPRESSION and executes the code associated with the matching case statement.
+
+// EXAMPLE PROGRAM WITH IF/ELSE
+// let x = 5;
+// if (x > 10) {
+//     console.log("x is greater than 10");
+// } else {
+//     console.log("x is less than or equal to 10");
+// }
+
+// EXAMPLE PROGRAM WITH SWITCH
+// let day = "Monday";
+// switch (day) {
+//     case "Monday":
+//         console.log("Today is Monday");
+//         break;
+//     case "Tuesday":
+//         console.log("Today is Tuesday");
+//         break;
+//     default:
+//         console.log("Today is neither Monday nor Tuesday");
+// }
+
+
+// ADVANTAGES OF SWITCH
+// 1. One advantage of using a switch statement is that it can be more efficient than multiple if/else statements when testing a single expression against multiple possible values.
+// 2. Additionally, a switch statement can make the code more readable and easier to follow, especially when there are many possible conditions to check.
+
+// However, if/else statements offer more flexibility than switch statements, as they can evaluate complex expressions and conditions that cannot be easily represented in a switch statement. if/else statements also allow for more fine - grained control over the flow of the program, as multiple conditions can be checked in a specific order.
+
+// WHEN TO USE WHICH
+// Overall, the choice between using an if/else statement and a switch statement depends on the specific needs of the program and the complexity of the conditions being evaluated.
 
 // JUST FOCUS ON FIRST 3 LINES
 // 1. Begins with the keyword switch. Bumping up against it is the variable that's being tested,
@@ -12,7 +44,3 @@
 // keyword case. Then the value that is being tried, "Sat". Then a space and a colon.
 // 3. The statement that executes if the test passes—if dayOfWeek does, in fact, have the value
 // "Sat". This statement is indented. Any number of statements can execute if the test passes.
-
-// IF STATEMENT VS SWITCH STATEMENT
-// WHY SWITCH STATEMENT
-// will discuss in upcomig videos
