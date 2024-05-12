@@ -1,0 +1,12 @@
+ABOUT REACT
+ what is react, who created it, why do we use it?
+ 
+MAIN CONCEPTS OF REACT
+ jsx, components, virtual DOM, rerendering, diffing algorithm
+
+ENVIRONMENT SETUP
+
+HELLO WORLD IN REACT
+ create new project using vite.js
+ understand boilerplate project structure and the role of each file
+ hello world in react 
