@@ -1,0 +1,26 @@
+HOW TO SETUP FIREBASE AND PUBLISH APP ON FIREBASE JUST LIKE GITHUB PAGES
+1. go to firebase website
+2. on the top right there is a button name "go to console" click it.
+3. click on the button in the middle called "create project" and follow the process.
+4. uncheck the toggle google analytics and follow the process.
+5. when you get in on the side there is a build drop down.
+6. Click on the hosting and follow the process.
+7. Then when you see the npm command copy it and open cmd paste the npm command and click enter to start it.
+8. After that click next on the screen where you copy the npm command and click next but make sure that to uncheck the javascript sdk thing.
+9. Then copy firebase login that is the title above sign in to google.
+10. If you have an error like this """"""""""firebase : File C:\Users\Abubakar\AppData\Roaming\npm\firebase.ps1 cannot be loaded because running scripts is disabled on this system. For 
+more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ firebase login
++ ~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess""""""""""""
+11. If you have this above error then open powershell as administrator and run this command """Set-ExecutionPolicy RemoteSigned"""
+12. Then Press Capital "A"
+13. And follow the process but be very carefull or it will give errors.
+14. Then copy "firebase init" with the title above initiate you project.
+15. Read everything carefully and procede.
+16. then in the project terminal write command "npm run build"
+17. After that the initialise you project click next and copy firebase deploy.
+18. and paste the command in the terminal of the project.
+19. At the bottom of the terminal after the firebase deploy you will have a link name hosting url.
