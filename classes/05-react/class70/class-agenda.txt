@@ -1,0 +1,14 @@
+Counter Application
+
+styling:
+	1. inline
+	2. using a variable
+	3. remove style duplication using variable
+
+import/export
+
+helper functions/ inline arrow functions
+
+state
+
+useStateHook
