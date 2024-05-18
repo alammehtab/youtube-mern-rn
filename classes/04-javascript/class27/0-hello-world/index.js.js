@@ -1,4 +1,3 @@
-//PREVIOUS VIDEOS
 // we need language to communicate
 // what is a programming language?
 // machine language
@@ -8,10 +7,17 @@
 // decimal to binary conversion
 // what is javascript, ecma, ecmascript, node etc?
 
-//THIS VIDEO
+// hello world in browser console
+alert("Salam dunya")
+console.log("Salam dunya!");
+
+
 // hello world in js using vscode
+alert("Salam dunya")
 console.log("Hello world!");
 
-// hello world in js using browser console
 // hello world in js using replit
 // hello world in js using programiz JS IDE
+
+// types in javascript
+https://www.w3schools.com/js/js_datatypes.asp
