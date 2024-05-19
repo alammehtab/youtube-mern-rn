@@ -1,0 +1,3 @@
+react refresher from w3schools: https://www.w3schools.com/react/default.asp
+
+what we covered: w3 react tutorial HOME to COMPONENTS
