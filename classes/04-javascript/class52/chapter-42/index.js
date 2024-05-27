@@ -1,14 +1,23 @@
 // CHAPTER-42: do while loops
 
-// WHILE VS DO WHILE (SYNTAX)
-// The differences between the two types of loops:
+// The Do While Loop
+// The do while loop is a variant of the while loop.This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
 
-// Instead of while, the keyword do leads off the statement.
-// The while clause, including the loop-limiting code inside the parentheses, moves to the
-// bottom—after the closing curly bracket.
-// Note that the while clause ends with a semicolon.
+// Syntax
+// do {
+//     // code block to be executed
+// }
+// while (condition);
 
-// WHILE VS DO WHILE (FUNCTIONALITY)
-// the difference between a while loop and a do...while loop is that it's
-// possible to code a while statement whose block of instructions never executes.
-// But in case of do-while the block of instructions always executes at least once.
+// Example
+// The example below uses a do while loop.The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+
+// do {
+//     text += "The number is " + i;
+//     i++;
+// }
+// while (i < 10);
+
+// NOTE: Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+
+// WHILE VS DO WHILE
