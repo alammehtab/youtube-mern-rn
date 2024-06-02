@@ -5,10 +5,15 @@
 // }
 
 // BARISH
-// var baadal = true;
+// badal ha to barish, nahi to nahi
+// var badal = true;
 
-// if (baadal) {
-//   alert("Umbrella uthalo");
-// } else {
-//   alert("No badal no umbrella");
+// agr badal ho
+// if (badal) {
+//   alert("It's gonna be raining soon in Peshawar!");
+// }
+
+// agar badal na ho
+// if (!badal) {
+//   alert("No chance of rain in Peshawar!");
 // }
