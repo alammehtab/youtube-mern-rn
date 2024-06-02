@@ -1,0 +1,3 @@
+students' presentation on random-quote-generator
+
+events and conditionals in react
