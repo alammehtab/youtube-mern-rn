@@ -1,6 +1,6 @@
 // CHAPTER-6: MATH EXPRESSIONS: UNFAMILIAR OPERATORS
 
-// increment ++
+// INCREMENT ++
 // var salary = 150;
 // console.log(++salary);
 
@@ -16,7 +16,7 @@
 // console.log({ incrementedSalary }); //159
 // console.log({ salary }); //160
 
-// decrement --
+// DECREMENT --
 // var charging = 75;
 // console.log(charging--);
 // console.log(charging);
