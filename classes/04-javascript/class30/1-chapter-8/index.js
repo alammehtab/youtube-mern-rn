@@ -1,17 +1,17 @@
 // CHAPTER-8 CONCATENATING STRINGS (combining strings)
 
-// In Chapter 1 you learned to display a message in an alert, coding it this way.
+// IN CHAPTER 1 YOU LEARNED TO DISPLAY A MESSAGE IN AN ALERT, CODING IT THIS WAY.
 // alert("Thanks for your input!");
 
-// Or you could code it this way.
+// OR YOU COULD CODE IT THIS WAY.
 // const message = "Thanks for your input!";
 // alert(message);
 
-// Personalized message
+// PERSONALIZED MESSAGES
 // const userName = "Ali";
 // alert("Thanks, " + userName + "!");
 
-// Note that the first string includes a space in above alert.
+// NOTE THAT THE FIRST STRING INCLUDES A SPACE IN ABOVE ALERT.
 
 // another example of concatenation
 // const firstName = "Muhammad";
@@ -29,20 +29,19 @@
 // Here it is, with three strings
 // alert("Thanks, " + "Ali" + "!");
 
-// You can assign a concatenation to a variable.
+// YOU CAN ASSIGN A CONCATENATION TO A VARIABLE.
 // const message = "Thanks, ";
 // const userName = "Ali";
 // const punctuation = "!";
 // const customMess = message + userName + punctuation;
 // alert(customMess);
 
-// If you put numbers in quotes, JavaScript concatenates them as strings rather than adding them.
+// IF YOU PUT NUMBERS IN QUOTES, JAVASCRIPT CONCATENATES THEM AS STRINGS RATHER THAN ADDING THEM.
 // This code...
 // alert("2" + "2");
 // alert(2 + "2");
 // alert(2 + "j");
 
-// If you mix strings and numbers JavaScript automatically converts the numbers to strings,
-// and displays the message "2 plus 2 equals 22".
+// IF YOU MIX STRINGS AND NUMBERS JAVASCRIPT AUTOMATICALLY CONVERTS THE NUMBERS TO STRINGS, AND DISPLAYS THE MESSAGE '2 PLUS 2 EQUALS 22'.
 // alert("2 plus 2 equals " + 2 + 2);
 // alert(2 + 2 + " is 2 plus 2");
