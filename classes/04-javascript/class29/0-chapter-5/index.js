@@ -1,6 +1,6 @@
 // CHAPTER-5: MATH EXPRESSIONS: FAMILIAR OPERATORS
 
-// basic operators +,-,*,/
+// BASIC OPERATORS +,-,*,/
 
 // + (addition) if all the operands are Numbers
 // 2 + 3
@@ -50,7 +50,7 @@
 // console.log(result);
 
 
-// *
+// MULTIPLICATION *
 // var firstNumber = 2;
 // var secondNumber = 10;
 // var result = firstNumber * secondNumber;
@@ -68,7 +68,7 @@
 // console.log(result);
 
 
-// Division /
+// DIVISION /
 // returns quotient
 // var dividend = 17;
 // var divisor = 4;
@@ -83,7 +83,7 @@
 // var result = "15" / "3";
 // console.log(result);
 
-// modulus operator % return remainder
+// MODULUS OPERATOR % RETURNS REMAINDER
 // var dividend = 15;
 // var divisor = 2;
 // var result = dividend % divisor;
@@ -105,7 +105,7 @@
 // var result = 1 % 0;
 // console.log(result)
 
-// printing better messages
+// PRINTING BETTER MESSAGES
 // var firstNumber = 4;
 // var secondNumber = 5;
 // var sum = firstNumber + secondNumber;
