@@ -1,5 +1,5 @@
 // CHAPTER-9 PROMPTS
-// used to take user input
+// USED TO TAKE USER INPUT
 // const userAge = prompt("Please enter your age!");
 // console.log("You are " + userAge + " years old.");
 // alert("You are " + userAge + " years old.");
@@ -21,9 +21,9 @@
 
 // alert("your total bill is " + totalBill);
 
-// prompts always return string values
-const pencil = +prompt("Price for pencil");
-const notebook = +prompt("price for notebook");
-const totalBill = pencil + notebook;
+// PROMPTS ALWAYS RETURN STRING VALUES,SOLUTION
+// const pencil = +prompt("Price for pencil");
+// const notebook = +prompt("price for notebook");
+// const totalBill = pencil + notebook;
 
-alert("your total bill is " + totalBill);
+// alert("your total bill is " + totalBill);
