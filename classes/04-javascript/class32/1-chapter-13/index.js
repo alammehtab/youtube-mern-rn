@@ -22,18 +22,16 @@
 //   console.log("Third number that is " + thirdNumber + " is the largest number");
 // }
 
-// GRADING SYSTEM
-const userName = prompt("Please enter your name");
-const score = +prompt("Please enter your score");
+// PESHAWAR BRT 
+// REQUIREMENTS:
+// cardBalance YA cashInPocket: 50 or more
 
-if (score >= 90) {
-  alert(userName + " your Grade is A");
-} else if (score >= 80) {
-  alert(userName + " your Grade is B");
-} else if (score >= 70) {
-  alert(userName + " your Grade is C");
-} else if (score >= 60) {
-  alert(userName + " your Grade is D");
-} else {
-  alert(userName + " your Grade is F");
-}
+// var cardBalance = 20
+// var cashInPocket = 200
+
+// if (cardBalance >= 50 || cashInPocket >= 50) {
+//   console.log(`Welcome to ZU Peshawar!`)
+// } else {
+//   console.log(`Sorry, you can't travel with us.`)
+// }
+
