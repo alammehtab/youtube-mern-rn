@@ -1,6 +1,6 @@
 // CHAPTER-16 ADDING AND REMOVING ELEMENTS
 
-// const books = ["computer science", "mathematics"];
+// var books = ["computer science", "mathematics"];
 // console.log(books);
 // add elements to the array
 
@@ -13,13 +13,13 @@
 // console.log(books);
 
 // add element at a specific position/index, it will replace already existing element
-// const books = ["computer science", "mathematics"];
+// var books = ["computer science", "mathematics"];
 // books[1] = "physics";
 // books[2] = "physics";
 // console.log(books);
 
 // adding elements to empty array
-// const books = [];
+// var books = [];
 
 // books[0] = "computer";
 // books[1] = "urdu";
@@ -29,9 +29,9 @@
 // console.log(books);
 
 // remove elements
-// const books = ["urdu", "english", "math"];
+// var books = ["urdu", "english", "math"];
 // books.pop();
-// const poppedBook = books.pop();
+// var poppedBook = books.pop();
 
 // console.log(books);
 // console.log({ poppedBook });
