@@ -22,6 +22,9 @@
 
 // External JavaScript (demonstrate in this file)
 // Scripts can also be placed in external files.
+// function helloFromExternalFile() {
+//     alert("Helllo from external script file!")
+// }
 
 // External scripts are practical when the same code is used in many different web pages.
 // To use an external script, put the name of the script file in the src(source) attribute of a < script > tag.

@@ -5,11 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter-43</title>
+    <script>
+        function greetUser() {
+            alert("Hellooooo")
+        }
+    </script>
 </head>
 
 <body>
     <p>Chapter-43: Placing Scripts</p>
+    <button onclick="greetUser()">Say Hello!</button>
+    <button onclick="sayBye()">Say Bye!</button>
+    <button onclick="helloFromExternalFile()">Say Hello External!</button>
     <script src="./index.js"></script>
+    <script>
+        function sayBye() {
+            alert("Byeeeee!")
+        }
+    </script>
 </body>
 
 </html>
