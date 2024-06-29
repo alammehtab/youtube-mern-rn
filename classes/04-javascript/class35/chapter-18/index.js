@@ -37,7 +37,7 @@
 
 // understanding for loop with a very simple example
 // print numbers 1 to 10
-// for (let number = 1; number <= 10; number++) {
+// for (var number = 1; number <= 10; number++) {
 //   console.log(number);
 // }
 
@@ -45,7 +45,7 @@
 // const cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
 // const cityToCheck = prompt("Please enter your city name: ");
 
-// for (let cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
+// for (var cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
 //   if (cityToCheck === cleanestCities[cityIndex]) {
 //     alert("It's one of the cleanest cities");
 //   }
