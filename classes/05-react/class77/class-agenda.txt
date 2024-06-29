@@ -1,0 +1,6 @@
+covered:
+	react router
+
+created:
+	created multi page demo website
+	followed: https://reactrouter.com/en/main/start/tutorial
