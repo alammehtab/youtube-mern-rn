@@ -1,3 +1,7 @@
 useContext hook
 
 props drilling
+
+react icons
+
+applied light/dark theme
