@@ -1,7 +1,7 @@
 // CHAPTER-19: for loops:Flags, Booleans, array length, and loopus interruptus
 
 // flag:
-// Flag variable is used as a signal in programming to let the program know that a
+// Flag variable is used as a signal in programming to var the program know that a
 // certain condition has met. It usually acts as a boolean variable indicating a condition
 // to be either true or false
 
@@ -12,16 +12,16 @@
 // number of elements in an array
 
 // loopus interruptus
-// to break a loop before it's completion, meeting a condition
+// to break a loop before it's compvarion, meeting a condition
 
 // implementation
-const cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
-const cityToCheck = prompt("Please enter your city name: ");
+var cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
+var cityToCheck = prompt("Please enter your city name: ");
 
 // flag
-let cityMili = false;
+var cityMili = false;
 
-for (let cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
+for (var cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
   if (cityToCheck === cleanestCities[cityIndex]) {
     cityMili = true;
     // loopus intrruptus
