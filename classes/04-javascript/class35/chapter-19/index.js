@@ -15,30 +15,30 @@
 // to break a loop before it's compvarion, meeting a condition
 
 // implementation
-var cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
-var cityToCheck = prompt("Please enter your city name: ");
+// var cleanestCities = ["Peshawar", "Islamabad", "Karachi", "Lahore", "Multan"];
+// var cityToCheck = prompt("Please enter your city name: ");
 
 // flag
-var cityMili = false;
+// var cityMili = false;
 
-for (var cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
-  if (cityToCheck === cleanestCities[cityIndex]) {
-    cityMili = true;
-    // loopus intrruptus
-    break;
-    // alert("han g city mil gai");
-  }
-  // else {
-  //   alert("city nahi mili");
-  // }
-  // alert(cityIndex);
-}
+// for (var cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
+//   if (cityToCheck === cleanestCities[cityIndex]) {
+//     cityMili = true;
+// loopus intrruptus
+// break;
+// alert("han g city mil gai");
+// }
+// else {
+//   alert("city nahi mili");
+// }
+// alert(cityIndex);
+// }
 
-if (cityMili) {
-  alert("It's one of the cleanest cities");
-} else {
-  alert("It's not on the list");
-}
+// if (cityMili) {
+//   alert("It's one of the cleanest cities");
+// } else {
+//   alert("It's not on the list");
+// }
 
 // using the flag (ye sb karne ki zaroorat nahi)
 // if (cityMili === true) {

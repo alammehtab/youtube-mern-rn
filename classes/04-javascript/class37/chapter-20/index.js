@@ -50,13 +50,13 @@
 // Exercise 4: Triangle Pattern with *s
 // ============================
 
-var rows = 5;
+// var rows = 5;
 
-for (var i = 1; i <= rows; i++) {
-  // for lines/rows
-  var stars = "";
-  for (var j = 1; j <= i; j++) {
-    stars += "*";
-  }
-  console.log(stars);
-}
+// for (var i = 1; i <= rows; i++) {
+//   // for lines/rows
+//   var stars = "";
+//   for (var j = 1; j <= i; j++) {
+//     stars += "*";
+//   }
+//   console.log(stars);
+// }
