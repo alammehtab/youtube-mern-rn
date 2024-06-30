@@ -16,15 +16,6 @@
 // }
 // console.log({ count });
 
-// ===========================
-// formatted strings
-// ===========================
-// var firstNumber = 5;
-// var secondNumber = 10;
-// var sum = firstNumber + secondNumber;
-
-// console.log(`The sum of ${firstNumber} and ${secondNumber} is: ${sum}`);
-
 // ============================
 // Exercise 1: Multiplication Table (5x5)
 // ============================
