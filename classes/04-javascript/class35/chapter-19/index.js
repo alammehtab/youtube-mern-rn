@@ -26,12 +26,12 @@ for (var cityIndex = 0; cityIndex < cleanestCities.length; cityIndex++) {
     cityMili = true;
     // loopus intrruptus
     break;
-    // console.log("han g city mil gai");
+    // alert("han g city mil gai");
   }
   // else {
-  //   console.log("city nahi mili");
+  //   alert("city nahi mili");
   // }
-  // console.log(cityIndex);
+  // alert(cityIndex);
 }
 
 if (cityMili) {
