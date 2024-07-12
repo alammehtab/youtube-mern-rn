@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter-46</title>
 </head>
+
 <body>
     <p>Chapter-46: Events: Button</p>
+
+    <!-- In the last chapter we learned how to repurpose a link to make it trigger an event when it's clicked, instead of loading a new page. We learned to do it with inline event-handling, not the best way, but the easiest to learn. Later in the book, you'll learn the approach that's preferred by most professionals—the scripting approach.
+    But even if we're using the inline method, when we want to give the user something to
+    click, a more professional approach, usually, is to use a button rather than a link. -->
+
+    Suppose that when the user clicks a button, an alert displays saying, "Hello world!"
+    Here's the code.
+    <input type="button" value="Click" onClick="alert('Hello world!');">
     <button onclick="alert('hi')">Say Hi</button>
     <button onclick="sayBye()">Say Bye</button><br>
     <img src="./icons/hi.png" onClick="alert('Uncle saying hi!')">
 
     <!-- javascript -->
     <script>
-        function sayBye(){
+        function sayBye() {
             alert("Bye")
         }
     </script>
 </body>
+
 </html>

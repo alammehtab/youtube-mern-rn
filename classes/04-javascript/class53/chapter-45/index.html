@@ -14,7 +14,7 @@
     moves the mouse, presses a key—and something happens. JavaScript gives you many ways to
     respond to the user's needs. 
     
-    EXAMPLES:
+    REAL WORLD EXAMPLES:
     1. The user clicks a button saying "Our Guarantee" and an alert displays spelling out the guarantee.
     
     2. A page displays a "before" picture of a model. When the user mouses over the picture, it is replaced by an "after" picture of her.
@@ -29,13 +29,15 @@
     <!-- All of these user actions—clicking a button, moving the mouse, moving from one field to another in a form, selecting a different option—are known as events. -->
 
     <!-- links we've used so far in html -->
-    <!-- <a href="https://www.google.com">Google</a><br>
-    <a href="https://www.w3schools.com">W3 Schools</a> -->
+    <!-- <a href="https://www.google.com">Google</a><br> -->
+    <!-- <a href="https://www.w3schools.com">W3 Schools</a> -->
 
     <!-- inline event handling -->
     <!-- Inline event-handling means that you combine bits of JavaScript with HTML markup. -->
     <!-- NOTE: WE WON'T BE USING INLINE EVENT-HANDLING. WE'LL BE USING SCRIPTING APPROACH that is we'll write javascript in a separate file same as we did for css. -->
     <!-- <a href="#" onClick="alert('Hi');">Click</a> -->
+    <!-- <a href="#" onclick="alert('Hi')">Say Hi</a> -->
+    <!-- <a href="#" onclick="console.log('Hi')">Say Hi</a> -->
 
     <!-- WARNING -->
     <!-- But there's a problem with the markup above. <a href="#" tells the browser to reload the page. This means that if the user has scrolled down to the link, the click, in addition to running the JavaScript code, will scroll the page back to the top—an action you don't normally want. I've included this flawed approach, using <a href="#", because you'll run into here and there in other people's work, but you'll probably prefer this approach: -->
@@ -44,6 +46,13 @@
     <!-- <a href="JavaScript:void(0)" onClick="alert('Hi');">Click</a> -->
 
     <!-- call a function from script on link click -->
+    <a href="JavaScript:void(0)" onclick="greetTheUser()">Greet User</a>
+
+    <script>
+        function greetTheUser() {
+            alert("Helllo user!")
+        }
+    </script>
 </body>
 
 </html>
