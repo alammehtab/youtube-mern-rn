@@ -19,8 +19,7 @@
 // using second variable
 // var city = "PESHAWAR";
 // var smallCity = city.toLowerCase();
-// console.log(city);
-// console.log(smallCity);
+// console.table([city, smallCity])
 
 
 // zaroori nhi ha k all uppercase ho, mix b hosakte hn
@@ -58,11 +57,11 @@
 //     "agriculture",
 // ];
 // var studentUniversity = prompt("Please enter your university name");
-// var isEligible = false;
+// var isEligible = 0;
 
 // for (var i = 0; i < eligibleUniversities.length; i++) {
-//     if (studentUniversity.toLowerCase() === eligibleUniversities[i]) {
-//         isEligible = true;
+//     if (studentUniversity.toLocaleLowerCase() === eligibleUniversities[i]) {
+//         isEligible = 1;
 //         break;
 //     }
 // }
