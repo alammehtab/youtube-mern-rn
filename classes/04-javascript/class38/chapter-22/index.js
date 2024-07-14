@@ -30,7 +30,7 @@ var language = "JavaScript";
 // var firstLetter = city.slice(0, 1);
 // var capitalFirstLetter = firstLetter.toUpperCase();
 // var remainingLetters = city.slice(1);
-// console.log({ firstLetter, capitalFirstLetter, remainingLetters })
+console.table([firstLetter, capitalFirstLetter, remainingLetters])
 // var finalResult = capitalFirstLetter + remainingLetters;
 // console.log(finalResult);
 
