@@ -15,7 +15,8 @@
 // console.log(book.indexOf("and Grow"));
 
 // APKO -1 DETA HA AGAR MATCH NA MILE
-// console.log(email.indexOf("r"));
+// var greetings = "hello";
+// console.log(greetings.indexOf("r"));
 
 // APKO WO INDEX DETA HA JISPE MATCH MILE
 // var email = "test@test.com";
