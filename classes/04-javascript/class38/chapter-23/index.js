@@ -18,7 +18,7 @@
 // var greetings = "hello";
 // console.log(greetings.indexOf("r"));
 
-// APKO WO INDEX DETA HA JISPE MATCH MILE
+// another example of -1/notfound
 // var email = "test@test.com";
 // console.log(email.indexOf("r"));
 // console.log(email.indexOf("@gmail.com"));
@@ -62,3 +62,6 @@
 // } else {
 //     alert("Valid email");
 // }
+
+// can shorten the condition
+// isValid === -1 ? alert("Invalid email") : alert("Valid email")
