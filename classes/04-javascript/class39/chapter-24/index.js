@@ -3,8 +3,13 @@
 // METHOD WE'LL DISCUSS
 // charAt
 
+// returns the character on the given address
 // var institute = "saylani mass it training";
-// console.log(institute.charAt(14));
+// console.log(institute.charAt(4));
+
+// returns EMPTY STRING if index doesn't exist
+// var institute = "saylani mass it training";
+// console.log(institute.charAt(140));
 
 // CAN'T USE WITH ARRAYS
 // var mohalla = ["ali", "ahmad", "akram", "aslam", "ajmal", "aslam"];
