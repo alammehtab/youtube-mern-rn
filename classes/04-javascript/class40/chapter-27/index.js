@@ -24,18 +24,16 @@
 // randomNumber = randomNumber * 6; // upper limit exclusive hoti ha
 // console.log({ randomNumber });
 
-// GENERATING RANDOM NUMBER FROM 0 TO N (0 inclusive, n exlclusive)
-// in this case 0-9
+// GENERATING RANDOM NUMBER FROM 0 TO N (0 inclusive, n exlclusive) in this case 0-9
 // var n = 10;
 // var randomNumber = Math.random() * n;
-// var randomInteger = Math.ceil(randomNumber);
+// var randomInteger = Math.ceil(randomNumber); // 1-10
 // console.log(randomInteger);
 
 // LUDO DICE EXAMPLE, RANDOM NUMBERS 1 TO 6 (method0: +1)
 // var decimalInRange = Math.random() * 6 + 1; // 1.something - 6.something
 // var numberOnDice = Math.floor(decimalInRange); // 1 to 6
-
-// console.table([bigDecimal, numberOnDice ]);
+// console.table([decimalInRange, numberOnDice]);
 
 // GUESS THE NUMBER, GAME, 1-3 (method1: ceil)
 // var randomNumber = Math.ceil(Math.random() * 3);
