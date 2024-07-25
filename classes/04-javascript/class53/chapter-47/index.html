@@ -1,13 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter-47</title>
+    <style>
+        .container {
+            padding: 50px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            background-color: lightblue;
+        }
+
+        .inner {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
 </head>
+
 <body>
     <p>Chapter-47: Events: Mouse</p>
-    <img src="./icons/hi.png" onMouseOver="alert('Uncle waving at you!')">
-    <img src="./icons/apple.png" onmouseover="src='./icons/banana.png'">
+
+    <!-- LIST OF MOUSE EVENTS -->
+    <!-- 
+    onclick: A user clicks on an element
+    oncontextmenu: A user right-clicks on an element
+    ondblclick: A user double-clicks on an element
+    onmousedown: A mouse button is pressed over an element
+    onmouseenter: The mouse pointer moves into an element
+    onmouseleave: The mouse pointer moves out of an element
+    onmousemove: The mouse pointer moves over an element
+    onmouseout: The mouse pointer moves out of an element
+    onmouseover: The mouse pointer moves onto an element
+    onmouseup: A mouse button is released over an element 
+    -->
+
+    <!-- show alert on mouse click -->
+    <!-- <img src="./icons/hi.png" onclick="alert('Uncle waving at you!')"> -->
+
+    <!-- change icon on mouse right click by changing its src -->
+    <!-- <img src="./icons/apple.png" oncontextmenu="src='./icons/banana.png'"> -->
+
+    <!-- apply styling on double click -->
+    <!-- <p ondblclick="this.style.color='crimson'">Hurrah! my styles got changed!</p> -->
+
+    <!-- call a function on any mouse button press -->
+    <!-- <p onmousedown="mouseDown()">Press a mouse button: left or right</p> -->
+
+    <!-- show alert on mouse enter -->
+    <!-- <p onmouseenter="alert('Mouse entered')">onmouseenter: The mouse pointer moves into an element</p> -->
+
+    <!-- show alert on mouse leave -->
+    <!-- <p onmouseleave="alert('mouse left')">onmouseleave: The mouse pointer moves out of an element</p> -->
+
+    <!-- show alert on mouse move -->
+    <!-- <p onmousemove="alert('mouse moved')">onmousemove: The mouse pointer moves over an element</p> -->
+
+    <!-- MOUSEENTER VS MOUSEMOVE -->
+    <!-- 
+    mouseenter: triggered only when the mouse pointer hits the element.
+    mousemove: triggered each time the mouse pointer is moved when it is over an element. -->
+
+    <!-- on mouse out -->
+
+    <!-- MOUSELEAVE VS MOUSEOUT -->
+    <!-- 
+    mouseleave: triggers when the mouse pointer leaves any child elements as well the selected element.
+    mouseout: only triggered when the mouse pointer leaves the selected element. 
+    -->
+
+    <!-- <div class="container" onmouseout="alert('Mouse left the element or a child element');"
+        onmouseleave="alert('Mouse left the element');">
+        Hover over me and move the mouse out!
+        <div class="inner">
+            Inner element
+        </div>
+    </div> -->
+
+    <!-- on mouse over -->
+    <!-- MOUSEENTER VS MOUSEOVER -->
+    <!-- 
+    mouseenter: triggers when the mouse pointer enters the div element, and its child elements.
+     mouseover: only triggered when the mouse pointer enters the div element. 
+     -->
+
+    <!-- <div class="container" onmouseover="alert('Mouse entered the element or a child element');"
+        onmouseenter="alert('Mouse entered the element');">
+        Hover over me and move the mouse in!
+        <div class="inner">
+            Inner element
+        </div>
+    </div> -->
+
+    <!-- show alert on mouse up -->
+    <!-- <p onmouseup="alert('mouse up triggered')">onmouseup: A mouse button is released over an element</p> -->
+
+    <script>
+        function mouseDown() {
+            alert("mouseDown")
+        }
+    </script>
 </body>
+
 </html>
