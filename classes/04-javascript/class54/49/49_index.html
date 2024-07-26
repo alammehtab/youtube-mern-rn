@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>49-READING FIELD VALUES</title>
 </head>
-<body>
-    <h1>LOGIN FORM</h1>
-    <!-- <form onSubmit="validateEmail()">
-        Email: <input type="email" id="email">
-        Password: <input type="password" id="pass">
-        <input type="submit">
-    </form> -->
 
-    <!-- using dynamic id -->
-    <form onSubmit="validateEmail('email')">
-        Email: <input type="email" id="email">
-        <input type="submit">
+<body>
+    <!-- let's suppose we've this very simple form -->
+    <form>
+        Email:
+        <input type="text">
+        <input type="submit" value="Submit">
     </form>
 
-    <script>
-        const userEmail = 'test@test.com'
-        const userPassword = 'raaz'
-        // function validateEmail(){
-        //     const email = document.getElementById('email').value
-        //     const password = document.getElementById('pass').value
+    <!-- 
+        we've the following three elements in the above form:
+        1. The text "Email"
+        2. The text field for the user's email address
+        3. The submit button
+    -->
 
-        //     if(email === userEmail && password === userPassword){
-        //         alert('home screen')
-        //     }else{
-        //         alert("Invalid credentials")
+    <!-- to get access to the email field let me assign an id to the email field -->
+    <!-- <form> 
+        Email:
+        <input type="text" id="email">
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <!-- 
+        now on submission of the form let's check the email
+        we'll be calling a js function on submission of the form
+    -->
+    <!-- <form onsubmit="checkAddress('email')">
+        Email:
+        <input type="text" id="email">
+        <input type="submit" value="Submit">
+    </form> -->
+
+
+    <script>
+        // function checkAddress(fieldId) {
+        //     // getElementById must be in strict camelCase
+        //     if (document.getElementById(fieldId).value === '') {
+        //         alert("Email is required!")
         //     }
         // }
 
-        // using dynamic id
-        function validateEmail(id){
-            const email = document.getElementById(id).value
-            alert(email)
-        }
+        // Some coders prefer to put the value found in the field into a variable, like this.
+
+        // function checkAddress(fieldId) {
+        //     var emailValue = document.getElementById(fieldId).value
+        //     if (emailValue === '') {
+        //         alert("Email is required!")
+        //     }
+        // }
     </script>
 </body>
+
 </html>
