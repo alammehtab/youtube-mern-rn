@@ -7,6 +7,6 @@ function generateCityName() {
   } else if (zipCode === 24731) {
     sheher.value = "Ali Masjid";
   } else {
-    alert("sahi se daal zipcode");
+    alert("Invalid zipcode");
   }
 }
