@@ -4,7 +4,7 @@
 // toFixed(lengthOfDecimals)
 
 // GENERAL EXAMPLES
-// var testNumber = 45.1284;
+// var testNumber = 45.7284;
 // console.log(testNumber.toFixed());
 
 // SALES TAX EXAMPLE
@@ -14,13 +14,11 @@
 // console.log({ salesTaxAmount });
 
 // var totalPrice = itemPrice + salesTaxAmount;
-// console.log(totalPrice);
+// console.table([itemPrice, salesTaxAmount, totalPrice]);
 
 // limiting the length of decimals
-// console.log(totalPrice);
 // totalPrice = totalPrice.toFixed(2);
-// console.log(totalPrice);
-// console.log({ itemPrice, salesTaxAmount, totalPrice });
+// console.table([itemPrice, salesTaxAmount, totalPrice]);
 
 // SCHOOL MARKS PERCENTAGE EXAMPLE
 // var totalMarks = 1100;
@@ -31,14 +29,15 @@
 // console.log(percentage);
 
 // after limiting the length
-// var percentage = ((obtainedMarks / totalMarks) * 100).toFixed(2);
+// var percentage = percentage.toFixed(2);
 // console.log(percentage);
 
 // PROBLEM
+// console.log((1.55).toFixed(2));
 // console.log((1.555).toFixed(2));
 
 // fixing the above problem (jugaar)
-// var num = 1.555;
+// var num = 1.5555;
 
 // var str = num.toString();
 // console.log(str);
@@ -51,5 +50,5 @@
 
 // console.log(str);
 // num = Number(str);
-// num = num.toFixed(2);
+// num = num.toFixed(3);
 // console.log(num);
