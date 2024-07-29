@@ -11,7 +11,7 @@
     <p>Chapter-48: Events: fields</p>
 
     <!-- FIELD EVENTS WE'RE GONNA DISCUSS -->
-    <!-- 
+    <!--     
         ONFOCUS:
             It tells JavaScript to do something when the user clicks in the field.
         ONBLUR: 
@@ -20,19 +20,20 @@
      -->
 
     <!-- turn the background color to red when the field is focused -->
-    <!-- Email: <input type="email" onFocus="this.style.backgroundColor='red'">
+    <!-- Email: <input type="email" onFocus="this.style.backgroundColor='red'"><br>
     Password: <input type="password" onFocus="this.style.backgroundColor='red'"> -->
 
     <!-- turn the background color back to white when the field is not focused anymore -->
-    <!-- Email: <input type="email" onFocus="this.style.backgroundColor='red'" onBlur="this.style.backgroundColor='white'">
+    <!-- Email: <input type="email" onFocus="this.style.backgroundColor='red'"
+        onBlur="this.style.backgroundColor='white'"><br>
     Password: <input type="password" onFocus="this.style.backgroundColor='red'"
         onBlur="this.style.backgroundColor='white'"> -->
 
     <!-- A slightly more professional approach would be to call functions that accomplish the same things. -->
-    <!-- Email:<br>
-    <input type="text" size="30" onFocus="makeFieldYellow(this);" onBlur="makeFieldWhite(this);"> -->
+    <!-- Email: <br>
+    <input type="email" size="30" onFocus="makeFieldYellow(this);" onBlur="makeFieldWhite(this);">
 
-    <!-- <script>
+    <script>
         function makeFieldYellow(element) {
             element.style.backgroundColor = 'yellow';
         }
