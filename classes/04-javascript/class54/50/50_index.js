@@ -1,6 +1,6 @@
 function generateCityName() {
-  const zipCode = +document.getElementById("zipcode").value;
-  const sheher = document.getElementById("sheher");
+  var zipCode = +document.getElementById("zipcode").value;
+  var sheher = document.getElementById("sheher");
 
   if (zipCode === 25180) {
     sheher.value = "Afghan Colony";
