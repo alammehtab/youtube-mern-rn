@@ -1,4 +1,4 @@
-function generateCityName() {
+function setCityName() {
   var zipCode = +document.getElementById("zipcode").value;
   var sheher = document.getElementById("sheher");
 
