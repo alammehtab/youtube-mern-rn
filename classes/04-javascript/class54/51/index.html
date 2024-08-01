@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51-Reading and Setting Paragraph Text</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reading and Setting Paragraph Text</h1>
+        <p id="myParagraph">This is the initial paragraph text. Change it using the input below!</p>
+
+        <div class="controls">
+            <button id="readTextBtn" onclick="readParagraphText()">Read Paragraph Text</button>
+            <input type="text" id="newTextInput" placeholder="Enter new text here">
+            <button id="setTextBtn" onclick="setParagraphText()">Set Paragraph Text</button>
+        </div>
+
+        <p id="output"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
