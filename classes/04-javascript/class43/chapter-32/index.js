@@ -1,7 +1,7 @@
 // Chapter-32: EXTRACTING PARTS OF THE DATE AND TIME
 
 // LAST CLASS
-var now = new Date();
+// var now = new Date();
 // console.log(now);
 
 // get day
@@ -9,13 +9,13 @@ var now = new Date();
 
 // day name
 // var daysNames = [
-//   "Sunday",
-//   "Monday",
-//   "Tuesday",
-//   "Wednesday",
-//   "Thursday",
-//   "Friday",
-//   "Saturday",
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
 // ];
 // console.log(daysNames[now.getDay()]);
 
@@ -35,19 +35,21 @@ var now = new Date();
 // NEW STUFF
 
 // GETTING MONTH NAME
+// var now = new Date();
+
 // var monthsNames = [
-//   "January",
-//   "February",
-//   "March",
-//   "April",
-//   "May",
-//   "June",
-//   "July",
-//   "August",
-//   "September",
-//   "October",
-//   "November",
-//   "December",
+//     "January",
+//     "February",
+//     "March",
+//     "April",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December",
 // ];
 
 // getting current month number
@@ -60,6 +62,7 @@ var now = new Date();
 // PRINTING HOURS AND MINUTES IN FORMATTED STRING
 
 // using variables
+// var now = new Date()
 // var hours = now.getHours();
 // var minutes = now.getMinutes();
 // console.log({ hours, minutes });
@@ -72,7 +75,7 @@ var now = new Date();
 // var hours = now.getHours();
 
 // if (hours > 11) {
-//   console.log(`${hours} PM`);
+//     console.log(`${hours - 12} PM`);
 // } else {
-//   console.log(`${hours} AM`);
+//     console.log(`${hours} AM`);
 // }
