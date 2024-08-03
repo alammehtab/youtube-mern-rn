@@ -1,28 +1,29 @@
-// CHAPTER-32: SPECIFYING A DATE AND TIME
+// CHAPTER-33: SPECIFYING A DATE AND TIME
 
-// const now = new Date();
+// var now = new Date();
 // console.log(now);
 
-// const helloToTheFuture = new Date("June 30, 2035");
-// console.log({ helloToTheFuture });
+// var helloToTheFuture = new Date("June 30, 2035");
+// console.log(helloToTheFuture);
 
 // INVALID DATE
-// const helloToTheFuture = new Date("June 33, 2035");
+// var helloToTheFuture = new Date("June 33, 2035");
 // console.log(helloToTheFuture);
 
 // DAYS TO ELECTION
-// const now = new Date();
-// const election = new Date("APRIL 8, 2024");
-// const timeToElectionInMilliseconds = election - now;
-// console.log({ timeToElectionInMilliseconds });
-// const daysToElection = timeToElectionInMilliseconds / (1000 * 60 * 60 * 24);
-// console.log(daysToElection);
-// console.log(Math.floor(daysToElection));
+// var now = new Date();
+// var mosamChange = new Date("November 8, 2024");
+// console.log(mosamChange)
+// var timeToMosamChangeInMilliseconds = mosamChange - now;
+// console.log({ timeToMosamChangeInMilliseconds });
+// var daysToMosamChange = timeToMosamChangeInMilliseconds / (1000 * 60 * 60 * 24);
+// console.log(daysToMosamChange);
+// console.log(Math.floor(daysToMosamChange));
 
 // HOURS TO ELECTION
-const now = new Date();
-const election = new Date("APRIL 8, 2024");
-const timeToElectionInMilliseconds = election - now;
-const hoursToElection = timeToElectionInMilliseconds / (1000 * 60 * 60);
-// console.log(hoursToElection);
-console.log(Math.floor(hoursToElection));
+// var now = new Date();
+// var mosamChange = new Date("November 8, 2024");
+// var timeToMosamChangeInMilliseconds = mosamChange - now;
+// var hoursToMosamChange = timeToMosamChangeInMilliseconds / (1000 * 60 * 60);
+// console.log(hoursToMosamChange);
+// console.log(Math.floor(hoursToMosamChange));
