@@ -72,10 +72,10 @@
 // console.log(`${now.getHours()}: ${now.getMinutes()}: ${now.getSeconds()}`);
 
 // DECIDING AM AND PM, HOURS > 11 PM ELSE AM
-// var hours = now.getHours();
-
-// if (hours > 11) {
-//     console.log(`${hours - 12} PM`);
-// } else {
-//     console.log(`${hours} AM`);
-// }
+var hours = now.getHours();
+console.log(hours)
+if (hours > 11) {
+    console.log(`${hours - 12} PM`);
+} else {
+    console.log(`${hours} AM`);
+}
