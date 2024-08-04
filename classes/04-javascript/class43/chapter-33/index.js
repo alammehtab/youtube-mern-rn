@@ -10,7 +10,7 @@
 // var helloToTheFuture = new Date("June 33, 2035");
 // console.log(helloToTheFuture);
 
-// DAYS TO ELECTION
+// DAYS TO MOSAM CHANGE
 // var now = new Date();
 // var mosamChange = new Date("November 8, 2024");
 // console.log(mosamChange)
@@ -20,7 +20,7 @@
 // console.log(daysToMosamChange);
 // console.log(Math.floor(daysToMosamChange));
 
-// HOURS TO ELECTION
+// HOURS TO MOSAM CHANGE
 // var now = new Date();
 // var mosamChange = new Date("November 8, 2024");
 // var timeToMosamChangeInMilliseconds = mosamChange - now;
