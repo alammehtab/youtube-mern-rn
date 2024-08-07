@@ -20,6 +20,6 @@ function setParagraphText() {
   } else {
     paragraph.textContent = newText;
     output.textContent = 'Paragraph text has been updated!';
-    newTextInput.value = ''; // Clear the input field
+    newTextInput.value = '';
   }
 }

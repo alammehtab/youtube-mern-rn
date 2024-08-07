@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>52-Manipulating images and text</title>
-    <style>
-        .hideTheImage{
-            visibility: hidden;
-        }
-    </style>
+    <title>52-Manipulating Images and Text</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <img src="./images/dice.jpg" width="200" id="dice-img"><br>
-    <button onclick="hideTheImage()">Shuffff</button>
-    <script src="./index.js"></script>
+    <div class="container">
+        <h1>52-Manipulating Images and Text</h1>
+        <p id="myParagraph">This is the initial paragraph text. Change it using the input below!</p>
+
+        <div class="controls">
+            <input type="text" id="newTextInput" placeholder="Enter new text here">
+            <button id="setTextBtn" onclick="setParagraphText()">Set Paragraph Text</button>
+        </div>
+
+        <div class="image-controls">
+            <button id="toggleImageBtn" onclick="toggleImage()">Toggle Image</button>
+            <button id="hideImageBtn" onclick="hideImage()">Hide Image</button>
+            <button id="showImageBtn" onclick="showImage()">Show Image</button>
+        </div>
+
+        <img id="myImage" src="./images/image1.jpg" alt="Example Image">
+
+        <p id="output"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
