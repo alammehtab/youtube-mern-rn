@@ -1,10 +1,15 @@
 1. frontend vs backend
 2. nodejs intro
-2.1 nodejs cli
-3. env setup
-4. hello world in nodejs
-5. create pkg json in node project
-6. what is nodemon and why do we use it? install it.
-7. using import export in js files (js modules)
-8. using node modules like http
-9. create simple server
+3. nodejs cli
+4. environment setup
+5. hello world in nodejs (create js file (index.js recommended) and run with node)
+6. web apis (alert etc), window object etc aren't available here in node 
+7. initialize npm in project (to manage our project and deps using npm)
+8. using built in node modules like http, fs etc
+    use require syntax
+9. our own modules in nodejs
+    module.exports and require
+10. require vs import
+    .js extension vs .mjs
+11. what is nodemon and why do we use it? install it and run project with it.
+12. create simple http server using nodejs
