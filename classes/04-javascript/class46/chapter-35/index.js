@@ -1,8 +1,7 @@
 // Chapter-35: Functions
 
 // WHAT IS A FUNCTION?
-// A function is a block of JavaScript that robotically does the same thing again and again,
-// whenever you invoke/call its name.
+// A function is a block of JavaScript that robotically does the same thing again and again,whenever you invoke/call its name.
 
 // WHY FUNCTIONS?
 // It saves you repetitive coding and makes your code easier to understand.
@@ -12,16 +11,16 @@
 // tells the user the current time.
 
 // without creating a function
-// const now = new Date();
-// const theHr = now.getHours();
-// const theMin = now.getMinutes();
+// var now = new Date();
+// var theHr = now.getHours();
+// var theMin = now.getMinutes();
 // alert("time: " + theHr + ":" + theMin);
 
 // using function
 // function tellTime() {
-//   const now = new Date();
-//   const theHr = now.getHours();
-//   const theMin = now.getMinutes();
+//   var now = new Date();
+//   var theHr = now.getHours();
+//   var theMin = now.getMinutes();
 //   alert("time: " + theHr + ":" + theMin);
 // }
 // tellTime();
