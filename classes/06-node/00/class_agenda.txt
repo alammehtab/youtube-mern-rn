@@ -2,14 +2,13 @@
 2. nodejs intro
 3. nodejs cli
 4. environment setup
-5. hello world in nodejs (create js file (index.js recommended) and run with node)
+5. hello world in nodejs (create js file (index.js recommended) 
+    and run with node)
 6. web apis (alert etc), window object etc aren't available here in node 
 7. initialize npm in project (to manage our project and deps using npm)
-8. using built in node modules like http, fs etc
-    use require syntax
-9. our own modules in nodejs
-    module.exports and require
-10. require vs import
-    .js extension vs .mjs
-11. what is nodemon and why do we use it? install it and run project with it.
-12. create simple http server using nodejs
+8. javascript modules (in nodes)
+    CJM vs ESM 
+	require vs import
+   	.js extension vs .mjs
+9. what is nodemon and why do we use it? install it and run project with it.
+10. create simple http server using nodejs
