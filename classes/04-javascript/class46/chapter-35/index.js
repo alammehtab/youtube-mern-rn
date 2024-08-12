@@ -3,34 +3,18 @@
 // WHAT IS A FUNCTION?
 // A function is a block of JavaScript that robotically does the same thing again and again,whenever you invoke/call its name.
 
-// WHY FUNCTIONS?
-// It saves you repetitive coding and makes your code easier to understand.
+// SOME OF THE FUNCTIONS/METHODS WE'VE USED SO FAR
+// alert, push, pop, slice, splice, indexOf, lastIndexOf, toString, parseInt, parseFloat etc
 
-// EXAMPLE SCENARIO
-// On your website, suppose there are several pages where you want to display an alert that
-// tells the user the current time.
-
-// without creating a function
-// var now = new Date();
-// var theHr = now.getHours();
-// var theMin = now.getMinutes();
-// alert("time: " + theHr + ":" + theMin);
-
-// using function
-// function tellTime() {
-//   var now = new Date();
-//   var theHr = now.getHours();
-//   var theMin = now.getMinutes();
-//   alert("time: " + theHr + ":" + theMin);
-// }
-// tellTime();
-// tellTime();
-// tellTime();
-// tellTime();
+// BUIL-IT VS USER-DEFINED FUNCTIONS
+// now we'll be creating our own function for our needs
 
 // CREATE OUR OWN FUNCTION
+// functionKeyword functionName(){
+// whatever this function does, goes here
+// }
 
-// function declaration
+// function declaration/statement
 // function sayHello() {
 //   alert("Hello");
 // }
@@ -38,9 +22,22 @@
 // function call
 // sayHello();
 
-// function with requirements
-function greetUser(userName) {
-  alert("Hello " + userName);
-}
+// WHY FUNCTIONS?
+// It saves you repetitive coding and makes your code easier to understand.
 
-greetUser("Bilal");
+// EXAMPLE SCENARIO
+// On your website, suppose there are several pages where you want to display an alert that tells the user the current time in this format hh:mm.
+
+// demonstrate the above scenario using js modules
+// use export and import to share the code
+// make sure you set a new prop "type" with the value "module" on scripts in html file
+
+// function tellTime() {
+//   var now = new Date();
+//   var theHr = now.getHours();
+//   var theMin = now.getMinutes();
+//   alert("time: " + theHr + ":" + theMin);
+// }
+// tellTime();
+
+// export { tellTime }
