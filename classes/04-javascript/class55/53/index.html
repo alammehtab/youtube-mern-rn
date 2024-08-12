@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>53-Swapping images</title>
+    <title>53-Image Swapping</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-    <!-- without using arguments -->
-    <!-- <img src="./images/car.webp" id="imageToSwap" onmouseover="swapImages()"> -->
 
-    <!-- using arguments -->
-    <img src="./images/car.webp" id="imageToSwap" onmouseover="swapImages('imageToSwap','./images/bike.webp')">
+<body>
+    <h1>Image Swapping Gallery</h1>
+    <div class="gallery">
+        <img src="./images/bike.webp" alt="Image 1" onclick="swapImage('./images/bike.webp')">
+        <img src="./images/car.webp" alt="Image 2" onclick="swapImage('./images/car.webp')">
+        <img src="./images/bicycle.webp" alt="Image 3" onclick="swapImage('./images/bicycle.webp')">
+    </div>
+    <p>Selected Image</p>
+    <img id="mainImage" class="main-image" src="./images/bike.webp" alt="Main Image">
     <script src="./index.js"></script>
 </body>
+
 </html>
