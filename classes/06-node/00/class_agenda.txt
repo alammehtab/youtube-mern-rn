@@ -6,9 +6,12 @@
     and run with node)
 6. web apis (alert etc), window object etc aren't available here in node 
 7. initialize npm in project (to manage our project and deps using npm)
-8. javascript modules (in nodes)
+8. javascript modules (in node)
     CJM vs ESM 
 	require vs import
    	.js extension vs .mjs
-9. what is nodemon and why do we use it? install it and run project with it.
+9. what is nodemon and why do we use it? 
+    install it and run project with it.
+    install it globally to run files from terminal with it
+    if installed locally, will have to create scripts
 10. create simple http server using nodejs
