@@ -1,6 +1,6 @@
 var text = document.getElementById('text');
 
-// Set initial styles explicitly
+// Set initial styles
 text.style.color = 'black';
 text.style.fontSize = '20px';
 text.style.border = '1px solid black';
