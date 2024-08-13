@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>55-Setting Styles</title>
+    <title>Dynamic Style Changer</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <p id="greetings">hello 👋, how are you doing?</p>
-    <button onclick="changeColor()">Change</button>
+    <h1>Dynamic Style Changer</h1>
+    <p id="text">Watch me change!</p>
+    <div>
+        <button onclick="changeColor()">Change Color</button>
+        <button onclick="changeFontSize()">Change Font Size</button>
+        <button onclick="toggleBorder()">Toggle Border</button>
+    </div>
     <script src="./index.js"></script>
 </body>
+
 </html>
