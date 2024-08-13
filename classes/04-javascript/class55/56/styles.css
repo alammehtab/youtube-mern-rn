@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.styled {
+    background-color: lightblue;
+    color: darkblue;
+    padding: 10px;
+}
+
+p {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

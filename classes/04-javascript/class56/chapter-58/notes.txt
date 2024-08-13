@@ -1,0 +1,47 @@
+1. Introduction to the DOM
+
+    Analogy:
+    Imagine a web page as a tree. The Document Object Model (DOM) is like a map that shows the structure of this tree, where each element is a branch or leaf.
+
+    Definition:
+    The DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.
+
+2. How the DOM Works
+    DOM stuff we've already seen:
+        document.getElementById()
+        document.getElementsByTagName()
+
+    Components of DOM:
+        Document: The entire web page.
+        Element Nodes: Tags like <div>, <p>, <h1>, etc.
+        Text Nodes: The text inside the elements.
+        Attributes: Properties like id, class, src, etc.
+
+    Visual Representation/Examples:
+        example-0.html and example-0.png
+        example-1.html and example-1.png
+
+3. Inspecting the DOM in a Browser
+    Browser Developer Tools
+        inpect the page and select different nodes/elements
+
+4. Manipulating the DOM with JavaScript
+    Browser Developer Tools
+        select elements using id/tagname and assign them diff values
+        like textContent, color etc
+
+5. Why the DOM is Important
+    The DOM is what allows JavaScript to make web pages interactive.
+    Without the DOM, JavaScript would have no way to understand or 
+    manipulate the content of web pages.
+
+6. Wrap-Up
+    Fun Fact:
+        The DOM is not part of JavaScript itself; it’s an API provided by the browser.
+    Challenge:
+        Try modifying the DOM on your own by changing elements on a practice page.
+    Exploration:
+        Understanding the DOM is essential for mastering JavaScript and other
+        web development libraries like ReactJS.
+    Next Chapter:
+        What are parents and children in the DOM???
