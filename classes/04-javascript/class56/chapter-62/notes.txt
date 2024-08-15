@@ -1,0 +1,34 @@
+Chapter62-The DOM: More Ways to Target Elements
+
+QUICK RECAP:
+    Understanding the DOM
+
+        .The DOM is a tree-like structure representing the HTML document.
+        .Nodes in the DOM include elements, attributes, and text.
+        .Each element in the DOM can have child elements, and every element (except the root) has a parent.
+
+    parentNode:
+        Returns the parent node of an element.
+    
+    childNodes:
+        Returns a NodeList of child nodes for a given element, including text and comment nodes.
+    
+    children:
+        Returns a NodeList of child nodes for a given element, except text and comment nodes.
+
+DISCUSSING IN THIS CHAPTER:
+
+    firstChild: 
+        Targets the first child node of an element.
+
+    lastChild: 
+        Targets the last child node of an element.
+    
+    nextSibling: 
+        Returns the next sibling node of the current element.
+    
+    previousSibling: 
+        Returns the previous sibling node.
+
+PRACTICAL DEMONSTRATION:
+    index.html

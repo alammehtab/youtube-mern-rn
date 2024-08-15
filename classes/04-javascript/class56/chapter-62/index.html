@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f4f4f4;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>More ways to target elements</h1>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button onclick="highlightFirst()">Highlight First</button>
+    <button onclick="highlightNext()">Highlight Next</button>
+    <button onclick="highlightLast()">Highlight Last</button>
+
+    <script>
+        var list = document.getElementById('myList');
+        var firstItem = list.firstElementChild;
+        var lastItem = list.lastElementChild;
+        var current = firstItem;
+
+        function highlightFirst() {
+            current.style.background = '';
+            current = firstItem;
+            current.style.background = '#222';
+            current.style.color = 'white'
+        }
+
+        function highlightLast() {
+            current.style.background = '';
+            current = lastItem;
+            current.style.background = '#222';
+            current.style.color = 'white';
+        }
+
+        function highlightNext() {
+            current.style.background = '';
+            if (current.nextElementSibling) {
+                current = current.nextElementSibling;
+            }
+            current.style.background = '#222';
+            current.style.color = 'white'
+        }
+    </script>
+
+</body>
+
+</html>
