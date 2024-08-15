@@ -1,0 +1,16 @@
+Chapter61-The DOM: Junk artifacts and nodeType
+
+PREVIOUS LECTURE (QUICK RECAP):
+    THE DOM: FINDING CHILDREN
+        children: Returns a live HTMLCollection of all child elements.
+        childNodes: Returns a live NodeList of all child nodes, including text nodes, comments, etc.
+
+WHAT ARE JUNK ARTIFACTS?
+    When working with the DOM, especially when iterating through child nodes, we may encounter nodes that are not elements. These are often referred to as "junk artifacts."
+
+    COMMON JUNK ARTIFACTS:
+        Text Nodes: These are created by spaces, line breaks, or text content within the HTML.
+        Comment Nodes: Nodes created by HTML comments.
+
+PRACTICAL EXAMPLE:
+    example.html

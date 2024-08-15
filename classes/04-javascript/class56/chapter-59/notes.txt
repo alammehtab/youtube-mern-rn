@@ -1,0 +1,33 @@
+59-The DOM: Parents and Children
+
+What is the DOM? (Quick Recap)
+    The DOM is a tree-like structure where every HTML element is a node.
+    The structure starts from the document object, which represents the entire page, and branches out to individual elements like div, p, h1, etc.
+
+Understanding Parents and Children
+    Parent Node: 
+        Any element that contains another element is called a parent.
+        <div>
+            <p>Hello, world</p>
+        </div>
+
+        here, div is the parent node.
+
+    Child Node: 
+        The elements inside a parent are its children.
+        <div>
+            <p>Hello, world</p>
+        </div>
+
+        single child:
+        here, p is the child node.
+
+        multiple children:
+        <div>
+            <p>Hello, world</p>
+            <span>hi</span>
+        </div>
+        here, p and span are children nodes.
+
+EXAMPLE:
+    example-0.html and example.png
