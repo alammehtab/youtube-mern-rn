@@ -2,8 +2,8 @@ Chapter61-The DOM: Junk artifacts and nodeType
 
 PREVIOUS LECTURE (QUICK RECAP):
     THE DOM: FINDING CHILDREN
-        children: Returns a live HTMLCollection of all child elements.
-        childNodes: Returns a live NodeList of all child nodes, including text nodes, comments, etc.
+        children: Returns only child elements (actual html elements like h1, p, span, div etc).
+        childNodes: Returns child nodes, including text nodes, comments, etc.
 
 WHAT ARE JUNK ARTIFACTS?
     When working with the DOM, especially when iterating through child nodes, we may encounter nodes that are not elements. These are often referred to as "junk artifacts."
