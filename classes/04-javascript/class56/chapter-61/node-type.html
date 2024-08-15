@@ -20,7 +20,16 @@
         var children = container.childNodes;
 
         for (var i = 0; i < children.length; i++) {
-            console.log(children[i])
+            // if node is element node
+            if (children[i].nodeType === 1) {
+                console.log("Element Node:", children[i]);
+                // if node is text node
+            } else if (children[i].nodeType === 3) {
+                console.log("Text Node:", children[i].textContent.trim());
+                // if node is comment node
+            } else if (children[i].nodeType === 8) {
+                console.log("Comment Node:", children[i].nodeValue);
+            }
         }
     </script>
 </body>

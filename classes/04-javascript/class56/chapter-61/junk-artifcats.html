@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+
+<body>
+    <div id="container">
+        <p>This is a paragraph.</p>
+        <!-- This is a comment -->
+        Text between elements
+        <span>A span element</span>
+    </div>
+
+    <script>
+        var container = document.getElementById("container");
+        var children = container.childNodes;
+        var junkArtifacts = []
+        var elementNodes = []
+
+        for (var i = 0; i < children.length; i++) {
+            // console.log(children[i])
+            if (children[i].nodeType !== 1) {
+                junkArtifacts.push(children[i])
+            } else {
+                elementNodes.push(children[i])
+            }
+        }
+        console.table([children, junkArtifacts, elementNodes])
+    </script>
+</body>
+
+</html>
