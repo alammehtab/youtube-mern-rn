@@ -18,16 +18,16 @@ QUICK RECAP:
 
 DISCUSSING IN THIS CHAPTER:
 
-    firstChild: 
+    firstChild/firstElementChild: 
         Targets the first child node of an element.
 
-    lastChild: 
+    lastChild/lastElementChild: 
         Targets the last child node of an element.
     
-    nextSibling: 
+    nextSibling/nextElementSibling: 
         Returns the next sibling node of the current element.
     
-    previousSibling: 
+    previousSibling/previousElementSibling: 
         Returns the previous sibling node.
 
 PRACTICAL DEMONSTRATION:
