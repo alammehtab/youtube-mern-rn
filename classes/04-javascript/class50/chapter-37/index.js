@@ -23,13 +23,11 @@
 
 // simple example
 // function calculateSum(num1, num2) {
-//   //   alert(num1 + num2);
-//   let sum = 0;
-//   sum = num1 + num2;
+//   // console.log(num1 + num2);
+//   var sum = num1 + num2;
 //   return sum;
 // }
-
-// const total = calculateSum(10, 2);
+// var total = calculateSum(10, 2);
 // console.log(total);
 
 // complex example: calculate matric percentage
@@ -46,11 +44,21 @@ function calculateObtainedMarks(marks) {
   return sum;
 }
 
-const obtainedMarks = calculateObtainedMarks([95, 67, 87, 59, 90]);
-const totalMarks = 500;
-// const matricPercentage = (obtainedMarks / totalMarks) * 100;
+function calculatePercentage(obtainedMarks, totalMarks) {
+  return (obtainedMarks / totalMarks) * 100;
+}
+
+// var obtainedMarks = calculateObtainedMarks([95, 67, 87, 59, 90]);
+// var totalMarks = 500;
+// var matricPercentage = calculatePercentage(obtainedMarks, totalMarks)
+
+// console.log(matricPercentage)
+
 
 // fix to 1 decimal value
-const matricPercentage = ((obtainedMarks / totalMarks) * 100).toFixed(1);
+// var matricPercentage = ((obtainedMarks / totalMarks) * 100).toFixed(1);
 
-console.log(matricPercentage);
+// console.log(matricPercentage);
+
+
+export { calculateObtainedMarks, calculatePercentage }

@@ -1,18 +1,19 @@
 //Chapter-38: Functions: Local vs. global variables
 
-// global variable
-// const channelName = "cs with alam";
+// DEF: local vs global variable
 
-function printChannelName() {
-  // local variable
-  const channelName = "cs with alam";
-  //   console.log(channelName);
-  document.write(channelName + "<br>");
-}
+// Global Variable
+// var globalVar = "I'm a global variable";
 
-// print directly
-// console.log(channelName);
-document.write(channelName + "<br>");
+// function myFunction() {
+//   // Local Variable
+//   var localVar = "I'm a local variable";
 
-// print using function
-printChannelName();
+//   console.log("Inside Function: ", globalVar);
+//   console.log("Inside Function: ", localVar);
+// }
+
+// myFunction();
+
+// console.log("Outside Function:", globalVar);
+// console.log("Outside Function:", localVar);
