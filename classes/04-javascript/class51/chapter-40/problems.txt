@@ -1,0 +1,13 @@
+0. Write a function getGrade(score) that takes a numeric score (0 through 100) and returns a letter grade based on the following scale. Use a switch statement:
+
+90-100 - "A"
+80-89 - "B"
+70-79 - "C"
+60-69 - "D"
+0-59 - "F"
+
+1. Write a function that takes a color of the traffic light ("red", "yellow", "green") and returns the action that should be taken ("Stop", "Prepare to stop", "Go"). Use a switch statement to handle the different colors. If the color is not recognized, return "Unknown color".
+
+2. Create a function that takes the name of a fruit and returns its price per kilogram. Use a switch statement to handle different fruits (e.g., "apple", "banana", "orange", "grape"). If the fruit is not listed, return "Price not available".
+
+3. Write a function that takes a vehicle type code ('C' for Car, 'M' for Motorcycle, 'T' for Truck) and returns the type of vehicle. Use a switch statement to handle the different types. If the vehicle type code is invalid, return "Unknown vehicle type".

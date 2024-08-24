@@ -35,3 +35,31 @@
 //     default:
 //         console.log("Invalid day")
 // }
+
+// EXAMPLE/PRACTICE PROGRAMS (SWITCH STATEMENT):
+// function calculate(operation, num1, num2) {
+//     switch (operation) {
+//         case 'add':
+//             return num1 + num2;
+//         case 'subtract':
+//             return num1 - num2;
+//         case 'multiply':
+//             return num1 * num2;
+//         case 'divide':
+//             return num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+//         default:
+//             return 'Invalid operation';
+//     }
+// }
+
+// console.log(calculate('add', 5, 3));
+// console.log(calculate('divide', 10, 0));
+
+// UNDERSTANDING RETURN STATEMENT
+// function understandReturn() {
+//     console.log("hellooooo world")
+//     return
+//     console.log("buy world")
+// }
+
+// understandReturn()
