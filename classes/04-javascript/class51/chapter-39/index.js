@@ -7,11 +7,16 @@
 // The main difference between the two is that an if/else statement evaluates a CONDITION and executes a block of code if the condition is true, while a switch statement evaluates an EXPRESSION and executes the code associated with the matching case statement.
 
 // EXAMPLE PROGRAM WITH IF/ELSE
-// var x = 5;
-// if (x > 10) {
-//     console.log("x is greater than 10");
+// var day = "Monday"
+
+// if (day === "Monday") {
+//     console.log("Today is Monday")
+// } else if (day === "Tuesday") {
+//     console.log("Today is Tuesday")
+// } else if (day === "Wednesday") {
+//     console.log("Today is Wednesday")
 // } else {
-//     console.log("x is less than or equal to 10");
+//     console.log("Invalid day name")
 // }
 
 // EXAMPLE PROGRAM WITH SWITCH
@@ -23,39 +28,11 @@
 //     case "Tuesday":
 //         console.log("Today is Tuesday");
 //         break;
-//     default:
-//         console.log("Today is neither Monday nor Tuesday");
-// }
-
-
-// SAME PROGRAM WITH IF-ELSE
-// if (day === "Monday") {
-//     console.log("Today is Monday")
-// } else if (day === "Tuesday") {
-//     console.log("Today is Tuesday")
-// } else {
-//     console.log("Today is neither Monday nor Tuesday")
-// }
-
-// ADVANTAGES OF SWITCH
-// 1. One advantage of using a switch statement is that it can be more efficient than multiple if/else statements when testing a single expression against multiple possible values.
-// 2. Additionally, a switch statement can make the code more readable and easier to follow, especially when there are many possible conditions to check.
-
-// However, if/else statements offer more flexibility than switch statements, as they can evaluate complex expressions and conditions that cannot be easily represented in a switch statement. if/else statements also allow for more fine - grained control over the flow of the program, as multiple conditions can be checked in a specific order.
-
-// WHEN TO USE WHICH
-// Overall, the choice between using an if/else statement and a switch statement depends on the specific needs of the program and the complexity of the conditions being evaluated.
-
-// var day = "Monday";
-// switch (day) {
-//     case "Monday":
-//         console.log("Today is Monday");
-//         break;
-//     case "Tuesday":
-//         console.log("Today is Tuesday");
+//     case "Wednesday":
+//         console.log("Today is Wednesday")
 //         break;
 //     default:
-//         console.log("Today is neither Monday nor Tuesday");
+//         console.log("Invalid day name");
 // }
 
 // JUST FOCUS ON FIRST 3 LINES
@@ -64,3 +41,12 @@
 // keyword case. Then the value that is being tried, "Monday". Then a space and a colon.
 // 3. The statement that executes if the test passes—if day does, in fact, have the value
 // "Monday". This statement is indented. Any number of statements can execute if the test passes.
+
+// ADVANTAGES OF SWITCH
+// 1. One advantage of using a switch statement is that it can be more efficient than multiple if/else statements when testing a single expression against multiple possible values.
+// 2. Additionally, a switch statement can make the code more readable and easier to follow, especially when there are many possible conditions to check.
+
+// However, if/else statements offer more flexibility than switch statements, as they can evaluate complex expressions and conditions that cannot be easily represented in a switch statement. if/else statements also allow for more fine - grained control over the flow of the program, as multiple conditions can be checked in a specific order.
+
+// WHEN TO USE WHICH?
+// Overall, the choice between using an if/else statement and a switch statement depends on the specific needs of the program and the complexity of the conditions being evaluated.
