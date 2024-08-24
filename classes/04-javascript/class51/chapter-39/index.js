@@ -7,7 +7,7 @@
 // The main difference between the two is that an if/else statement evaluates a CONDITION and executes a block of code if the condition is true, while a switch statement evaluates an EXPRESSION and executes the code associated with the matching case statement.
 
 // EXAMPLE PROGRAM WITH IF/ELSE
-// let x = 5;
+// var x = 5;
 // if (x > 10) {
 //     console.log("x is greater than 10");
 // } else {
@@ -15,7 +15,7 @@
 // }
 
 // EXAMPLE PROGRAM WITH SWITCH
-// let day = "Monday";
+// var day = "Monday";
 // switch (day) {
 //     case "Monday":
 //         console.log("Today is Monday");
@@ -46,7 +46,7 @@
 // WHEN TO USE WHICH
 // Overall, the choice between using an if/else statement and a switch statement depends on the specific needs of the program and the complexity of the conditions being evaluated.
 
-// let day = "Monday";
+// var day = "Monday";
 // switch (day) {
 //     case "Monday":
 //         console.log("Today is Monday");
