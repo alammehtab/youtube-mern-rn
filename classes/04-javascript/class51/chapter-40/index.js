@@ -46,7 +46,12 @@
 //         case 'multiply':
 //             return num1 * num2;
 //         case 'divide':
-//             return num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+//         // return num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+//         if (num2 !== 0) {
+//             return num1 / num2
+//         } else {
+//             return 'Cannot divide by zero'
+//         }
 //         default:
 //             return 'Invalid operation';
 //     }
