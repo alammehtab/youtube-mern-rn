@@ -15,7 +15,7 @@
 // var i = 0
 // do {
 //     console.log(i)
-// i++;
+//     i++;
 // }
 // while (i < 0);
 
@@ -36,3 +36,18 @@
 // dowhile Loop:
 // Prompting the user for input until a valid input is provided.
 // Performing an initial setup task before checking the loop condition.
+
+// EXAMPLE PROGRAMS
+// do {
+//     var randomNumber = Math.ceil(Math.random() * 5)
+//     var userGuess = +prompt("Guess the number: ")
+
+//     if (userGuess === randomNumber) {
+//         alert("Hurrah! You got it!")
+//         console.log(randomNumber)
+//     } else {
+//         alert("Oh! try next time.")
+//         console.log(randomNumber)
+//     }
+//     var play = +prompt("Do you wanna play the game?\n1. 'Yes'\n0. 'No'")
+// } while (play)
