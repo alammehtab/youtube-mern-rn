@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive DOM Inspector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #infoPanel {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .clickable {
+            padding: 10px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .clickable:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interactive DOM Inspector</h1>
+    <p>Click on any element below to see its properties:</p>
+
+    <div id="header" class="clickable">This is a header div.</div>
+    <p id="paragraph" class="clickable">This is a paragraph element.</p>
+    <span id="spanText" class="clickable">This is a span element.</span>
+
+    <div id="infoPanel">
+        <h2>Element Info:</h2>
+        <p id="nodeName">Node Name: </p>
+        <p id="nodeValue">Node Value: </p>
+        <p id="nodeType">Node Type: </p>
+    </div>
+
+    <script>
+        const infoPanel = document.getElementById('infoPanel');
+        const nodeNameElement = document.getElementById('nodeName');
+        const nodeValueElement = document.getElementById('nodeValue');
+        const nodeTypeElement = document.getElementById('nodeType');
+
+        function displayElementInfo(event) {
+            const element = event.target;
+            nodeNameElement.textContent = 'Node Name: ' + element.nodeName;
+            nodeValueElement.textContent = 'Node Value: ' + (element.firstChild ? element.firstChild.nodeValue : 'null');
+            nodeTypeElement.textContent = 'Node Type: ' + element.nodeType;
+        }
+
+        // Add event listener to all clickable elements
+        const clickableElements = document.querySelectorAll('.clickable');
+        clickableElements.forEach(element => {
+            element.addEventListener('click', displayElementInfo);
+        });
+    </script>
+</body>
+
+</html>
