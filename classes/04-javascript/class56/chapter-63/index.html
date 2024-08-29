@@ -42,24 +42,21 @@
         <h2>Element Info:</h2>
         <p id="nodeName">Node Name: </p>
         <p id="nodeValue">Node Value: </p>
-        <p id="nodeType">Node Type: </p>
     </div>
 
     <script>
-        const infoPanel = document.getElementById('infoPanel');
-        const nodeNameElement = document.getElementById('nodeName');
-        const nodeValueElement = document.getElementById('nodeValue');
-        const nodeTypeElement = document.getElementById('nodeType');
+        var infoPanel = document.getElementById('infoPanel');
+        var nodeNameElement = document.getElementById('nodeName');
+        var nodeValueElement = document.getElementById('nodeValue');
 
         function displayElementInfo(event) {
-            const element = event.target;
+            var element = event.target;
             nodeNameElement.textContent = 'Node Name: ' + element.nodeName;
             nodeValueElement.textContent = 'Node Value: ' + (element.firstChild ? element.firstChild.nodeValue : 'null');
-            nodeTypeElement.textContent = 'Node Type: ' + element.nodeType;
         }
 
         // Add event listener to all clickable elements
-        const clickableElements = document.querySelectorAll('.clickable');
+        var clickableElements = document.querySelectorAll('.clickable');
         clickableElements.forEach(element => {
             element.addEventListener('click', displayElementInfo);
         });
