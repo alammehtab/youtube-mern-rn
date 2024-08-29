@@ -16,7 +16,7 @@
 
 // SAME EXAMPLE WITH WHILE LOOP
 
-// let count = 1;
+// var count = 1;
 // while (count < 10) {
 //     console.log(count);
 //     count++;
@@ -33,3 +33,21 @@
 // Use a while loop for reading a file into a variable.
 // Use a while loop when asking for user input.
 // Use a while loop when the increment value is nonstandard.
+
+// EXAMPLE PROGRAMS
+// GUESS THE NUMBER GAME
+// var playAgain = +prompt("Khelna chah rhe ho?\n0. 'No' \n1.'Yes'")
+
+// while (playAgain) {
+//     var randomNumber = Math.ceil(Math.random() * 3)
+//     var userGuess = +prompt("Guess the number: ")
+
+//     if (userGuess === randomNumber) {
+//         alert("You got it right")
+//     } else {
+//         alert("Try again!")
+//     }
+//     playAgain = +prompt("Khelna chah rhe ho?\n0. 'No' \n1.'Yes'")
+// }
+
+// console.log(randomNumber)
