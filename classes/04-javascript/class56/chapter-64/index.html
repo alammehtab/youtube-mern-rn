@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64-The DOM: Counting elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 96%;
+            height: 150px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .counter {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .counter div {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-align: center;
+            min-width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Dynamic Element Counter Dashboard</h2>
+        <textarea id="htmlInput" placeholder="Enter your HTML code here..."></textarea>
+        <div class="counter">
+            <div id="paraCount">Paragraphs: 0</div>
+            <div id="imgCount">Images: 0</div>
+            <div id="divCount">Divs: 0</div>
+        </div>
+    </div>
+
+    <script>
+        var htmlInput = document.getElementById('htmlInput');
+        var paraCount = document.getElementById('paraCount');
+        var imgCount = document.getElementById('imgCount');
+        var divCount = document.getElementById('divCount');
+
+        htmlInput.addEventListener('input', () => {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(htmlInput.value, 'text/html');
+
+            var paragraphs = doc.getElementsByTagName('p').length;
+            var images = doc.getElementsByTagName('img').length;
+            var divs = doc.getElementsByTagName('div').length;
+
+            paraCount.textContent = `Paragraphs: ${paragraphs}`;
+            imgCount.textContent = `Images: ${images}`;
+            divCount.textContent = `Divs: ${divs}`;
+        });
+    </script>
+
+</body>
+
+</html>
