@@ -50,16 +50,19 @@
         var nodeValueElement = document.getElementById('nodeValue');
 
         function displayElementInfo(event) {
-            var element = event.target;
+            console.log("firstChild: ", element.firstChild)
             nodeNameElement.textContent = 'Node Name: ' + element.nodeName;
             nodeValueElement.textContent = 'Node Value: ' + (element.firstChild ? element.firstChild.nodeValue : 'null');
         }
 
         // Add event listener to all clickable elements
         var clickableElements = document.querySelectorAll('.clickable');
-        clickableElements.forEach(element => {
-            element.addEventListener('click', displayElementInfo);
-        });
+        // clickableElements.forEach(element => {
+        //     element.addEventListener('click', displayElementInfo);
+        // });
+        for (var i = 0; i < clickableElements.length; i++) {
+            clickableElements[i].addEventListener('click', displayElementInfo)
+        }
     </script>
 </body>
 
