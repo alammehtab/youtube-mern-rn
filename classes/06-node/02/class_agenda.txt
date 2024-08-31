@@ -1,0 +1,124 @@
+ports
+headers
+http requests and types
+http status codes
+http server with multiple routes
+==================================
+
+Ports
+    Analogy: 
+        Think of a port like an apartment number in an apartment building.
+        Building: The entire building represents the server (or the computer hosting the server).
+        Apartment Number: The port is like the specific apartment number where you want to go within the building.
+
+    Explanation:
+        What It Is: A port is a number that identifies a specific process or service running on a computer.
+        Function: When your computer communicates with a server, it needs to know which service or application it wants to talk to. The port helps with that by directing the communication to the right place.
+    
+    Example:
+
+        Port 80: This is the default port for HTTP web traffic. When you type http://example.com, your browser uses port 80 by default to connect to the web server.
+        Port 443: This is the default port for HTTPS (secure web traffic). For https://example.com, port 443 is used.
+
+Headers
+    Analogy: 
+        Think of headers like the envelope of a letter.
+
+        Envelope: The envelope contains information about the sender, recipient, and other details. Similarly, HTTP headers contain metadata about the request or response.
+        Letter: The letter inside is like the main content (body) of the HTTP request or response.
+    
+    Explanation:
+
+        What They Are: Headers are pieces of information sent with HTTP requests and responses. They include details about the request or response itself, such as what kind of data is being sent or what type of response is expected.
+        Function: Headers help the client and server understand how to process the request or response.
+    
+    Example:
+
+        Request Headers: When your browser asks for a web page, it might include headers like Accept-Language (to specify the language preference) or User-Agent (to describe the browser type).
+        Response Headers: When the server replies, it might include headers like Content-Type (to specify the type of content being sent, like HTML or JSON) or Cache-Control (to control how long the content should be cached).
+
+Putting It All Together
+    Connection: 
+        When you connect to a website, you use a port number (like 80 or 443) to ensure the request goes to the right place on the server.
+    Information Exchange: 
+        Headers in the request and response help both the client and server understand what kind of information is being exchanged and how it should be handled.
+
+What is an HTTP Request?
+
+    HTTP stands for Hypertext Transfer Protocol. It's a protocol used for transferring data over the web.
+    An HTTP request is a way for a client (like a web browser) to ask a server (where a website or web service is hosted) for information or to perform an action.
+
+    Components of an HTTP Request:
+
+    Method: 
+        The type of action the client wants the server to perform. Common methods include:
+
+        GET: Request data from the server.
+        POST: Send data to the server to create or update resources.
+        PUT: Update existing resources.
+        DELETE: Remove resources from the server.
+
+    URL: 
+        The address of the resource you are requesting. For example, https://example.com/page.
+
+    Headers: 
+        Additional information about the request. Headers can include metadata like the type of data being sent, authentication tokens, or the client’s preferred language.
+
+    Body: 
+        This is optional and usually used with methods like POST and PUT to send data to the server (e.g., form submissions).
+
+    How It Works:
+
+        The client (browser or app) sends an HTTP request to a server.
+        The server processes the request, performs the required action (e.g., retrieve a webpage or store data), and sends back an HTTP response.
+        The client receives the response and displays the result or handles it as needed.
+
+    Example: 
+        If you want to visit a website, your browser sends a GET request to the server hosting the website. The server then responds with the webpage content, which your browser displays.
+
+    Why It Matters: 
+        Understanding HTTP requests is fundamental for web development and troubleshooting because it helps you grasp how web interactions work and how data is exchanged between clients and servers.
+
+HTTP STATUS CODES
+
+    1xx - Informational
+        100 Continue: Initial part of a request has been received, and the client should continue with the request.
+        101 Switching Protocols: Server is switching protocols as requested by the client.
+
+    2xx - Success
+        200 OK: The request was successful.
+        201 Created: The request was successful, and a resource was created.
+        204 No Content: The request was successful, but there is no content to send.
+
+    3xx - Redirection
+        301 Moved Permanently: The resource has been permanently moved to a new URL.
+        302 Found: The resource has been temporarily moved to a new URL.
+        304 Not Modified: The resource has not been modified since the last request.
+
+    4xx - Client Errors
+        400 Bad Request: The server cannot process the request due to client error (e.g., malformed request).
+        401 Unauthorized: Authentication is required and has failed or not been provided.
+        403 Forbidden: The server understands the request but refuses to authorize it.
+        404 Not Found: The requested resource could not be found.
+        405 Method Not Allowed: The request method is not supported for the resource.
+
+    5xx - Server Errors
+        500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.
+        502 Bad Gateway: The server received an invalid response from an upstream server.
+        503 Service Unavailable: The server is currently unable to handle the request due to temporary overloading or maintenance.
+        504 Gateway Timeout: The server did not receive a timely response from an upstream server.
+
+    MOST COMMONLY ENCOUNTERED HTTP STATUS CODES:
+
+        200 OK: Request was successful.
+        301 Moved Permanently: Resource has been moved permanently to a new URL.
+        302 Found: Resource has been temporarily moved to a new URL.
+        400 Bad Request: The request was malformed or invalid.
+        401 Unauthorized: Authentication is required or has failed.
+        403 Forbidden: Access to the resource is forbidden.
+        404 Not Found: Resource could not be found.
+        500 Internal Server Error: The server encountered an error and cannot fulfill the request.
+        502 Bad Gateway: Invalid response from an upstream server.
+        503 Service Unavailable: The server is currently unable to handle the request due to temporary overload or maintenance.
+    
+    Note: These codes help clients and servers communicate the status and outcome of HTTP requests.
