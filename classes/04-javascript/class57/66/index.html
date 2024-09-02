@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .profile-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-card h2 {
+            margin-top: 0;
+        }
+
+        .profile-card p {
+            margin: 5px 0;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>66-The DOM: Attribute names and values</h1>
+    <div class="profile-card" id="profileCard">
+        <img id="profile-img" src="./images/default.jpeg" alt="">
+        <div>
+            <h2 id="name">John Doe</h2>
+            <p id="age">Age: 30</p>
+            <p id="profession">Profession: Developer</p>
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="updateProfile('./images/profile1.jpeg', 'Jane Smith', 25, 'Designer')">Profile 1</button>
+        <button onclick="updateProfile('./images/profile2.jpeg', 'Mark Johnson', 40, 'Manager')">Profile 2</button>
+        <button onclick="updateProfile('./images/profile3.jpeg', 'Lucy Brown', 29, 'Engineer')">Profile 3</button>
+    </div>
+
+    <script>
+        function updateProfile(imgSrc, name, age, profession) {
+            var profileCard = document.getElementById('profileCard');
+            var profileImage = document.getElementById('profile-img')
+            profileImage.setAttribute('src', imgSrc);
+            profileCard.setAttribute('data-name', name);
+            profileCard.setAttribute('data-age', age);
+            profileCard.setAttribute('data-profession', profession);
+
+            document.getElementById('name').textContent = profileCard.getAttribute('data-name');
+            document.getElementById('age').textContent = "Age: " + profileCard.getAttribute('data-age');
+            document.getElementById('profession').textContent = "Profession: " + profileCard.getAttribute('data-profession');
+        }
+    </script>
+
+</body>
+
+</html>
