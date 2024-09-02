@@ -45,10 +45,12 @@
     <!-- <img src="./icons/apple.png" oncontextmenu="src='./icons/banana.png'"> -->
 
     <!-- apply styling on double click -->
-    <!-- <p ondblclick="this.style.color='crimson'">Hurrah! my styles got changed!</p> -->
+    <!-- <p ondblclick="style.color = 'crimson'">Hurrah! my styles got changed!</p>
+    <p ondblclick="changeColor(this)">Paragraph2</p>
+    <p ondblclick="changeColor(this)">Paragraph3</p> -->
 
     <!-- call a function on any mouse button press -->
-    <!-- <p onmousedown="mouseDown()">Press a mouse button: left or right</p> -->
+    <!-- <p onmousedown="mouseDown()">Press any mouse button: left, right, scroll, side</p> -->
 
     <!-- show alert on mouse enter -->
     <!-- <p onmouseenter="alert('Mouse entered')">onmouseenter: The mouse pointer moves into an element</p> -->
@@ -98,11 +100,14 @@
     <!-- show alert on mouse up -->
     <!-- <p onmouseup="alert('mouse up triggered')">onmouseup: A mouse button is released over an element</p> -->
 
-    <script>
+    <!-- <script>
         function mouseDown() {
             alert("mouseDown")
         }
-    </script>
+        function changeColor(selectedElement) {
+            selectedElement.style.color = "crimson"
+        }
+    </script> -->
 </body>
 
 </html>
