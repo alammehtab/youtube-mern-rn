@@ -86,11 +86,14 @@
             var profileCard = document.getElementById('profileCard');
             var profileImage = document.getElementById('profile-img')
             profileImage.setAttribute('src', imgSrc);
+
+            // setAttribute
             profileCard.setAttribute('data-name', name);
             profileCard.setAttribute('data-age', age);
             profileCard.setAttribute('data-profession', profession);
 
-            document.getElementById('name').textContent = profileCard.getAttribute('data-name');
+            // getAttributes
+            document.getElementById('name').textContent = name // can do this way as well
             document.getElementById('age').textContent = "Age: " + profileCard.getAttribute('data-age');
             document.getElementById('profession').textContent = "Profession: " + profileCard.getAttribute('data-profession');
         }
