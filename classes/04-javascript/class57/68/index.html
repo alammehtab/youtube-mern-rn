@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Nested List Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        ul ul {
+            padding-left: 20px;
+        }
+
+        li {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        li.active {
+            background-color: #d1e7dd;
+            border-left: 5px solid #0f5132;
+        }
+
+        .actions {
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0a58ca;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dynamic Nested List Builder</h1>
+        <ul id="list">
+            <!-- List items will be dynamically added here -->
+        </ul>
+        <div class="actions">
+            <input type="text" id="itemInput" placeholder="Enter item name">
+            <button onclick="addMainItem()">Add Main Item</button>
+            <button onclick="addSubItem()">Add Sub-Item</button>
+            <button onclick="insertAbove()">Insert Above</button>
+            <button onclick="insertBelow()">Insert Below</button>
+            <button onclick="removeItem()">Remove Item</button>
+        </div>
+    </div>
+    <script>
+        let activeItem = null;
+
+        document.getElementById('list').addEventListener('click', function (e) {
+            if (e.target.tagName === 'LI') {
+                if (activeItem) {
+                    activeItem.classList.remove('active');
+                }
+                activeItem = e.target;
+                activeItem.classList.add('active');
+            }
+        });
+
+        function createListItem(text) {
+            var li = document.createElement('li');
+            li.textContent = text;
+            return li;
+        }
+
+        function addMainItem() {
+            var text = document.getElementById('itemInput').value;
+            if (text) {
+                var li = createListItem(text);
+                document.getElementById('list').appendChild(li);
+                document.getElementById('itemInput').value = '';
+            }
+        }
+
+        function addSubItem() {
+            if (activeItem) {
+                var text = document.getElementById('itemInput').value;
+                if (text) {
+                    var subUl = activeItem.querySelector('ul') || document.createElement('ul');
+                    var li = createListItem(text);
+                    subUl.appendChild(li);
+                    if (!activeItem.querySelector('ul')) {
+                        activeItem.appendChild(subUl);
+                    }
+                    document.getElementById('itemInput').value = '';
+                }
+            } else {
+                alert('Please select an item first.');
+            }
+        }
+
+        function insertAbove() {
+            if (activeItem) {
+                var text = document.getElementById('itemInput').value;
+                if (text) {
+                    var li = createListItem(text);
+                    activeItem.parentNode.insertBefore(li, activeItem);
+                    document.getElementById('itemInput').value = '';
+                }
+            } else {
+                alert('Please select an item first.');
+            }
+        }
+
+        function insertBelow() {
+            if (activeItem) {
+                var text = document.getElementById('itemInput').value;
+                if (text) {
+                    var li = createListItem(text);
+                    if (activeItem.nextSibling) {
+                        activeItem.parentNode.insertBefore(li, activeItem.nextSibling);
+                    } else {
+                        activeItem.parentNode.appendChild(li);
+                    }
+                    document.getElementById('itemInput').value = '';
+                }
+            } else {
+                alert('Please select an item first.');
+            }
+        }
+
+        function removeItem() {
+            if (activeItem) {
+                activeItem.parentNode.removeChild(activeItem);
+                activeItem = null;
+            } else {
+                alert('Please select an item first.');
+            }
+        }
+    </script>
+</body>
+
+</html>
