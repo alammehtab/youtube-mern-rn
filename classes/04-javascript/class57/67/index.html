@@ -13,6 +13,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
         }
@@ -116,6 +117,7 @@
 </head>
 
 <body>
+    <h1 style="color: black;">67-The DOM: Adding Nodes</h1>
     <div class="container">
         <h1>To-Do List</h1>
         <input type="text" id="taskInput" placeholder="Enter a new task">
@@ -127,6 +129,11 @@
         function addTask() {
             var taskInput = document.getElementById('taskInput');
             var taskList = document.getElementById('taskList');
+
+            // handle empty task
+            if (!taskInput.value.trim()) {
+                return alert("Todo can't be empty!")
+            }
 
             // Create a new list item
             var li = document.createElement('li');
