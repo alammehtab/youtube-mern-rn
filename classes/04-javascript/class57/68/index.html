@@ -20,6 +20,9 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         ul {
@@ -39,6 +42,11 @@
         li.active {
             background-color: #d1e7dd;
             border-left: 5px solid #0f5132;
+        }
+
+        #itemInput {
+            padding: 10px;
+            width: 82%;
         }
 
         .actions {
@@ -63,13 +71,14 @@
 </head>
 
 <body>
+    <h1 style="text-align: center;">68-The DOM: Inserting Nodes</h1>
     <div class="container">
-        <h1>Dynamic Nested List Builder</h1>
+        <h2>Dynamic Nested List Builder</h2>
         <ul id="list">
             <!-- List items will be dynamically added here -->
         </ul>
+        <input type="text" id="itemInput" placeholder="Enter item name">
         <div class="actions">
-            <input type="text" id="itemInput" placeholder="Enter item name">
             <button onclick="addMainItem()">Add Main Item</button>
             <button onclick="addSubItem()">Add Sub-Item</button>
             <button onclick="insertAbove()">Insert Above</button>
@@ -78,17 +87,21 @@
         </div>
     </div>
     <script>
-        let activeItem = null;
+        var activeItem = null;
 
-        document.getElementById('list').addEventListener('click', function (e) {
+        function handleListClick(e) {
             if (e.target.tagName === 'LI') {
+                // remove already selected element
                 if (activeItem) {
                     activeItem.classList.remove('active');
                 }
                 activeItem = e.target;
                 activeItem.classList.add('active');
             }
-        });
+        }
+
+        // can add onclick in html, or can use this in js
+        document.getElementById('list').addEventListener('click', handleListClick);
 
         function createListItem(text) {
             var li = document.createElement('li');
@@ -102,6 +115,8 @@
                 var li = createListItem(text);
                 document.getElementById('list').appendChild(li);
                 document.getElementById('itemInput').value = '';
+            } else {
+                alert("Main item can't be null/empty!")
             }
         }
 
