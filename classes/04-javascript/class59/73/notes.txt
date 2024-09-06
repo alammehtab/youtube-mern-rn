@@ -1,0 +1,125 @@
+Chapter 73 - Objects: Constructors for Methods
+
+1. What Are Constructors for Methods?
+
+    Definition: 
+    
+    When you create a constructor function, you can also define methods inside the constructor. These methods will then be available to all objects created from that constructor.
+
+    In simple terms, constructors can be used not only for defining properties but also for defining functions (methods) that all objects can share.
+
+    Key Concept: 
+    
+    A method is a function associated with an object. When we define methods inside a constructor, each object created using that constructor will have access to those methods.
+
+2. Why Use Constructors for Methods?
+
+    Code Reusability: 
+    
+    It allows us to define common behavior (methods) for all objects created using the constructor.
+
+    Organized Code: 
+    
+    Constructors for methods keep the data (properties) and functionality (methods) related to an object in one place.
+    
+    Efficient Object Creation: 
+    
+    Methods inside constructors can perform actions on the object's properties and can be used by all objects created from that constructor.
+
+3. How to Define Methods in a Constructor?
+
+    You define a method inside the constructor function just like you define a regular function.
+
+    Example:
+
+    function Car(color, model, year) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+
+        // Method to start the car
+        this.start = function() {
+            console.log(this.model + " is starting...");
+        };
+
+        // Method to display the car's details
+        this.displayDetails = function() {
+            console.log("Car: " + this.model + ", Color: " + this.color + ", Year: " + this.year);
+        };
+    }
+
+    var car1 = new Car("red", "Toyota", 2020);
+    var car2 = new Car("blue", "Honda", 2018);
+
+    car1.start(); // Output: Toyota is starting...
+    car2.displayDetails(); // Output: Car: Honda, Color: blue, Year: 2018
+    Here, the start and displayDetails methods are defined inside the Car constructor. Every Car object has access to these methods.
+
+4. Why Define Methods Inside Constructors?
+
+    Defining methods inside the constructor is useful if you need methods that work with the specific properties of each object.
+
+    Each object created from the constructor will have its own copy of the method, so it can use the method with its own data.
+
+    Example:
+
+
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+
+        this.greet = function() {
+            console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+        };
+    }
+
+    var person1 = new Person("Alice", 30);
+    var person2 = new Person("Bob", 25);
+
+    person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+    person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
+
+5. Best Practices for Constructors with Methods
+
+    While you can define methods inside the constructor, it is often better to define methods outside the constructor using prototypes. This way, all objects share the same method rather than having a copy of the method for each object (which consumes more memory).
+    We will learn about prototypes in the next chapter!
+
+6. Real-World Example: Bank Account Constructor
+
+    function BankAccount(accountHolder, balance) {
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+
+        // Method to deposit money
+        this.deposit = function(amount) {
+            this.balance += amount;
+            console.log(this.accountHolder + " deposited " + amount + ". New balance: " + this.balance);
+        };
+
+        // Method to withdraw money
+        this.withdraw = function(amount) {
+            if (amount > this.balance) {
+                console.log("Insufficient balance!");
+            } else {
+                this.balance -= amount;
+                console.log(this.accountHolder + " withdrew " + amount + ". New balance: " + this.balance);
+            }
+        };
+    }
+
+    var account1 = new BankAccount("Alice", 1000);
+    var account2 = new BankAccount("Bob", 500);
+
+    account1.deposit(200); // Output: Alice deposited 200. New balance: 1200
+    account2.withdraw(600); // Output: Insufficient balance!
+
+    In this example, the BankAccount constructor has two methods: deposit and withdraw. These methods allow each bank account object to perform actions related to managing its balance.
+
+7. Advantages of Constructors for Methods
+
+    Modularity: Constructors allow you to bundle related properties and methods together.
+    Convenience: You can create multiple objects with similar functionality without repeating code.
+    Encapsulation: Constructors help encapsulate both the data (properties) and behavior (methods) of an object.
+
+UPCOMING LESSON:
+    Objects: Prototypes
