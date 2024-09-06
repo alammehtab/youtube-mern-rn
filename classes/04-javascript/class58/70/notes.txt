@@ -1,0 +1,36 @@
+Chapter69- Objects: Properties
+
+What is a property?
+    real-world:
+        data related to an object like color, model, year, owner etc of a car.
+    programming:
+        data (variable) inside an object.
+
+Can we create empty objects like variables?
+    yes, we can.
+    var car = {}
+
+How can we add a property to an object?
+
+    // dot notation
+    objectName.propertyName = value
+
+    // bracket notation
+    objectName["propertyName"] = value
+
+How can we access its value?
+
+    // dot notation
+    objectName.propertyName
+
+    // bracket notation
+    objectName["propertyName"]
+
+How can we change its value?
+    objectName.property = newValue
+
+How can we delete it?
+    delete objectName.propertyName
+
+Can we check the existance of a property in an object?
+    propertyName in objectName
