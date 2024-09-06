@@ -1,0 +1,96 @@
+Chapter 72 - Objects: Constructors
+
+1. What is a Constructor?
+
+    Definition: 
+
+    A constructor is a special type of function used to create multiple objects of the same type (i.e., similar objects with shared properties and methods).
+    It's like a blueprint or template for creating objects.
+    Instead of manually creating multiple objects, constructors help you automate the process.
+
+2. Why Do We Use Constructors?
+
+    Constructors help you create many similar objects with the same structure but different data.
+    Imagine you want to create many car objects, each with a different color, model, and year. Doing this manually can be repetitive, so using a constructor makes it easier and less error-prone.
+
+3. How to Create a Constructor Function?
+
+    A constructor function is written like a regular function but with two key differences:
+
+        Its name starts with an uppercase letter.
+        Inside the constructor, this refers to the new object being created.
+
+    Example:
+
+    function Car(color, model, year) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+    }
+
+    In this example, Car is a constructor function that takes three parameters: color, model, and year.
+
+4. How to Create Objects Using a Constructor?
+
+    To create an object using a constructor, you use the new keyword.
+
+    Example:
+
+    var car1 = new Car("red", "Toyota", 2020);
+    var car2 = new Car("blue", "Honda", 2018);
+
+    console.log(car1.model); // Toyota
+    console.log(car2.color); // blue
+    In this example, car1 and car2 are two objects created using the Car constructor. Both objects share the same structure but have different values.
+
+5. Adding Methods to a Constructor
+
+    You can add methods to a constructor function just like you add properties.
+
+    Example:
+
+    function Car(color, model, year) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+        this.start = function() {
+            console.log(this.model + " has started");
+        };
+    }
+
+    var car1 = new Car("red", "Toyota", 2020);
+    car1.start(); // Toyota has started
+    Here, start is a method added inside the constructor, which can be called on any object created from this constructor.
+
+6. Benefits of Using Constructors
+
+    Reusability: Constructors allow you to reuse code to create similar objects.
+    Efficiency: Instead of writing code to create each object manually, you can use a constructor to quickly generate as many objects as needed.
+    Scalability: Constructors are useful in building large-scale applications where many similar objects are required.
+
+7. Practical Example: A Person Constructor
+
+    function Person(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.fullName = function() {
+            return this.firstName + " " + this.lastName;
+        };
+    }
+
+    var person1 = new Person("John", "Doe", 30);
+    var person2 = new Person("Jane", "Smith", 25);
+
+    console.log(person1.fullName()); // John Doe
+    console.log(person2.fullName()); // Jane Smith
+
+    In this example, Person is a constructor that creates person1 and person2, each with their own firstName, lastName, and age. Both also have a method fullName to return the full name.
+
+8. Best Practices with Constructors
+
+    Always capitalize the first letter of a constructor function (e.g., Car, Person) to distinguish it from regular functions.
+    Use the new keyword when creating objects from a constructor.
+
+UPCOMING LESSON:
+    Objects: Constructors for methods
