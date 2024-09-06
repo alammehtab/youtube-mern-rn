@@ -8,14 +8,16 @@ Chapter 71 - Objects: Methods
     Methods represent actions that can be performed with the object.
     Think of methods as tasks you can ask an object to perform.
 
+    In short, methods are functions that are declared inside an object.
+
 2. Why Do We Use Methods?
 
     Methods help objects perform specific actions, like real-world objects do.
     For example, a car object may have methods like start(), drive(), or stop() to represent actions the car can take.
-    3. How to Add Methods to Objects
-    Methods are functions that are declared inside an object.
 
-Example:
+3. How to Add Methods to Objects
+
+    Example:
 
     var car = {
         color: "red",
