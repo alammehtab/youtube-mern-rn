@@ -1,0 +1,96 @@
+Chapter 71 - Objects: Methods
+
+1. What Are Methods?
+
+    Definition: 
+         
+    In JavaScript, a method is a function that is a property of an object. It allows an object to perform actions or behaviors.
+    Methods represent actions that can be performed with the object.
+    Think of methods as tasks you can ask an object to perform.
+
+2. Why Do We Use Methods?
+
+    Methods help objects perform specific actions, like real-world objects do.
+    For example, a car object may have methods like start(), drive(), or stop() to represent actions the car can take.
+    3. How to Add Methods to Objects
+    Methods are functions that are declared inside an object.
+
+Example:
+
+    var car = {
+        color: "red",
+        model: "Toyota",
+        year: 2020,
+        start: function() {
+            console.log("The car has started");
+        }
+    };
+
+    In the above example, start() is a method that is a function inside the car object.
+
+4. How to Call a Method?
+
+    To call a method, use the same dot notation that you use to access properties.
+
+Example:
+    
+    car.start(); // The car has started
+
+5. Adding Methods After Object Creation
+
+    You can add methods to an object even after it’s been created.
+
+Example:
+
+    car.drive = function() {
+        console.log("The car is driving");
+    };
+
+    car.drive(); // The car is driving
+
+6. this Keyword Inside Methods
+
+    The this keyword refers to the current object and is used to access properties inside a method.
+
+Example:
+
+    var car = {
+        color: "red",
+        model: "Toyota",
+        year: 2020,
+        start: function() {
+            console.log("Starting the " + this.model);
+        }
+    };
+
+    car.start(); // Starting the Toyota
+
+    In this case, this.model refers to the model property of the car object. Using this inside methods allows you to reference other properties of the same object.
+
+7. Benefits of Using Methods
+
+    Methods organize the behavior of objects and allow us to bundle related functionalities together.
+    Methods allow objects to perform actions, which can lead to interactive and dynamic behaviors.
+
+8. Practical Example: A Person Object
+
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        },
+        celebrateBirthday: function() {
+            this.age += 1;
+            console.log("Happy Birthday! You are now " + this.age + " years old.");
+        }
+    };
+
+    console.log(person.fullName()); // John Doe
+    person.celebrateBirthday(); // Happy Birthday! You are now 31 years old.
+
+    Here, fullName and celebrateBirthday are methods. The fullName method returns the person’s full name, and celebrateBirthday increments the age and prints a birthday message.
+
+UPCOMING LESSON:
+    Objects: Constructors
