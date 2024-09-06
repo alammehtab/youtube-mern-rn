@@ -5,8 +5,13 @@ Chapter 69- Objects
     Definition: 
         In JavaScript, an object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
 
+        Another Definition: Object is a ollection of key-value pairs.
+
+        property: variable (data) inside an object.
+        method: function inside an object.
+
     Analogy: 
-        Think of an object like a real-world object, such as a car. A car has properties like color, model, and year, and it can perform actions like start, stop, or drive.
+        Think of an object like a real-world object, such as a car. A car has properties like color, model, and year, and it can perform actions (functions) like start, stop, or drive.
 
 2. Why Do We Use Objects?
 
@@ -23,7 +28,7 @@ Chapter 69- Objects
 
     Example:
 
-        let car = {
+        var car = {
             color: "red",
             model: "Toyota",
             year: 2020
@@ -35,8 +40,8 @@ Chapter 69- Objects
 
     Example:
 
-        console.log(car.color); // Output: "red"
-        console.log(car["model"]); // Output: "Toyota"
+        console.log(car.color);
+        console.log(car["model"]); 
 
 5. Adding New Properties
 
