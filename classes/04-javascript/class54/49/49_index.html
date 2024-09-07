@@ -10,37 +10,58 @@
 <body>
     <!-- let's suppose we've this very simple form -->
     <!-- <form>
-        Email:
-        <input type="email">
-        <input type="submit" value="Submit">
-    </form> -->
+            Email:
+            <input type="email">
+            <input type="submit" value="Submit">
+        </form> -->
 
     <!-- 
-        we've the following three elements in the above form:
-        1. The text "Email"
-        2. The text field for the user's email address
-        3. The submit button
-    -->
+            we've the following three elements in the above form:
+            1. The text "Email"
+            2. The text field for the user's email address
+            3. The submit button
+        -->
 
     <!-- to get access to the email field let me assign an id to the email field -->
     <!-- <form> 
-        Email:
-        <input type="email" id="email">
-        <input type="submit" value="Submit">
-    </form> -->
+            Email:
+            <input type="email" id="email">
+            <input type="submit" value="Submit">
+        </form> -->
 
     <!-- 
-        now on submission of the form let's check the email
-        we'll be calling a js function on submission of the form
-    -->
+            now on submission of the form let's check the email
+            we'll be calling a js function on submission of the form
+        -->
+
+    <!-- with some limitation like page refresh -->
     <!-- <form onsubmit="checkAddress('email')">
         Email:
         <input type="text" id="email">
         <input type="submit" value="Submit">
     </form> -->
 
+    <!-- <form>
+        Email:
+        <input type="text" id="email">
+        <input type="submit" value="Submit" onclick="handleSubmit(event,'email')">
+    </form> -->
+
 
     <script>
+        // function handleSubmit(event, fieldId) {
+        //     // stop page refresh
+        //     event.preventDefault()
+
+        //     checkAddress(fieldId)
+        // }
+
+        // function checkAddress(fieldId) {
+        //     var fieldEl = document.getElementById(fieldId)
+        //     var userEmail = fieldEl.value;
+        //     console.log(userEmail)
+        // }
+
         // function checkAddress(fieldId) {
         //     // getElementById must be in strict camelCase
         //     if (document.getElementById(fieldId).value === '') {
