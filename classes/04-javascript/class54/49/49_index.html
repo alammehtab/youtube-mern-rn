@@ -25,7 +25,7 @@
     <!-- to get access to the email field let me assign an id to the email field -->
     <!-- <form> 
             Email:
-            <input type="email" id="email">
+            <input type="email" id="userEmail">
             <input type="submit" value="Submit">
         </form> -->
 
@@ -37,43 +37,72 @@
     <!-- with some limitation like page refresh -->
     <!-- <form onsubmit="checkAddress()">
         Email:
-        <input type="text" id="email">
+        <input type="email" id="userEmail">
         <input type="submit" value="Submit">
     </form> -->
 
-    <!-- <form>
+    <form>
         Email:
-        <input type="text" id="email">
+        <input type="email" id="userEmail">
         <input type="submit" value="Submit" onclick="checkAddress(event)">
-    </form> -->
+    </form>
 
 
     <script>
+        // function checkAddress() {
+        //     // getElementById must be in strict camelCase
+        //     var emailInputEl = document.getElementById('userEmail')
+        //     var emailValue = emailInputEl.value
+
+        //     if (emailValue === '') {
+        //         alert("Email is required!")
+        //     }
+
+        //     // we can do it this way as well
+        //     // if (document.getElementById('userEmail').value === '') {
+        //     //     alert("Email is required!")
+        //     // }
+        // }
+
+        // issue: page refresh
+        // function checkAddress() {
+        //     var emailInputEl = document.getElementById('userEmail')
+        //     var emailValue = emailInputEl.value
+
+        //     if (emailValue === '') {
+        //         console.log("Email is required!")
+        //     }
+        // }
+
+        // explore event
+        // function checkAddress(submitEvent) {
+        //     submitEvent.preventDefault()
+        //     console.log(submitEvent)
+        // }
 
         // function checkAddress(e) {
         //     // stop page refresh
         //     e.preventDefault()
 
-        //     var fieldEl = document.getElementById('email')
+        //     var fieldEl = document.getElementById('userEmail')
         //     var userEmail = fieldEl.value;
         //     console.log(userEmail)
         // }
 
-        // function checkAddress() {
-        //     // getElementById must be in strict camelCase
-        //     if (document.getElementById('email').value === '') {
-        //         alert("Email is required!")
-        //     }
-        // }
+        // final checkAddress function
+        // function checkAddress(e) {
+        //     // stop page refresh
+        //     e.preventDefault()
 
-        // Some coders prefer to put the value found in the field into a variable, like this.
+        //     var emailInputEl = document.getElementById('userEmail')
 
-        // function checkAddress() {
-        //     var emailValue = document.getElementById('email').value
-        //     if (emailValue === '') {
+        //     if (emailInputEl.value === '') {
         //         alert("Email is required!")
         //     } else {
-        //         alert(`You're email is: ${emailValue}`)
+        //         alert(`Your Email: ${emailInputEl.value}`)
+
+        //         // empty email input
+        //         emailInputEl.value = ''
         //     }
         // }
     </script>
