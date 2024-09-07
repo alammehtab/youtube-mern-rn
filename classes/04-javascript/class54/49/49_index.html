@@ -35,7 +35,7 @@
         -->
 
     <!-- with some limitation like page refresh -->
-    <!-- <form onsubmit="checkAddress('email')">
+    <!-- <form onsubmit="checkAddress()">
         Email:
         <input type="text" id="email">
         <input type="submit" value="Submit">
@@ -44,35 +44,32 @@
     <!-- <form>
         Email:
         <input type="text" id="email">
-        <input type="submit" value="Submit" onclick="handleSubmit(event,'email')">
+        <input type="submit" value="Submit" onclick="checkAddress(event)">
     </form> -->
 
 
     <script>
-        // function handleSubmit(event, fieldId) {
+
+        // function checkAddress(e) {
         //     // stop page refresh
-        //     event.preventDefault()
+        //     e.preventDefault()
 
-        //     checkAddress(fieldId)
-        // }
-
-        // function checkAddress(fieldId) {
-        //     var fieldEl = document.getElementById(fieldId)
+        //     var fieldEl = document.getElementById('email')
         //     var userEmail = fieldEl.value;
         //     console.log(userEmail)
         // }
 
-        // function checkAddress(fieldId) {
+        // function checkAddress() {
         //     // getElementById must be in strict camelCase
-        //     if (document.getElementById(fieldId).value === '') {
+        //     if (document.getElementById('email').value === '') {
         //         alert("Email is required!")
         //     }
         // }
 
         // Some coders prefer to put the value found in the field into a variable, like this.
 
-        // function checkAddress(fieldId) {
-        //     var emailValue = document.getElementById(fieldId).value
+        // function checkAddress() {
+        //     var emailValue = document.getElementById('email').value
         //     if (emailValue === '') {
         //         alert("Email is required!")
         //     } else {
