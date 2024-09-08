@@ -5,11 +5,11 @@ text.style.color = 'black';
 text.style.fontSize = '20px';
 text.style.border = '1px solid black';
 
-function changeColor() {
+function toggleColor() {
   text.style.color = text.style.color === 'black' ? 'red' : 'black';
 }
 
-function changeFontSize() {
+function toggleFontSize() {
   text.style.fontSize = text.style.fontSize === '20px' ? '30px' : '20px';
 }
 
