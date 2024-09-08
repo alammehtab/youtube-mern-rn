@@ -4,10 +4,11 @@ function swapImage(newImageSrc, clickedThumbnail) {
   mainImage.src = newImageSrc;
 
   // Remove 'active' class from all thumbnails
-  var thumbnails = document.querySelectorAll(".gallery img");
-  // thumbnails.forEach(img => img.classList.remove("active"));
-  for (var i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].classList.remove("active")
+  var images = document.querySelectorAll(".gallery img");
+  // getElementById vs querySelector vs querySelectorAll
+  // images.forEach(img => img.classList.remove("active"));
+  for (var i = 0; i < images.length; i++) {
+    images[i].classList.remove("active")
   }
 
   // Add 'active' class to the clicked thumbnail
