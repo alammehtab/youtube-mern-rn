@@ -1,4 +1,4 @@
-function swapImage(newImageSrc, clickedThumbnail) {
+function swapImage(newImageSrc, clickedImage) {
   var mainImage = document.getElementById("mainImage");
   // swap images
   mainImage.src = newImageSrc;
@@ -12,5 +12,5 @@ function swapImage(newImageSrc, clickedThumbnail) {
   }
 
   // Add 'active' class to the clicked thumbnail
-  clickedThumbnail.classList.add("active");
+  clickedImage.classList.add("active");
 }
