@@ -19,7 +19,7 @@ function toggleImage() {
   var image = document.getElementById('myImage');
   var output = document.getElementById('output');
 
-  if (image.src.includes('/images/image1.jpg')) {
+  if (image.src.includes('image1.jpg')) {
     image.src = './images/image2.jpg';
     output.textContent = 'Image has been changed to the second image!';
   } else {
