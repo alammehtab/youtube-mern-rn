@@ -25,7 +25,7 @@ CHAPTER-58: THE DOM
 
 3. Inspecting the DOM in a Browser
     Browser Developer Tools
-        inpect the page and select different nodes/elements
+        inspect the page and select different nodes/elements
 
 4. Manipulating the DOM with JavaScript
     Browser Developer Tools
