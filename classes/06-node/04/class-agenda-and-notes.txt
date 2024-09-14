@@ -1,0 +1,125 @@
+URL module vs javascript's URL constructor
+Node app with get, put, post, and delete http requests
+
+Postman (from a backend dev perspective)
+    what, why?
+    ui and features tour
+    setting like theme etc
+    creating account
+    maitaining collections, environments
+    creating and using variables in it like globals
+============================================================
+
+NODE'S URL MODULE VS URL CONSTRUCTOR:
+
+    The URL constructor is a built-in global object in Node.js (starting from Node.js version 10 and above), so there is no need to import the url module.
+
+    IS THE URL MODULE IN NODEJS DEPRECATED?
+
+    No, the url module in Node.js is not deprecated. It is still available and useful in certain scenarios, especially when dealing with legacy code or when you need to work with the older callback-style methods like url.parse().
+
+    However, the URL constructor (which is part of the WHATWG URL Standard) is now the preferred method for parsing and working with URLs in most modern Node.js applications. It provides a more standardized and consistent interface, which is why it is often used in newer code.
+
+NODEJS SERVER CODE:
+
+    import http from 'http';
+
+    const server = http.createServer((req, res) => {
+    const { method, url } = req;
+    const parsedUrl = new URL(url, `http://${req.headers.host}`);
+
+    // Set response header to JSON
+    res.setHeader('Content-Type', 'application/json');
+
+    // GET Request
+    if (method === 'GET' && parsedUrl.pathname === '/api/items') {
+        res.statusCode = 200;
+        res.end(JSON.stringify({ message: 'GET request - Fetching all items' }));
+
+    // POST Request
+    } else if (method === 'POST' && parsedUrl.pathname === '/api/items') {
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            const newItem = JSON.parse(body);
+            res.statusCode = 201;
+            res.end(JSON.stringify({ message: `POST request - Adding new item`, data: newItem }));
+        });
+
+  // PUT Request
+  } else if (method === 'PUT' && parsedUrl.pathname.startsWith('/api/items/')) {
+    let body = '';
+    const itemId = parsedUrl.pathname.split('/').pop();
+    req.on('data', chunk => {
+      body += chunk.toString();
+    });
+    req.on('end', () => {
+      const updatedItem = JSON.parse(body);
+      res.statusCode = 200;
+      res.end(JSON.stringify({ message: `PUT request - Updating item ${itemId}`, data: updatedItem }));
+    });
+
+    // DELETE Request
+    } else if (method === 'DELETE' && parsedUrl.pathname.startsWith('/api/items/')) {
+        const itemId = parsedUrl.pathname.split('/').pop();
+        res.statusCode = 200;
+        res.end(JSON.stringify({ message: `DELETE request - Deleting item ${itemId}` }));
+
+    // Handle 404 Not Found
+    } else {
+        res.statusCode = 404;
+        res.end(JSON.stringify({ message: 'Route not found' }));
+    }
+    });
+
+    const PORT = 3000;
+    server.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+    });
+
+EXPLANATION OF ROUTES:
+
+    GET Request:
+
+    Path: /api/items
+    Description: Returns a message saying you're fetching all items.
+
+    POST Request:
+
+    Path: /api/items
+    Description: Parses the request body and adds a new item.
+
+    PUT Request:
+
+    Path: /api/items/:id
+    Description: Updates an item with a specific ID.
+
+    DELETE Request:
+
+    Path: /api/items/:id
+    Description: Deletes an item with a specific ID.
+
+TESTING THE ROUTES USING POSTMAN:
+
+    GET Request:
+
+    URL: http://localhost:3000/api/items
+    Click "Send" and check the response.
+
+    POST Request:
+
+    URL: http://localhost:3000/api/items
+    Go to the "Body" tab in Postman, select "raw" and set it to JSON.
+    Example JSON: { "name": "New Item" }
+
+    PUT Request:
+
+    URL: http://localhost:3000/api/items/1
+    Send a JSON body similar to POST: { "name": "Updated Item" }.
+
+    DELETE Request:
+
+    URL: http://localhost:3000/api/items/1
+    Click "Send" to delete an item with ID 1.
