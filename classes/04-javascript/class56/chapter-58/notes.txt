@@ -12,6 +12,8 @@ CHAPTER-58: THE DOM
     DOM stuff we've already seen:
         document.getElementById()
         document.getElementsByTagName()
+        document.querySelector()
+        document.querySelectorAll()
 
     Components of DOM:
         Document: The entire web page.
