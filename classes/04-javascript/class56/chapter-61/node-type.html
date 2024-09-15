@@ -17,18 +17,18 @@
 
     <script>
         var container = document.getElementById("container");
-        var children = container.childNodes;
+        var allNodes = container.childNodes;
 
-        for (var i = 0; i < children.length; i++) {
+        for (var i = 0; i < allNodes.length; i++) {
             // if node is element node
-            if (children[i].nodeType === 1) {
-                console.log("Element Node:", children[i]);
+            if (allNodes[i].nodeType === 1) {
+                console.log("Element Node:", allNodes[i]);
                 // if node is text node
-            } else if (children[i].nodeType === 3) {
-                console.log("Text Node:", children[i].textContent.trim());
+            } else if (allNodes[i].nodeType === 3) {
+                console.log("Text Node:", allNodes[i].textContent.trim());
                 // if node is comment node
-            } else if (children[i].nodeType === 8) {
-                console.log("Comment Node:", children[i].nodeValue);
+            } else if (allNodes[i].nodeType === 8) {
+                console.log("Comment Node:", allNodes[i].nodeValue);
             }
         }
     </script>

@@ -11,25 +11,25 @@
     <div id="container">
         <p>This is a paragraph.</p>
         <!-- This is a comment -->
-        Text between elements
+        Text between elements <br>
         <span>A span element</span>
     </div>
 
     <script>
-        // var container = document.getElementById("container");
-        // var allNodes = container.childNodes;
-        // var junkArtifacts = []
-        // var elementNodes = []
+        var container = document.getElementById("container");
+        var allNodes = container.childNodes;
+        var junkArtifacts = []
+        var elementNodes = []
 
-        // for (var i = 0; i < allNodes.length; i++) {
-        //     // console.log(allNodes[i])
-        //     if (allNodes[i].nodeType !== 1) {
-        //         junkArtifacts.push(allNodes[i])
-        //     } else {
-        //         elementNodes.push(allNodes[i])
-        //     }
-        // }
-        // console.table([allNodes, junkArtifacts, elementNodes])
+        for (var i = 0; i < allNodes.length; i++) {
+            // console.log(allNodes[i])
+            if (allNodes[i].nodeType !== 1) {
+                junkArtifacts.push(allNodes[i])
+            } else {
+                elementNodes.push(allNodes[i])
+            }
+        }
+        console.table([allNodes, junkArtifacts, elementNodes])
     </script>
 </body>
 
