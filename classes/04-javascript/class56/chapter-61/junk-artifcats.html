@@ -16,20 +16,20 @@
     </div>
 
     <script>
-        var container = document.getElementById("container");
-        var children = container.childNodes;
-        var junkArtifacts = []
-        var elementNodes = []
+        // var container = document.getElementById("container");
+        // var allNodes = container.childNodes;
+        // var junkArtifacts = []
+        // var elementNodes = []
 
-        for (var i = 0; i < children.length; i++) {
-            // console.log(children[i])
-            if (children[i].nodeType !== 1) {
-                junkArtifacts.push(children[i])
-            } else {
-                elementNodes.push(children[i])
-            }
-        }
-        console.table([children, junkArtifacts, elementNodes])
+        // for (var i = 0; i < allNodes.length; i++) {
+        //     // console.log(allNodes[i])
+        //     if (allNodes[i].nodeType !== 1) {
+        //         junkArtifacts.push(allNodes[i])
+        //     } else {
+        //         elementNodes.push(allNodes[i])
+        //     }
+        // }
+        // console.table([allNodes, junkArtifacts, elementNodes])
     </script>
 </body>
 
