@@ -1,12 +1,13 @@
-// Get all child nodes
-var childNodes = parentDiv.childNodes;
+var parentDiv = document.getElementById("parentDiv")
 
-// console.log('All Child Nodes:', childNodes);
+// Get all child nodes
+var allNodes = parentDiv.childNodes;
+// console.log('All Child Nodes:', allNodes);
 
 // Loop through child nodes
-// for (var i = 0; i < childNodes.length; i++) {
-//     // Check if the node is an element
-//     if (childNodes[i].nodeType === 1) {
-//         childNodes[i].style.backgroundColor = 'lightgray';
-//     }
-// }
+for (var i = 0; i < allNodes.length; i++) {
+    // Check if the node is an element
+    if (allNodes[i].nodeType === 1) {
+        allNodes[i].style.backgroundColor = 'lightgray';
+    }
+}
