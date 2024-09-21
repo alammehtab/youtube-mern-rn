@@ -70,7 +70,7 @@
         var imgCount = document.getElementById('imgCount');
         var divCount = document.getElementById('divCount');
 
-        htmlInput.addEventListener('input', () => {
+        htmlInput.addEventListener('input', function () {
             var parser = new DOMParser();
             var doc = parser.parseFromString(htmlInput.value, 'text/html');
 
