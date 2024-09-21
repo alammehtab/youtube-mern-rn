@@ -50,7 +50,8 @@
         var nodeValueElement = document.getElementById('nodeValue');
 
         function displayElementInfo(event) {
-            console.log("firstChild: ", element.firstChild)
+            var element = event.target;
+            // console.log("firstChild: ", element.firstChild)
             nodeNameElement.textContent = 'Node Name: ' + element.nodeName;
             nodeValueElement.textContent = 'Node Value: ' + (element.firstChild ? element.firstChild.nodeValue : 'null');
         }
