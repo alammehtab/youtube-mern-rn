@@ -64,11 +64,14 @@ Chapter 72 - Objects: Constructors
 
 6. Benefits of Using Constructors
 
-    Reusability: Constructors allow you to reuse code to create similar objects.
-    Efficiency: Instead of writing code to create each object manually, you can use a constructor to quickly generate as many objects as needed.
-    Scalability: Constructors are useful in building large-scale applications where many similar objects are required.
+    Reusability: 
+        Constructors allow you to reuse code to create similar objects.
+    Efficiency: 
+        Instead of writing code to create each object manually, you can use a       constructor to quickly generate as many objects as needed.
+    Scalability: 
+        Constructors are useful in building large-scale applications where many similar objects are required.
 
-7. Practical Example: A Person Constructor
+7. Another Example: A Person Constructor
 
     function Person(firstName, lastName, age) {
         this.firstName = firstName;
