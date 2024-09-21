@@ -40,6 +40,7 @@
         <li>Item 3</li>
     </ul>
     <button onclick="highlightFirst()">Highlight First</button>
+    <button onclick="highlightPrevious()">Highlight Previous</button>
     <button onclick="highlightNext()">Highlight Next</button>
     <button onclick="highlightLast()">Highlight Last</button>
 
@@ -51,6 +52,7 @@
 
         function highlightFirst() {
             current.style.background = '';
+            current.style.color = 'black';
             current = firstItem;
             current.style.background = '#222';
             current.style.color = 'white'
@@ -58,13 +60,27 @@
 
         function highlightLast() {
             current.style.background = '';
+            current.style.color = 'black';
             current = lastItem;
             current.style.background = '#222';
             current.style.color = 'white';
         }
 
+        function highlightPrevious() {
+            current.style.background = '';
+            current.style.color = 'black';
+
+            if (current.previousElementSibling) {
+                current = current.previousElementSibling;
+            }
+
+            current.style.background = '#222';
+            current.style.color = 'white'
+        }
+
         function highlightNext() {
             current.style.background = '';
+            current.style.color = 'black';
             if (current.nextElementSibling) {
                 current = current.nextElementSibling;
             }
