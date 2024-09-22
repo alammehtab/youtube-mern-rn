@@ -1,0 +1,104 @@
+USER MANAGEMENT USING REACT AND EXPRESS
+
+Adding Error Handling to Express Server and Creating a React UI with Vite
+
+ERROR HANDLING MIDDLEWARE
+function errorHandler(err, req, res, next) {
+  res.status(err.status || 500).json({
+    message: err.message || 'Something went wrong',
+    error: true,
+  });
+}
+
+CALL IT AFTER ALL ROUTES
+app.use(errorHandler);
+
+REACT UI TO BE CONNECTED WITH OUR SERVER
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const App = () => {
+  const [users, setUsers] = useState([]);
+  const [newUser, setNewUser] = useState('');
+  const [updateUser, setUpdateUser] = useState({ id: '', name: '' });
+
+  // Fetch all users (READ)
+  useEffect(() => {
+    axios.get('http://localhost:5000/users')
+      .then(response => setUsers(response.data))
+      .catch(err => console.error(err));
+  }, []);
+
+  // Add a user (CREATE)
+  const addUser = () => {
+    axios.post('http://localhost:5000/users', { name: newUser })
+      .then(response => {
+        setUsers([...users, response.data]);
+        setNewUser(''); // Reset input
+      })
+      .catch(err => console.error(err));
+  };
+
+  // Update a user (UPDATE)
+  const updateUserById = (id) => {
+    axios.put(`http://localhost:5000/users/${id}`, { name: updateUser.name })
+      .then(response => {
+        setUsers(users.map(user => (user.id === id ? response.data : user)));
+        setUpdateUser({ id: '', name: '' }); // Reset input
+      })
+      .catch(err => console.error(err));
+  };
+
+  // Delete a user (DELETE)
+  const deleteUserById = (id) => {
+    axios.delete(`http://localhost:5000/users/${id}`)
+      .then(() => {
+        setUsers(users.filter(user => user.id !== id));
+      })
+      .catch(err => console.error(err));
+  };
+
+  return (
+    <div>
+      <h1>CRUD Operations with Express & React</h1>
+
+      {/* Create User */}
+      <input
+        type="text"
+        value={newUser}
+        onChange={(e) => setNewUser(e.target.value)}
+        placeholder="Enter new user"
+      />
+      <button onClick={addUser}>Add User</button>
+
+      {/* Update User */}
+      {updateUser.id && (
+        <div>
+          <input
+            type="text"
+            value={updateUser.name}
+            onChange={(e) => setUpdateUser({ ...updateUser, name: e.target.value })}
+            placeholder="Update user name"
+          />
+          <button onClick={() => updateUserById(updateUser.id)}>Update User</button>
+        </div>
+      )}
+
+      {/* Read & Delete Users */}
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>
+            {user.name}
+            <button onClick={() => setUpdateUser({ id: user.id, name: user.name })}>
+              Edit
+            </button>
+            <button onClick={() => deleteUserById(user.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default App;
+
