@@ -16,7 +16,7 @@ Chapter 74 - Objects: Prototypes
 
     Memory Efficiency: 
     
-    Instead of each object having its own copy of a method, all objects can share the same method through the prototype.
+    Instead of each object having its own copy of a method/property, all objects can share the same method/property through the prototype.
     
     Inheritance: 
     
@@ -34,7 +34,7 @@ Chapter 74 - Objects: Prototypes
 
 4. Example of Prototypes
 
-    Every object in JavaScript has a prototype property, which is used to share methods across all instances of the object.
+    Every object in JavaScript has a prototype property, which is used to share methods/properties across all instances of the object.
 
     Example:
 
@@ -145,7 +145,7 @@ Chapter 74 - Objects: Prototypes
 
 10. Conclusion
 
-    Prototypes are a powerful feature in JavaScript that allow you to share methods between multiple objects and create objects that inherit from other objects.
+    Prototypes are a powerful feature in JavaScript that allow you to share methods/properties between multiple objects and create objects that inherit from other objects.
     
     This concept is crucial for understanding how JavaScript handles inheritance and object behavior, and it sets the foundation for more advanced topics like ES6 classes and inheritance.
 
