@@ -50,12 +50,12 @@
 // console.log(car)
 
 // CHECK PROPERTY EXISTANCE
-var car = {
-    color: "red",
-    year: 2022,
-    owner: "Ali",
-    price: 1515151
-}
+// var car = {
+//     color: "red",
+//     year: 2022,
+//     owner: "Ali",
+//     price: 1515151
+// }
 
 // console.log("owner" in car) // owner exists in car
-console.log("tyres" in car) // tyres property doesn't exist in car
+// console.log("tyres" in car) // tyres property doesn't exist in car

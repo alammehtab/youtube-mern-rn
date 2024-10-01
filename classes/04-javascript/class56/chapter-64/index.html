@@ -70,20 +70,22 @@
         var imgCount = document.getElementById('imgCount');
         var divCount = document.getElementById('divCount');
 
-        htmlInput.addEventListener('input', () => {
+        htmlInput.addEventListener('input', function () {
             var parser = new DOMParser();
             var doc = parser.parseFromString(htmlInput.value, 'text/html');
+
+            // var divsCount = document.getElementsByTagName('div').length
+            // console.log({ divsCount })
 
             var paragraphs = doc.getElementsByTagName('p').length;
             var images = doc.getElementsByTagName('img').length;
             var divs = doc.getElementsByTagName('div').length;
 
+
             paraCount.textContent = `Paragraphs: ${paragraphs}`;
             imgCount.textContent = `Images: ${images}`;
             divCount.textContent = `Divs: ${divs}`;
         });
-        var divsCount = document.getElementsByTagName('div').length
-        console.log({ divsCount })
     </script>
 
 </body>

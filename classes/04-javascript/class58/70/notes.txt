@@ -1,4 +1,4 @@
-Chapter69- Objects: Properties
+Chapter70- Objects: Properties
 
 What is a property?
     real-world:

@@ -5,7 +5,7 @@ Chapter 69- Objects
     Definition: 
         In JavaScript, an object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
 
-        Another Definition: Object is a ollection of key-value pairs.
+        Another Definition: Object is a collection of key-value pairs.
 
         property: variable (data) inside an object.
         method: function inside an object.
