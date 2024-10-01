@@ -84,42 +84,5 @@ Chapter 73 - Objects: Constructors for Methods
     While you can define methods inside the constructor, it is often better to define methods outside the constructor using prototypes. This way, all objects share the same method rather than having a copy of the method for each object (which consumes more memory).
     We will learn about prototypes in the next chapter!
 
-6. Real-World Example: Bank Account Constructor
-
-    function BankAccount(accountHolder, balance) {
-        this.accountHolder = accountHolder;
-        this.balance = balance;
-
-        // Method to deposit money
-        this.deposit = function(amount) {
-            this.balance += amount;
-            console.log(this.accountHolder + " deposited " + amount + ". New balance: " + this.balance);
-        };
-
-        // Method to withdraw money
-        this.withdraw = function(amount) {
-            if (amount > this.balance) {
-                console.log("Insufficient balance!");
-            } else {
-                this.balance -= amount;
-                console.log(this.accountHolder + " withdrew " + amount + ". New balance: " + this.balance);
-            }
-        };
-    }
-
-    var account1 = new BankAccount("Alice", 1000);
-    var account2 = new BankAccount("Bob", 500);
-
-    account1.deposit(200); // Output: Alice deposited 200. New balance: 1200
-    account2.withdraw(600); // Output: Insufficient balance!
-
-    In this example, the BankAccount constructor has two methods: deposit and withdraw. These methods allow each bank account object to perform actions related to managing its balance.
-
-7. Advantages of Constructors for Methods
-
-    Modularity: Constructors allow you to bundle related properties and methods together.
-    Convenience: You can create multiple objects with similar functionality without repeating code.
-    Encapsulation: Constructors help encapsulate both the data (properties) and behavior (methods) of an object.
-
 UPCOMING LESSON:
     Objects: Prototypes
