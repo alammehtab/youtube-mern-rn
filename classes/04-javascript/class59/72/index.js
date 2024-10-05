@@ -37,18 +37,19 @@
 // car3.start()
 
 // ANOTHER REAL-WORLD EXAMPLE (PERSON)
-function Person(firstName, lastName, a) {
-    this.fn = firstName;
-    this.ln = lastName;
-    this.age = a;
-    this.printFullName = function () {
-        console.log(`${firstName} ${lastName}`)
-    }
-}
+// function Person(firstName, lastName, a) {
+//     this.fn = firstName;
+//     this.ln = lastName;
+//     this.age = a;
+//     this.printFullName = function () {
+//         console.log(`${firstName} ${lastName}`)
+//     }
+// }
 
-var ali = new Person("Ali", "Muhammad", 45)
-var bilal = new Person("Bilal", "Ahmed", 15)
-var danyal = new Person("Danyal", "Akram", 32)
+// var ali = new Person("Ali", "Muhammad", 45)
+// var bilal = new Person("Bilal", "Ahmed", 15)
+// var danyal = new Person("Danyal", "Akram", 32)
 // console.log(ali, bilal, danyal)
-ali.printFullName()
-danyal.printFullName()
+// ali.printFullName()
+// bilal.printFullName()
+// danyal.printFullName()
