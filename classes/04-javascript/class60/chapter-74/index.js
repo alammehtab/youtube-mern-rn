@@ -13,10 +13,10 @@
 // EXAMPLE OF PROTOTYPE/PROTOTYPE IN ACTION
 
 // constructor function
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
 
 // create person object using Person constructor function
 // var ali = new Person("Ali", 28)
@@ -51,10 +51,21 @@ function Person(name, age) {
 // person5.greet()
 
 // ADDING METHODS TO JS'S BUILT-IN OBJECTS
-Array.prototype.first = function () {
-    return this[0];
-};
+// Array.prototype.first = function () {
+//     return this[0];
+// };
 
-var numbers = [1, 2, 3, 4];
-var friends = ["Danyal", "Ali", "Sohrab"]
-console.log(friends.first()); // Output: 1
+// Array.prototype.dusra = function () {
+//     return this[1]
+// }
+
+// var numbers = [1, 2, 3, 4];
+// var friends = ["Danyal", "Ali", "Sohrab"]
+
+// test first method
+// console.log(numbers.first()); // output: 1
+// console.log(friends.first()); // Output: Danyal
+
+// test dusra method
+// console.log(numbers.dusra())
+// console.log(friends.dusra())
