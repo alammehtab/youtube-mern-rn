@@ -1,0 +1,80 @@
+In today’s lecture, we’ll cover how to set up a database connection between a Node.js Express server and MongoDB using the Mongoose library.
+
+OUTLINE FOR TODAY'S LECTURE
+    Introduction to MongoDB and Mongoose:
+        Why we are moving from an in-memory array to a database.
+        What MongoDB is and how it works.
+        What Mongoose is and why we use it.
+
+    Setting Up MongoDB:
+        Installing and setting up MongoDB locally or using a cloud solution like MongoDB Atlas.
+    Connecting to MongoDB with Mongoose:
+        Code example for connecting to the MongoDB database.
+=========================================================================================
+
+1. Introduction to MongoDB and Mongoose
+    Why Use a Database?
+        Previously, we were storing our user data in an array within the server, which worked fine for small amounts of data in memory. However, for larger or persistent data, we need a database.
+
+        MongoDB is a NoSQL database that stores data in a flexible, JSON-like format. It’s a great fit for modern applications due to its scalability and flexibility.
+
+        Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js, providing a schema-based solution to model our data.
+
+2. Setting Up MongoDB
+    Option 1: Install MongoDB Locally 
+        Medium Post You Should Follow:
+        https://medium.com/@nsidana123/installing-mongodb-and-getting-started-8ef4ba4c886c
+        
+        Download and install MongoDB from mongodb.com.
+        Start MongoDB by running the mongod command in the terminal.
+    Option 2: Use MongoDB Atlas (Cloud)
+        Go to MongoDB Atlas.
+        Create a free account and set up a new cluster.
+        Copy the connection string provided by Atlas.
+
+3. Connecting to MongoDB with Mongoose
+    First, install Mongoose in your project:
+        npm install mongoose
+
+Express Server with Mongoose Setup
+    Here’s how you can set up the MongoDB connection in an Express server using Mongoose:
+    
+    import express from 'express';
+    import mongoose from 'mongoose';
+    import cors from 'cors';
+
+    // Initialize Express
+    const app = express();
+    app.use(cors());
+    app.use(express.json());
+
+    // MongoDB connection string (replace <your_connection_string> with your own)
+    const mongoUri = 'mongodb://localhost:27017/user_management'; // or use your MongoDB Atlas URI
+
+    // Connect to MongoDB
+    mongoose.connect(mongoUri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    }).then(() => {
+    console.log('Connected to MongoDB');
+    }).catch(err => {
+    console.error('Error connecting to MongoDB:', err.message);
+    });
+
+    // Define a User schema
+    const userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    });
+
+    // Create a User model
+    const User = mongoose.model('User', userSchema);
+
+Why Use MongoDB?
+    Persistent Storage: Unlike the array we used before, data stored in MongoDB is persistent and remains available after server restarts.
+    Scalability: MongoDB is designed for horizontal scaling, making it suitable for applications that need to grow.
+    Flexibility: MongoDB stores data as documents in a JSON-like format (BSON), allowing for flexible data structures.
+    
+Why Use Mongoose?
+    Schema-based modeling: Mongoose allows us to define a schema for our data and provides validation and type-checking out of the box.
+    Querying capabilities: Mongoose provides a simple, clean interface for querying MongoDB.
