@@ -1,108 +1,97 @@
 Chapter 75 - Objects: Checking for Properties and Methods
-1. Introduction: Why Check for Properties and Methods?
-When working with objects, especially in large projects or when dealing with external libraries, it's important to check if an object has a certain property or method before trying to use it.
-This prevents errors and makes your code more robust, especially if the object is dynamic or not fully under your control.
+
+1. Why Check for Properties and Methods?
+    When working with objects, especially in large projects or when dealing with external libraries, it's important to check if an object has a certain property or method before trying to use it.
+    This prevents errors and makes your code more robust, especially if the object is dynamic or not fully under your control.
+
 2. Ways to Check for Properties in Objects
-There are several ways to check if an object contains a specific property. Let’s explore the most common methods:
+        There are several ways to check if an object contains a specific property. Let’s explore the most common methods:
 
-3. Method 1: Using the in Operator
-The in operator checks whether a property exists in an object or its prototype chain.
-Syntax:
+    Method 1: Using the in Operator
+        The in operator checks whether a property exists in an object or its prototype chain.
 
-javascript
-Copy code
-"propertyName" in objectName
-Example:
+        Syntax:
+            "propertyName" in objectName
 
-javascript
-Copy code
-var car = {
-    make: "Toyota",
-    model: "Corolla"
-};
+        Example:
+            var car = {
+                make: "Toyota",
+                model: "Corolla"
+            };
 
-console.log("make" in car);  // Output: true
-console.log("color" in car); // Output: false
-The in operator returns true if the property exists in the object (or its prototype), and false if it doesn't.
-4. Method 2: Using the hasOwnProperty() Method
-hasOwnProperty() checks if a property exists directly on the object, ignoring properties that are inherited from the prototype chain.
-Syntax:
+        console.log("make" in car);  // Output: true
+        console.log("color" in car); // Output: false
+        The in operator returns true if the property exists in the object (or its prototype), and false if it doesn't.
 
-javascript
-Copy code
-objectName.hasOwnProperty("propertyName")
-Example:
+    Method 2: Using the hasOwnProperty() Method
+        hasOwnProperty() checks if a property exists directly on the object, ignoring properties that are inherited from the prototype chain.
+    
+        Syntax:
+            objectName.hasOwnProperty("propertyName")
 
-javascript
-Copy code
-var car = {
-    make: "Toyota",
-    model: "Corolla"
-};
+        Example:
+            var car = {
+                make: "Toyota",
+                model: "Corolla"
+            };
 
-console.log(car.hasOwnProperty("make"));  // Output: true
-console.log(car.hasOwnProperty("toString")); // Output: false
-toString is an inherited method from the object's prototype, so hasOwnProperty() returns false for it, even though it can be used by the object.
-5. Method 3: Using typeof to Check for Methods
-To check if an object has a method, you can use the typeof operator, which returns the type of the property or method.
-If the method exists, typeof will return "function".
-Syntax:
+        console.log(car.hasOwnProperty("make"));  // Output: true
+        console.log(car.hasOwnProperty("toString")); // Output: false
+        toString is an inherited method from the object's prototype, so hasOwnProperty() returns false for it, even though it can be used by the object.
 
-javascript
-Copy code
-typeof objectName.methodName === "function"
-Example:
+    Method 3: Using typeof to Check for Methods
+        To check if an object has a method, you can use the typeof operator, which returns the type of the property or method.
+        If the method exists, typeof will return "function".
+        
+        Syntax:
+            typeof objectName.methodName === "function"
 
-javascript
-Copy code
-var car = {
-    make: "Toyota",
-    model: "Corolla",
-    start: function() {
-        console.log("Car is starting");
-    }
-};
+        Example:
+            var car = {
+                make: "Toyota",
+                model: "Corolla",
+                start: function() {
+                    console.log("Car is starting");
+                }
+            };
 
-console.log(typeof car.start === "function"); // Output: true
-console.log(typeof car.drive === "function"); // Output: false
-This checks if the start method exists and returns true, but drive doesn't exist, so it returns false.
-6. Method 4: Using undefined Check
-You can also check for a property or method by comparing it to undefined.
-Syntax:
+        console.log(typeof car.start === "function"); // Output: true
+        console.log(typeof car.drive === "function"); // Output: false
+        This checks if the start method exists and returns true, but drive doesn't exist, so it returns false.
 
-javascript
-Copy code
-if (objectName.propertyName !== undefined) {
-    // property exists
-}
-Example:
+    Method 4: Using undefined Check
+        You can also check for a property or method by comparing it to undefined.
+        
+        Syntax:
+            if (objectName.propertyName !== undefined) {
+                // property exists
+            }
+        Example:
+            var person = {
+                name: "John",
+                age: 30
+            };
 
-javascript
-Copy code
-var person = {
-    name: "John",
-    age: 30
-};
+            if (person.name !== undefined) {
+                console.log("Name exists");
+            }
 
-if (person.name !== undefined) {
-    console.log("Name exists");
-}
+            if (person.gender === undefined) {
+                console.log("Gender does not exist");
+            }
 
-if (person.gender === undefined) {
-    console.log("Gender does not exist");
-}
-This approach checks if a property or method is explicitly undefined. If it is, the property or method doesn't exist.
-7. Difference Between in and hasOwnProperty()
-The key difference is that the in operator checks both the object's properties and its prototype chain, whereas hasOwnProperty() only checks the object's own properties.
-Example:
+        This approach checks if a property or method is explicitly undefined. If it is, the property or method doesn't exist.
 
-javascript
-Copy code
-var car = {
-    make: "Toyota",
-    model: "Corolla"
-};
+3. Difference Between in and hasOwnProperty()
+        The key difference is that the in operator checks both the object's properties and its prototype chain, whereas hasOwnProperty() only checks the object's own properties.
 
-console.log("toString" in car);  // Output: true (inherited from Object prototype)
-console.log(car.hasOwnProperty("toString"));  // Output: false
-The in operator finds toString because it's inherited, while hasOwnProperty() does not because toString is not directly defined on the car object.
+        Example:
+            var car = {
+                make: "Toyota",
+                model: "Corolla"
+            };
+
+        console.log("toString" in car);  // Output: true (inherited from Object prototype)
+        console.log(car.hasOwnProperty("toString"));  // Output: false
+        
+        The in operator finds toString because it's inherited, while hasOwnProperty() does not because toString is not directly defined on the car object.
