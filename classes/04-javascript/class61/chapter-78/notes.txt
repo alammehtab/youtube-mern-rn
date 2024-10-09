@@ -1,0 +1,44 @@
+Chapter 78: Browser Control - Forward and Reverse
+
+1. Navigating Back in History
+
+    In JavaScript, you can programmatically make the browser go back in its history, just like when a user clicks the back button or presses the Backspace key:
+
+    history.back();
+    If there’s a previous page in the history, the browser will navigate to it. If not, nothing happens.
+
+2. Going Forward in History
+
+    Similarly, to move forward in history, as if the user pressed alt-right-arrow or clicked the forward button:
+
+    history.forward();
+    If no forward page exists, the browser remains on the current page.
+
+3. Custom Number of Steps
+
+    You can tell the browser to go back or forward a custom number of steps using the history.go() method. Use a negative number to go back and a positive number to move forward:
+
+    history.go(-3); // Go back three steps
+    history.go(2);  // Go forward two steps
+    If the number is beyond the available history, nothing will happen.
+
+4. Shorthand Equivalents
+
+    history.back() is the same as history.go(-1), moving back one step.
+    history.forward() is the same as history.go(1), moving forward one step.
+
+5. Checking Referrer
+
+    If the user clicked a link to get to the current page, you can check the URL of the previous page using:
+
+    var whereUserCameFrom = document.referrer;
+    However, this only works if the user arrived via a link. If they navigated using a bookmark or typed the URL manually, document.referrer will be an empty string ("").
+
+Key Points:
+
+    history.back(): Navigates back one step in the history.
+    history.forward(): Moves forward one step.
+    history.go(steps): Moves forward or backward a custom number of steps.
+    document.referrer: Gets the URL of the referring page, but only if the user came from a link.
+    
+These functions help manage browser navigation, providing users with an easier way to interact with your site’s navigation history.
