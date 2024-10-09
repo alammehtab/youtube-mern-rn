@@ -1,0 +1,62 @@
+Chapter 79: Browser Control - Filling the Window with Content
+
+1. Opening a Popup Window
+    Popup windows, though often blocked by browsers due to misuse, can still be useful in some cases. Here's how to open a blank popup window:
+
+        var monkeyWindow = window.open();
+
+    This opens a new blank window and assigns it to a variable (monkeyWindow). The size and behavior of the popup depend on the browser, and it may open in a new tab or a new window.
+
+2. Filling a Window with Content: Method 1 - Using document.write()
+
+    You can use document.write() to add HTML content to the newly opened window:
+
+        var monkeyWindow = window.open();
+        var windowContent = "<h1>Capuchin Monkey</h1><img src='monkey.jpg'><p>The word capuchin derives from a group of friars<br>named the Order of Friars Minor Capuchin who wear<br>brown robes with large hoods covering their heads.</p>";
+        monkeyWindow.document.write(windowContent);
+
+    Explanation:
+
+        Line 1: Opens a blank window.
+
+        Line 2: Assigns HTML content to a variable.
+
+        Line 3: Uses document.write() to fill the popup with that HTML content.
+
+    Tip: Inside the main double quotes (""), use single quotes ('') for any HTML attributes, such as in the src of an image tag.
+
+3. Filling a Window with Content: Method 2 - Using location.assign() or location.href
+    
+    You can assign an entire webpage to the popup window:
+
+        monkeyWindow.location.assign("http://www.animals.com/capuchin.html");
+        
+        or
+
+        monkeyWindow.location.href = "http://www.animals.com/capuchin.html";
+
+        This replaces the blank window content with the document from the specified URL.
+
+4. Filling a Window with Content: Method 3 - Opening a Specific URL Directly
+
+    The most common and concise method is to specify the webpage to open when creating the popup:
+
+        var monkeyWindow = window.open("http://www.animals.com/capuchin.html");
+
+    If the webpage shares the same host or directory as the original document, you can use a relative path:
+
+        var monkeyWindow = window.open("capuchin.html");
+
+5. Closing the Window
+
+    Once you're done with the popup, you can close it programmatically:
+
+        monkeyWindow.close();
+
+Key Points:
+
+    Opening a Popup: Use window.open() to create a new browser window.
+    Filling Content: You can fill the popup with content using document.write(), by assigning a URL with location.assign(), or by specifying a URL directly in window.open().
+    Closing the Window: Use window.close() to close the popup.
+
+Popups can be a useful feature when used responsibly, especially in cases where additional content or documents need to be opened separately from the main page.
