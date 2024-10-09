@@ -1,7 +1,8 @@
 Chapter 76: Browser Control - Getting and Setting the URL
 
 1. Getting the Full URL
-    In JavaScript, you can easily check the full URL of the page you’re on using the window.location.href property.
+    In JavaScript, you can easily check the full URL of the page you’re on using the 
+    window.location.href property.
 
     var currentURL = window.location.href;
     console.log(currentURL);
