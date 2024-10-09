@@ -1,0 +1,40 @@
+Chapter 77: Browser Control - Getting and Setting the URL (Another Way)
+
+1. Using window.location.assign()
+    
+    In the previous chapter, you learned how to change the URL using window.location.href. Now, there's another way to do it—using the assign() method:
+
+    window.location.assign("http://www.me.com");
+
+    This method directs the browser to a new page. You can also include more detailed URLs:
+
+        window.location.assign("http://www.me.com/lojack.html#guarantee");
+
+2. Using window.location.replace()
+
+    Another alternative is replace(), which behaves slightly differently from assign():
+
+    window.location.replace("http://www.me.com/lojack.html#guarantee");
+
+    The key difference? History handling. When you use assign(), the original page is stored in the browser's history, meaning the user can go back. But with replace(), the original page is not stored in the history, so the user can't navigate back to it. If they press the back button, they'll go back to the page they visited before the original.
+
+3. Reloading the Current Page 
+    You can reload the current page with:
+
+    window.location.reload(true); // Reloads from server
+    window.location.reload(false); // Reloads from cache
+    window.location.reload(); // Default: cache
+    
+    True: Forces the browser to reload the page from the server.
+    False (or no argument): Reloads from the browser’s cache if available.
+    A quicker way to reload (though you can’t specify cache/server behavior) is:
+
+        window.location.href = window.location.href;
+
+Summary:
+
+    assign() changes the URL while keeping the history intact.
+    replace() changes the URL but removes the original page from history.
+    reload() reloads the current page, with options to reload from the cache or server.
+
+Make sure to use these methods appropriately depending on whether you want users to navigate back or force the page to refresh from the server.
