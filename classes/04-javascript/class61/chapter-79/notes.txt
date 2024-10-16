@@ -12,7 +12,7 @@ Chapter 79: Browser Control - Filling the Window with Content
     You can use document.write() to add HTML content to the newly opened window:
 
         var monkeyWindow = window.open();
-        var windowContent = "<h1>Capuchin Monkey</h1><img src='monkey.jpg'><p>The word capuchin derives from a group of friars<br>named the Order of Friars Minor Capuchin who wear<br>brown robes with large hoods covering their heads.</p>";
+        var windowContent = `<h1>My Bicycle</h1><img src='./bicycle.webp' width="100px" height="100px"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officia ab omnis enim labore hic ullam totam, provident reprehenderit illum.</p>`;
         monkeyWindow.document.write(windowContent);
 
     Explanation:
@@ -29,11 +29,11 @@ Chapter 79: Browser Control - Filling the Window with Content
     
     You can assign an entire webpage to the popup window:
 
-        monkeyWindow.location.assign("http://www.animals.com/capuchin.html");
+        monkeyWindow.location.assign("https://www.w3schools.com/js/default.asp");
         
         or
 
-        monkeyWindow.location.href = "http://www.animals.com/capuchin.html";
+        monkeyWindow.location.href = "https://www.w3schools.com/js/default.asp";
 
         This replaces the blank window content with the document from the specified URL.
 
@@ -41,11 +41,11 @@ Chapter 79: Browser Control - Filling the Window with Content
 
     The most common and concise method is to specify the webpage to open when creating the popup:
 
-        var monkeyWindow = window.open("http://www.animals.com/capuchin.html");
+        var monkeyWindow = window.open("https://www.w3schools.com/js/default.asp");
 
     If the webpage shares the same host or directory as the original document, you can use a relative path:
 
-        var monkeyWindow = window.open("capuchin.html");
+        var monkeyWindow = window.open("default.asp");
 
 5. Closing the Window
 
