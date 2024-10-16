@@ -1,0 +1,66 @@
+Chapter 80: Browser Control - Controlling the Window's Size and Location
+
+1. Opening a Popup with a Name
+    
+    When opening a popup, you can assign a name to the window, which allows you to target it with links or forms:
+
+    var monkeyWindow = window.open("monk.html", "win1");
+
+    The first parameter is the URL (monk.html).
+    The second parameter is the window's name (win1), which can be referenced in HTML elements.
+
+    Key Points:
+
+    The name is used in HTML, not in JavaScript for further actions on the window.
+    You can skip the name by providing an empty string as the second parameter.
+
+2. Controlling the Window's Size
+
+    You can specify the window size by adding width and height parameters:
+
+    var monkeyWindow = window.open("monk.html", "win1", "width=420,height=380");
+    
+    Things to Note:
+
+    width and height are in pixels.
+    Both must be at least 100 pixels.
+    The parameters should be part of the third string in the window.open() method.
+    No spaces are allowed between the parameters, and they must be enclosed in the same set of quotation marks.
+
+3. Positioning the Window on the Screen
+    
+    You can also control where the popup will appear on the screen by specifying left and top positions:
+
+    var w = window.open("", "", "width=420,height=380,left=200,top=100");
+    
+    Key Points:
+
+    left specifies how many pixels the window is from the left edge of the screen.
+    top specifies how many pixels the window is from the top of the screen.
+    Size parameters must be included along with position parameters for them to work.
+
+4. Combining Size and Position Parameters in a Variable
+
+    For clarity, you can assign window specifications to a variable and use it within window.open():
+
+    var windowSpecs = "width=420,height=380,left=200,top=100";
+    window.open("test.html", " ", windowSpecs);
+
+    This allows for easier control over complex window configurations and can be useful when multiple window properties are needed.
+
+5. Setting Empty URL and Name Parameters
+
+    If you only want to control the window's size and position without specifying a URL or name, you can still include empty strings as placeholders:
+
+    var customWindow = window.open("", "", "width=500,height=400");
+
+    This opens a window with the specified size but without any content initially.
+
+Key Points Recap:
+
+    Window Naming: Specify a window name for targeting in HTML links or forms, but it's optional if you don't need it.
+    Size and Positioning: Use width, height, left, and top to control the window's size and location on the screen.
+    Combining Parameters: You can combine window specifications into a single variable for cleaner code.
+    No Spaces in Parameters: Avoid spaces within the size and position parameters, as they will break the JavaScript functionality.
+
+With these options, you can create popups that are sized and positioned exactly as needed for your application's requirements, giving you flexibility over how new windows are displayed.
