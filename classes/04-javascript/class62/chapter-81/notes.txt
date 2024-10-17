@@ -1,0 +1,59 @@
+Chapter 81: Browser Control - Testing for Popup Blockers
+
+1. Why Test for Popup Blockers? 
+
+    Popup blockers are now a built-in feature of modern browsers to prevent unwanted or intrusive popups. However, if your website relies on popups for key functionality, you need to ensure that popups can be displayed. This is particularly important if popups are blocked by default. Testing whether a popup is blocked allows you to notify users and request them to disable their popup blocker for your site.
+
+2. The Basic Popup Blocker 
+
+    Test The test works by attempting to open a small, hidden popup window. If the popup is blocked, the window handle will either be null or undefined depending on the browser. Here’s the basic structure for testing popup blockers:
+
+    function checkForPopBlocker() {
+        var testPop = window.open("", "", "width=100,height=100");
+        if (testPop === null) {
+            alert("Please disable your popup blocker.");
+        } else {
+            testPop.close();
+        }
+    }
+
+    Explanation:
+
+        Line 2: Attempts to open a small 100x100 pixel window.
+        Line 3: If the popup is blocked, testPop will be null and the user is alerted to disable the popup blocker.
+        Line 6: Closes the test popup quickly if it opens successfully.
+
+3. Handling Internet Explorer 
+
+    Internet Explorer behaves differently compared to most other browsers. If a popup is blocked in Internet Explorer, the handle (testPop) is undefined instead of null. To handle both cases, the function must be updated to account for undefined values:
+
+    function checkForPopBlocker() {
+        var testPop = window.open("", "", "width=100,height=100");
+        if (testPop === null || typeof(testPop) === "undefined") {
+            alert("Please disable your popup blocker.");
+        } else {
+            testPop.close();
+        }
+    }
+
+    Explanation:
+
+        Line 4: Adds a check to see if testPop is undefined, which happens in Internet Explorer.
+        Line 5: If either condition (null or undefined) is met, the user will be alerted.
+
+4. Running the Test on Page Load 
+    
+    It's common to run the popup blocker test as soon as the page loads. To do this, add the function call in the <body> tag:
+
+    <body onLoad="checkForPopBlocker();">
+
+    This ensures that users are immediately notified if popups are blocked and can take action before interacting with any popup-based features on your site.
+
+Key Points Recap:
+
+    Testing for Blockers: Open a small test popup and check whether the handle is null or undefined to detect blocked popups.
+    Handling Different Browsers: Ensure compatibility by checking both null (common) and undefined (for Internet Explorer).
+    OnLoad Testing: The test should typically run when the page loads using the onLoad event in the <body> tag.
+
+With this approach, you can make sure users are aware if their popup blocker is interfering with your website’s functionality and prompt them to take corrective action.
+
