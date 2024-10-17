@@ -1,0 +1,198 @@
+Agenda for Today's Lecture
+
+    Introduction to MVC Architecture:
+        What is MVC and why is it important?
+        Breakdown of Model, View, and Controller.
+
+    Setting up MongoDB Atlas:
+        How to connect to MongoDB Atlas using Mongoose.
+
+    Building the MVC Structure:
+        Creating Models, Views, and Controllers in Node.js.
+        Folder structure for an MVC application.
+
+    Implementing a CRUD Operation using MVC:
+
+        Creating a basic CRUD (Create, Read, Update, Delete) system using the MVC architecture.
+        Testing the Application using Postman or a basic React frontend.
+=================================================================
+1. Introduction to MVC Architecture
+    The MVC architecture divides your application into three interconnected parts:
+
+    Model: Represents the data and the business logic. It interacts with the database.
+
+    View: The front-end or user interface (UI). For today, we’ll skip the view since Node.js alone is typically back-end focused, but a React app could serve as the view.
+
+    Controller: Handles the requests from the user, processes the data using the model, and sends responses back.
+------------------------------------------------------------------
+
+Why MVC?
+
+    Separation of concerns: MVC divides the app into three distinct components, making it easier to manage and scale.
+
+    Reusability: Each part (Model, View, Controller) can be reused in other parts of the application.
+
+    Maintainability: Because each component is separate, it's easier to maintain and debug.
+----------------------------------------------------------------
+
+2. Setting up MongoDB Atlas
+
+    Step 1: Create a MongoDB Atlas Account
+        Go to MongoDB Atlas.
+        Set up a new project and cluster.
+        In the security settings, add your current IP address and create a new database user.
+        Copy the MongoDB connection string.
+
+    Step 2: Install Mongoose
+        Mongoose will help us interact with MongoDB from our Node.js application:
+
+        npm install mongoose
+-------------------------------------------------------------------
+
+3. Building the MVC Structure
+
+    Project Folder Structure
+    
+    node-mvc/
+    │
+    ├── models/
+    │   └── User.js         # Model
+    │
+    ├── controllers/
+    │   └── userController.js  # Controller
+    │
+    ├── routes/
+    │   └── userRoutes.js      # Routes
+    │
+    ├── app.js              # Entry Point
+    └── package.json
+
+    Step 1: Model
+        The model will represent the User schema and handle data operations with MongoDB.
+
+        models/User.js:
+        
+        import mongoose from 'mongoose';
+
+        const userSchema = new mongoose.Schema({
+        name: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+        },
+        });
+
+        export const User = mongoose.model('User', userSchema);
+
+    Step 2: Controller
+        The controller will handle the logic for different actions such as adding, updating, and deleting users.
+
+        controllers/userController.js:
+
+        import { User } from '../models/User.js';
+
+        // Get all users
+        export const getAllUsers = async (req, res) => {
+        try {
+            const users = await User.find();
+            res.status(200).json(users);
+        } catch (err) {
+            res.status(500).json({ message: 'Error fetching users' });
+        }
+        };
+
+        // Add a new user
+        export const addUser = async (req, res) => {
+        const { name, email } = req.body;
+        const newUser = new User({ name, email });
+        try {
+            await newUser.save();
+            res.status(201).json(newUser);
+        } catch (err) {
+            res.status(500).json({ message: 'Error adding user' });
+        }
+        };
+
+        // Update a user
+        export const updateUser = async (req, res) => {
+        const { id } = req.params;
+        const { name, email } = req.body;
+        try {
+            const updatedUser = await User.findByIdAndUpdate(id, { name, email }, { new: true });
+            if (!updatedUser) {
+            return res.status(404).json({ message: 'User not found' });
+            }
+            res.status(200).json(updatedUser);
+        } catch (err) {
+            res.status(500).json({ message: 'Error updating user' });
+        }
+        };
+
+        // Delete a user
+        export const deleteUser = async (req, res) => {
+        const { id } = req.params;
+        try {
+            await User.findByIdAndDelete(id);
+            res.status(204).send();
+        } catch (err) {
+            res.status(500).json({ message: 'Error deleting user' });
+        }
+        };
+
+    Step 3: Routes
+        Routes are the entry point to the controller. The routes file will map the HTTP requests to their corresponding controller actions.
+
+        routes/userRoutes.js:
+
+        import express from 'express';
+        import { getAllUsers, addUser, updateUser, deleteUser } from '../controllers/userController.js';
+
+        const router = express.Router();
+
+        router.get('/users', getAllUsers);
+        router.post('/users', addUser);
+        router.put('/users/:id', updateUser);
+        router.delete('/users/:id', deleteUser);
+
+        export default router;
+
+    4. Connecting the MVC in app.js
+        The app.js file will set up the Express app and MongoDB connection.
+
+        import express from 'express';
+        import mongoose from 'mongoose';
+        import cors from 'cors';
+        import userRoutes from './routes/userRoutes.js';
+
+        const app = express();
+        app.use(cors());
+        app.use(express.json());
+
+        // MongoDB Atlas connection
+        mongoose.connect('YOUR_MONGODB_ATLAS_CONNECTION_STRING', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        }).then(() => {
+        console.log('Connected to MongoDB Atlas');
+        }).catch(err => {
+        console.error('Error connecting to MongoDB:', err.message);
+        });
+
+        // Routes
+        app.use('/api', userRoutes);
+
+        app.listen(5000, () => {
+        console.log('Server running on port 5000');
+        });
+        Replace YOUR_MONGODB_ATLAS_CONNECTION_STRING with the actual connection string you copied from MongoDB Atlas.
+
+5. Testing the Application
+    Using Postman:
+    Get all users: GET http://localhost:5000/api/users
+    Add a user: POST http://localhost:5000/api/users
+    Body (JSON): { "name": "John Doe", "email": "john@example.com" }
+    Update a user: PUT http://localhost:5000/api/users/:id
+    Delete a user: DELETE http://localhost:5000/api/users/:id

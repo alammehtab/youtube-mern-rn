@@ -1,0 +1,155 @@
+MongoDB CHEAT SHEET
+MONGOOSE CHEAT SHEET
+MONGODB CRUD USING USER MANAGEMENT SYSTEM
+==================================================================
+# MongoDB Cheat Sheet
+
+# Basic Commands
+mongo  # Start MongoDB Shell
+show dbs  # Show Databases
+use <database_name>  # Use a Database
+show collections  # Show Collections
+db.createCollection("<collection_name>")  # Create Collection
+db.<collection_name>.drop()  # Drop Collection
+
+# CRUD Operations
+db.<collection_name>.insertOne({<key>: <value>, ...})  # Insert Document
+db.<collection_name>.insertMany([{<key>: <value>, ...}, ...])  # Insert Multiple Documents
+db.<collection_name>.find({<query>})  # Find Documents
+db.<collection_name>.findOne({<query>})  # Find One Document
+db.<collection_name>.updateOne({<filter>}, { $set: {<key>: <value>} })  # Update Document
+db.<collection_name>.updateMany({<filter>}, { $set: {<key>: <value>} })  # Update Multiple Documents
+db.<collection_name>.deleteOne({<filter>})  # Delete Document
+db.<collection_name>.deleteMany({<filter>})  # Delete Multiple Documents
+
+# Query Operators
+# Comparison
+# - $eq: Equal
+# - $ne: Not equal
+# - $gt: Greater than
+# - $gte: Greater than or equal
+# - $lt: Less than
+# - $lte: Less than or equal
+# Logical
+# - $and: Logical AND
+# - $or: Logical OR
+# - $not: Logical NOT
+# Element
+# - $exists: Checks for existence
+# - $type: Checks for data type
+
+# Aggregation
+db.<collection_name>.aggregate([  # Basic Aggregation
+  { $match: {<criteria>} },
+  { $group: { _id: "$<field>", total: { $sum: "$<field>" } } },
+  { $sort: { total: -1 } }
+])
+
+# Indexing
+db.<collection_name>.createIndex({<key>: 1})  # Create Index (1 for ascending, -1 for descending)
+db.<collection_name>.getIndexes()  # Show Indexes
+db.<collection_name>.dropIndex("<index_name>")  # Drop Index
+
+# Backup and Restore
+mongodump --db <database_name> --out <backup_directory>  # Backup
+mongorestore --db <database_name> <backup_directory>  # Restore
+
+# Miscellaneous
+db.version()  # Check MongoDB Version
+exit  # Exit MongoDB Shell
+-----------------------------------------------------------
+
+# Mongoose Cheat Sheet
+
+## Setup
+const mongoose = require('mongoose');
+mongoose.connect('<your_connection_string>', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Define Schema
+const <ModelName>Schema = new mongoose.Schema({
+  <field>: { type: <DataType>, required: true/false },
+  ...
+});
+
+// Create Model
+const <ModelName> = mongoose.model('<ModelName>', <ModelName>Schema);
+
+## CRUD Operations
+
+### Create Document
+const doc = new <ModelName>({ <field>: <value>, ... });
+doc.save().then(() => console.log('Document saved!')).catch(err => console.error(err));
+
+// Insert Multiple Documents
+< ModelName >.insertMany([{ <field>: <value>, ... }, ...])
+  .then(() => console.log('Documents inserted!'))
+  .catch(err => console.error(err));
+
+### Read Documents
+< ModelName >.find({ <query> })  // Find Multiple Documents
+  .then(docs => console.log(docs))
+  .catch(err => console.error(err));
+
+< ModelName >.findOne({ <query> })  // Find One Document
+  .then(doc => console.log(doc))
+  .catch(err => console.error(err));
+
+### Update Documents
+< ModelName >.updateOne({ <filter> }, { $set: { <field>: <value> } })
+  .then(() => console.log('Document updated!'))
+  .catch(err => console.error(err));
+
+< ModelName >.updateMany({ <filter> }, { $set: { <field>: <value> } })
+  .then(() => console.log('Documents updated!'))
+  .catch(err => console.error(err));
+
+### Delete Documents
+< ModelName >.deleteOne({ <filter> })
+  .then(() => console.log('Document deleted!'))
+  .catch(err => console.error(err));
+
+< ModelName >.deleteMany({ <filter> })
+  .then(() => console.log('Documents deleted!'))
+  .catch(err => console.error(err));
+
+## Query Operators
+// Comparison
+// - $eq, $ne, $gt, $gte, $lt, $lte
+// Logical
+// - $and, $or, $not
+// Element
+// - $exists, $type
+
+## Middleware
+// Pre-save Hook
+< ModelName >.pre('save', function(next) {
+  // Do something before saving
+  next();
+});
+
+// Post-save Hook
+< ModelName >.post('save', function(doc) {
+  console.log('Document saved:', doc);
+});
+
+## Validation
+const <ModelName>Schema = new mongoose.Schema({
+  <field>: {
+    type: <DataType>,
+    required: true,
+    minlength: <min_length>,
+    maxlength: <max_length>,
+    unique: true
+  }
+});
+
+## Connection Handling
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected to database');
+});
+mongoose.connection.on('error', (err) => {
+  console.error('Mongoose connection error:', err);
+});
+mongoose.connection.on('disconnected', () => {
+  console.log('Mongoose disconnected');
+});

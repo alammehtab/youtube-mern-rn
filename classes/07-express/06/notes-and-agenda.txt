@@ -1,0 +1,10 @@
+CLASS TASK
+
+agenda for today:
+		1. complete express server with mongodb setup and user management crud
+		2. user managment system react application
+		3. connect both applications
+		4. deploy both on vercel
+		5. test on postman after deployment
+
+        
