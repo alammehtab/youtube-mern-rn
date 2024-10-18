@@ -6,7 +6,9 @@ Chapter 81: Browser Control - Testing for Popup Blockers
 
 2. The Basic Popup Blocker 
 
-    Test The test works by attempting to open a small, hidden popup window. If the popup is blocked, the window handle will either be null or undefined depending on the browser. Here’s the basic structure for testing popup blockers:
+    Test 
+    
+    The test works by attempting to open a small, hidden popup window. If the popup is blocked, the window handle will either be null or undefined depending on the browser. Here’s the basic structure for testing popup blockers:
 
     function checkForPopBlocker() {
         var testPop = window.open("", "", "width=100,height=100");
