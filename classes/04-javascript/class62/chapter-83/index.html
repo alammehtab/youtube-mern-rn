@@ -9,6 +9,16 @@
 
 <body>
     <h1>Chapter-83: Form validation: drop-downs</h1>
+    <form onSubmit="return checkForSelection('states');">
+        <select id="states">
+            <option value="" selected="selected">SELECT A STATE</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+        </select>&nbsp;&nbsp;
+        <input type="submit" value="Submit Form">
+    </form>
     <script src="./index.js"></script>
 </body>
 
