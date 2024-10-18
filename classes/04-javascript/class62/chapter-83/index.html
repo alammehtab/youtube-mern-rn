@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter-83</title>
 </head>
+
 <body>
-    <p>Chapter-83: Form validation: drop-downs</p>
-
-    <form onSubmit="checkForSelection();">
-        <select id="states">
-            <option value="" selected="selected">
-                SELECT A STATE</option>
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-        </select>&nbsp;&nbsp;
-        <input type="submit" value="Submit Form">
-    </form>
-
-    <script>
-        function checkForSelection() {
-                if (document.getElementById("states").selectedIndex === 0) {
-                    alert("Please select a state.");
-                    return false;
-                }
-            }
-    </script>
+    <h1>Chapter-83: Form validation: drop-downs</h1>
+    <script src="./index.js"></script>
 </body>
+
 </html>
