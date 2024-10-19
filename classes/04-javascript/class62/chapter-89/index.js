@@ -1,6 +1,1 @@
-function sayHello() {
-  alert("Hellooooooo");
-}
-
-const btn = document.getElementById("hamaraBtn");
-btn.onclick = sayHello;
+// Chapter - 89: Handling events within JavaScript

@@ -1,0 +1,77 @@
+Chapter-89: Handling events within JavaScript
+
+In JavaScript, handling events such as button clicks or form submissions can be done in multiple ways. While the oldest approach involves using inline event handlers, professional coders generally prefer separating HTML content from JavaScript functionality to keep things modular and clean. This chapter explains the differences between inline event handling and the preferred method of using external JavaScript to handle events.
+
+1. Inline Event Handlers (Less Desirable)
+    
+    Inline event handlers are written directly within HTML elements. For example, handling a button click can be done like this:
+
+    <input type="button" value="Click" onClick="sayHello();">
+
+    Here, the onClick attribute is directly in the HTML, and when the button is clicked, the sayHello() function will be called. 
+    
+    However, this approach is discouraged because it mixes HTML with JavaScript, making the code harder to maintain and less modular.
+
+2. Separating HTML and JavaScript (Preferred Approach)
+    
+    In this approach, we remove the event handling from the HTML and assign it in the JavaScript code. This ensures a clear separation between structure (HTML) and behavior (JavaScript). Here’s how to handle the same button click event using this method:
+
+    HTML:
+    <input type="button" value="Click" id="button1">
+
+    JavaScript:
+    var b1 = document.getElementById("button1");
+    b1.onclick = sayHello;
+
+    Line 1: We select the button element by its id using getElementById() and assign it to the variable b1.
+    
+    Line 2: We assign an event handler to b1 by setting b1.onclick to the sayHello function. When the button is clicked, the sayHello function is triggered.
+
+Key Differences Between Inline and Scripted Event Handlers:
+
+    Lowercase Event Names: When using scripted event handlers, event names must be lowercase (onclick, not onClick).
+
+    No Quotes or Parentheses: In scripted event handling, the function name is written without quotes or parentheses. For example, b1.onclick = sayHello;, not b1.onclick = "sayHello()";.
+
+    If you wanted to shorten the code, you could directly assign the event handler to the button without using a separate variable:
+
+    document.getElementById("button1").onclick = sayHello;
+
+3. The Function That Handles the Event
+
+    The function that handles the event remains the same regardless of whether you use inline event handling or external JavaScript. Here’s the example function:    
+
+    function sayHello() {
+        alert("Hi there.");
+    }
+
+    When the button is clicked, the function displays an alert with the message "Hi there."
+
+4. Event Handling for Different Elements
+
+    You can apply similar event handling to other elements, such as images and forms. For example, you can call a function when the user mouses over an image or submits a form.
+
+Example 1: Image Swap on Mouseover
+
+    Here, when the user moves the mouse over the image with id i12, the swapPic function is called:
+
+    var targetImg = document.getElementById("i12");
+    targetImg.onmouseover = swapPic;
+
+    Example 2: Email Validation on Form Submission
+
+    Here, when the user submits a form with id form5, the valEmail function is called to validate the email address:
+
+Summary of Key Points:
+
+    Inline event handlers mix HTML and JavaScript, making code harder to maintain.
+
+    Scripted event handlers keep HTML and JavaScript separate, providing a cleaner and more maintainable structure.
+
+    Lowercase event names are required when using scripted event handlers (e.g., onclick not onClick).
+
+    No quotes or parentheses are used in the function assignment (e.g., b1.onclick = sayHello;).
+
+    Scripted event handling can be applied to various elements like buttons, images, and forms, making it versatile.
+
+By following the separation of concerns approach, you ensure your code is more maintainable and easier to debug, which is especially important for larger, more complex applications.
