@@ -1,0 +1,117 @@
+Chapter-86: Form validation: email
+
+Validating an email address is critical for ensuring that users provide correctly formatted email addresses. While regular expressions (regex) are the most efficient way to validate email formats, we will also explore simpler validation techniques using JavaScript's indexOf() method.
+
+1. HTML Structure for Email Input
+    
+    Here’s a basic form that asks the user to enter their email address:
+
+    <form onSubmit="return validateEmail();">
+        Please enter your email: <br>
+        <input type="text" id="email">
+        <input type="submit" value="Submit Form">
+    </form>
+
+    The input field has an id of "email", which will be used to reference the input value in our validation function.
+
+2. Validating an Email Using indexOf()
+
+    In this section, we'll create a function that checks for:
+
+    No spaces in the email.
+
+    The presence of the @ symbol at an appropriate position.
+
+    The presence of a period (.) with a valid domain extension.
+
+    Here’s the JavaScript function for this basic validation:
+
+    function validateEmail() {
+        var eEntered = document.getElementById("email").value;
+        var addressIsLegal = true;
+
+        // Check if there are spaces in the email address
+        if (eEntered.indexOf(" ") !== -1) {
+            alert("No spaces allowed in address.");
+            return false;
+        }
+
+        // Check if "@" is in a valid position
+        if (eEntered.indexOf("@") < 1 || eEntered.indexOf("@") > eEntered.length - 5) {
+            alert("Invalid position of '@' symbol.");
+            return false;
+        }
+
+        // Check if there is a period and enough characters after it
+        if (eEntered.indexOf(".") - eEntered.indexOf("@") < 2 || eEntered.indexOf(".") > eEntered.length - 3) {
+            alert("Invalid domain name.");
+            return false;
+        }
+
+        return true; // Email is valid
+    }
+
+    Explanation:
+
+        Line 3: The value entered by the user is retrieved and stored in the variable eEntered.
+
+        Line 6-8: Checks for spaces in the email using indexOf(" "). If spaces are found (i.e., indexOf() returns a number other than -1), an alert is displayed, and form submission is canceled.
+
+        Line 11-14: Checks for the presence of @ in a valid position:
+        It should not be at the start of the string (i.e., before the first character).
+        There should be at least 4 characters after the @ (e.g., for a minimum domain structure like a.com).
+
+        Line 17-20: Checks for the period (.) and ensures that it appears after the @ and that there are at least two characters after the period for the domain extension.
+
+3. Validating an Email Using Regular Expressions (Regex)
+    
+    Regular expressions are a more concise and robust way to validate email formats, covering a wider range of scenarios. Here’s how you can validate an email using regex:
+
+    function validateEmail() {
+        var eEntered = document.getElementById("email").value;
+        var emailPattern = /^[\w\-\.\+]+@[a-zA-Z0-9\-]+\.[a-zA-Z]{2,4}$/;
+
+        if (!emailPattern.test(eEntered)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+        return true;
+    }
+
+    Explanation:
+
+    Line 3: The regular expression ^[\w\-\.\+]+@[a-zA-Z0-9\-]+\.[a-zA-Z]{2,4}$:
+    
+        [\w\-\.\+]: Allows any word characters (letters, digits, and underscores), as well as hyphens, dots, and plus signs, before the @.
+
+        @[a-zA-Z0-9\-]+: Requires a valid domain name with letters, digits, and hyphens.
+    
+        \.[a-zA-Z]{2,4}: Ensures there is a period (.) followed by 2 to 4 alphabetic characters (for domain extensions like .com, .net, .org, etc.).
+    
+    Line 5: If the email doesn’t match the pattern, an alert displays, and the form submission is canceled.
+
+4. Comparison: indexOf() vs Regular Expressions
+    
+    indexOf() Method:
+    
+        Simple to use and understand but limited in checking all email validity rules.
+    
+        Requires multiple lines of code to cover different cases (spaces, @ position, domain structure).
+    
+    Regular Expressions:
+    
+        Concise and powerful, covering a wider variety of email patterns.
+    
+        Efficient for more complex validations (e.g., special characters, valid domain structures).
+    
+        However, they can be hard to read for beginners and require a deeper understanding of the syntax.
+
+5. Key Points:
+
+    Basic Validation: Ensure no spaces are present, the @ symbol is in a valid position, and the domain name is valid.
+
+    Regular Expressions: Provide a more powerful and efficient way to validate email addresses.
+
+    User-Friendly Alerts: Inform users of invalid input before submitting the form.
+
+Incorporating these techniques ensures that your form collects valid email addresses, reducing errors and improving data quality.
