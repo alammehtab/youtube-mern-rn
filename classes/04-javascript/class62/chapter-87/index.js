@@ -1,16 +1,2 @@
-// without try catch
-// function greetTheWorld() {
-//   let greeting = "Hello world!";
-//   aler(greeting);
-// }
+// Chapter-87: Exceptions: try and catch
 
-// using try catch
-function greetTheWorld() {
-  try {
-    let greeting = "Hello world!";
-    aler(greeting);
-  } catch (error) {
-    alert(error);
-  }
-}
-greetTheWorld();

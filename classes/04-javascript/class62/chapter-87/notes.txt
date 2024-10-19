@@ -1,0 +1,98 @@
+Chapter-87: Exceptions: try and catch
+
+In JavaScript, errors can sometimes be hard to detect, especially in longer code. If the script stops working due to an error, JavaScript doesn’t always give you enough information to quickly pinpoint the problem. This is where try and catch come in handy—they allow you to handle errors gracefully and get feedback about what went wrong.
+
+1. Identifying an Error
+
+    Consider the following function:
+
+    function greetWorld() {
+        var greeting = "Hello world!";
+        aler(greeting);  // Oops! Typo in 'alert'
+    }
+
+    The code above contains a typo in the alert() method (misspelled as aler()). If you run this function, nothing will happen, and you won't receive any specific error message unless you're checking the browser console. This can be frustrating, especially in larger scripts.
+
+2. Using try and catch
+
+    You can use the try and catch block to handle such errors and display useful information when something goes wrong.
+
+    Here’s how we can modify the greetWorld() function to handle the error:
+
+    function greetWorld() {
+        try {
+            var greeting = "Hello world!";
+            aler(greeting);  // Mistake: 'aler' is not a function
+        }
+        catch(err) {
+            alert(err);  // Display the error message
+        }
+    }
+
+    Explanation:
+
+    Line 2: The code inside the try block is where we place the operational code. This is where the error occurs.
+
+    Line 6: The catch block will be executed if any error occurs inside the try block. The error object (err) is passed to the catch block.
+
+    Line 7: The error message is displayed using an alert(). In this case, JavaScript will return a ReferenceError because it doesn’t recognize aler() as a valid function.
+
+    When you run this code, the catch block will trigger and display an alert with an error message like:
+
+    "ReferenceError: aler is not defined"
+
+3. How try and catch Work
+
+    The try block says to JavaScript: "Attempt to execute this code. If an error occurs, stop execution and pass the error to the catch block."
+
+    try block: This contains the code that may throw an error.
+
+    catch block: This handles the error. The error object (err in this case) contains information about what went wrong.
+
+4. Error Messages in catch
+
+    The error passed to the catch block typically contains valuable information like:
+
+    The type of error (ReferenceError, TypeError, etc.).
+
+    A description of the error (e.g., "Cannot find variable: aler").
+
+    The error object is not limited to a specific name—err, error, or any other valid identifier can be used.
+
+5. Limitations of try and catch
+
+    While try and catch are useful for catching runtime errors like undefined variables or incorrect references, they do have limitations:
+
+    Syntax Errors: 
+    
+    If the error is a syntax error (e.g., missing parentheses, extra brackets, or unbalanced quotes), try and catch will not catch it, and the script will fail silently.
+
+    Logical Errors: If your logic is flawed (e.g., infinite loops, wrong calculations), try and catch won't be able to help.
+
+    In those cases, you’ll need to rely on manual debugging techniques or browser developer tools to identify and fix the problem.
+
+6. More Advanced Error Handling
+
+    You can use try and catch in various ways:
+
+    Handling specific errors: You can execute different code based on the type of error.
+
+    Logging errors: Instead of showing alerts, you can log errors to the console or send them to a server for debugging.
+
+7. Conclusion
+
+    The try and catch mechanism in JavaScript helps you catch and handle runtime errors in your code, making debugging easier. 
+    
+    However, it's essential to understand its limitations and use it alongside other debugging tools for more complex issues.
+
+Key Points:
+
+    try block: Contains the code to execute.
+
+    catch block: Handles any errors that occur in the try block.
+
+    Error object: Provides details about the error (e.g., type and message).
+
+    Limitations: try and catch won’t catch syntax errors or logical errors.
+
+By incorporating try and catch, you can write more resilient code and provide better feedback to users or developers when something goes wrong.
