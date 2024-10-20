@@ -1,0 +1,99 @@
+In today’s lecture, we will cover Authentication in a Node.js application using JWT (JSON Web Token). Authentication is a critical aspect of any application, as it allows us to verify the identity of users and control access to certain resources.
+
+Outline for Today’s Lecture
+
+    1. Introduction to Authentication
+
+        What is authentication, and why is it important?
+        Authentication vs Authorization.
+        Methods of authentication in web applications.
+
+    2. JWT (JSON Web Token) Overview
+
+        What is JWT and why do we use it?
+        Structure of a JWT.
+        How JWT works in authentication.
+        
+    3. Setting up Authentication in Express
+
+        Creating a user model with MongoDB.
+        User registration and login.
+        Generating and validating JWT tokens.
+        
+    4. Protecting Routes with JWT
+
+        Middleware to protect routes.
+        Testing the authentication flow using Postman.
+----------------------------------------------------------------
+
+1. Introduction to Authentication
+
+    Authentication is the process of verifying the identity of a user. In our web application, we need to ensure that only authenticated users can access certain resources or perform specific actions.
+
+    Difference between Authentication and Authorization:
+
+        Authentication: Verifies who a user is.
+        Authorization: Determines what a user is allowed to do.
+
+    Methods of Authentication:
+
+        Session-based authentication (server-side).
+        Token-based authentication (JWT is a popular choice).
+        OAuth, SSO (Single Sign-On), etc.
+
+    Today, we will focus on JWT-based authentication.
+-----------------------------------------------------------------
+
+2. JWT (JSON Web Token) Overview
+
+    JWT is a token format used to securely transmit information between a client and a server. It is widely used for authentication in modern web applications.
+
+    Structure of a JWT:
+
+        A JWT has three parts:
+
+        Header: Contains metadata about the token (type of token, signing algorithm).
+
+        Payload: Contains the claims (data like user ID, email, etc.).
+
+        Signature: Used to verify the token's integrity.
+
+        Example of a JWT:
+
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+    How JWT Works:
+
+        The user sends their login credentials to the server.
+
+        The server verifies the credentials and, if valid, generates a JWT.
+        
+        The JWT is sent back to the client and stored (typically in localStorage or a cookie).
+        
+        For each subsequent request, the client sends the JWT in the Authorization header.
+        
+        The server verifies the JWT and grants access to the protected routes or resources.
+-----------------------------------------------------------------
+
+3. Testing the Authentication Flow
+
+    1. Register a new user via POST /api/auth/register:
+
+        {
+            "name": "John Doe",
+            "email": "john@example.com",
+            "password": "123456"
+        }
+
+    2. Login the user via POST /api/auth/login:
+
+        {
+            "email": "john@example.com",
+            "password": "123456"
+        }
+
+    3. Get all users (protected route) via GET /api/users:
+
+        Add the token from the login response to the Authorization header.
+
+    
