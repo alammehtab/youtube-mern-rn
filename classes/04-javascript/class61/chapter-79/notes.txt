@@ -1,6 +1,7 @@
 Chapter 79: Browser Control - Filling the Window with Content
 
 1. Opening a Popup Window
+
     Popup windows, though often blocked by browsers due to misuse, can still be useful in some cases. Here's how to open a blank popup window:
 
         var monkeyWindow = window.open();
