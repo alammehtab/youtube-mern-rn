@@ -1,18 +1,18 @@
 // Chapter - 83: Form validation: drop - downs
 
 // VALIDATION FUNCTION
-// function checkForSelection(selecID) {
-//     var target = document.getElementById(selecID);
+// function checkForSelection() {
+//     var target = document.getElementById('states');
 //     if (target.selectedIndex === 0) {
 //         alert("Please select a state.");
 //         return false; // Prevents form submission
 //     }
 // }
 
-// IMPROVING USABLITY
+// IMPROVING VISIBILITY
 
-// function checkForSelection(selecID) {
-//     var target = document.getElementById(selecID);
+// function checkForSelection() {
+//     var target = document.getElementById('states');
 //     if (target.selectedIndex === 0) {
 //         alert("Please select a state.");
 //         target.focus(); // Move focus back to the drop-down
