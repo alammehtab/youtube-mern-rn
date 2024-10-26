@@ -2,7 +2,7 @@
 
 // FUNCTION FOR VALIDATION
 // function checkForLastName() {
-//     if (document.getElementById("lastNameField").value.length === 0) {
+//     if (document.getElementById("lastNameField").value.trim().length === 0) {
 //         alert("Please enter your last name");
 //         return false; // Stops form submission
 //     }
@@ -16,7 +16,7 @@
 //         targetField.focus(); // Places cursor in the field
 //         return false;
 //     }
-// } 
+// }
 
 // ADDING VISUAL FEEDBACK
 
