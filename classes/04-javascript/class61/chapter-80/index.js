@@ -9,7 +9,7 @@
 // var monkeyWindow = window.open("test.html")
 
 // provide url and name both
-// var monkeyWindow = window.open("test.html", "Name from Script")
+// var monkeyWindow = window.open("test.html", "_parent")
 
 // 2. CONTROLLING THE WINDOWS SIZE
 // window.open("test.html", " ", "width=200,height=200")
