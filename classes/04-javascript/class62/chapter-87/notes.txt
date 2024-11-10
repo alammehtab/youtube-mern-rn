@@ -6,7 +6,7 @@ In JavaScript, errors can sometimes be hard to detect, especially in longer code
 
     Consider the following function:
 
-    function greetWorld() {
+    function greetTheWorld() {
         var greeting = "Hello world!";
         aler(greeting);  // Oops! Typo in 'alert'
     }
@@ -17,9 +17,9 @@ In JavaScript, errors can sometimes be hard to detect, especially in longer code
 
     You can use the try and catch block to handle such errors and display useful information when something goes wrong.
 
-    Here’s how we can modify the greetWorld() function to handle the error:
+    Here’s how we can modify the greetTheWorld() function to handle the error:
 
-    function greetWorld() {
+    function greetTheWorld() {
         try {
             var greeting = "Hello world!";
             aler(greeting);  // Mistake: 'aler' is not a function
